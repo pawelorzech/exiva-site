@@ -126,6 +126,8 @@ a {
   color: var(--gold);
   text-decoration-color: color-mix(in srgb, var(--gold) 45%, transparent);
   text-underline-offset: .18em;
+  /* Bare URLs used as link text must not push the page sideways on a phone. */
+  overflow-wrap: break-word;
 }
 a:hover { color: var(--gold-bright); text-decoration-color: currentColor; }
 
