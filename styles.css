@@ -2174,7 +2174,12 @@ tbody tr:last-child td { border-bottom: 0; }
   .tagline { font-size: 1rem; }
   .hero .btn { width: 100%; }
   .hero-facts { justify-content: center; gap: .45rem 1rem; }
-  .product-stage { min-height: 33rem; transform: scale(.86); transform-origin: top center; margin-bottom: -4rem; }
+  .product-stage {
+    min-height: 33rem;
+    margin-bottom: .75rem;
+    transform: scale(.86);
+    transform-origin: top center;
+  }
   .spell-command { left: 50%; transform: translateX(-50%); }
   .phone { top: 2.8rem; }
   .level-alert { right: -1rem; top: 15rem; min-width: 11.5rem; }
