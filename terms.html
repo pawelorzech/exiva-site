@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulamin / Terms of Service — Exiva</title>
+<meta name="description" content="Regulamin aplikacji Exiva (PL/EN): zakres usługi, subskrypcja, prawo odstąpienia, reklamacje i granice odpowiedzialności.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#12100C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FDF8EF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Regulamin / Terms of Service — Exiva">
+<meta property="og:description" content="Regulamin aplikacji Exiva (PL/EN): zakres usługi, subskrypcja, prawo odstąpienia, reklamacje i granice odpowiedzialności.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+(function () {
+  var root = document.documentElement;
+  root.className += " js";
+  document.addEventListener("DOMContentLoaded", function () {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang-btn]"));
+    if (!buttons.length) return;
+    function apply(lang) {
+      Array.prototype.forEach.call(document.querySelectorAll("[data-lang]"), function (el) {
+        if (el.getAttribute("data-lang") === lang) el.setAttribute("data-active", "");
+        else el.removeAttribute("data-active");
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-lang-btn") === lang ? "true" : "false");
+      });
+      try { localStorage.setItem("exiva-lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("exiva-lang"); } catch (e) {}
+    var guess = (navigator.language || "pl").toLowerCase().indexOf("pl") === 0 ? "pl" : "en";
+    apply(saved === "pl" || saved === "en" ? saved : guess);
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { apply(b.getAttribute("data-lang-btn")); });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści / Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" width="32" height="32" viewBox="0 0 108 108" role="img" aria-label="Exiva" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand-termshtml-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFDF98"/>
+      <stop offset="55%" stop-color="#E6C25C"/>
+      <stop offset="100%" stop-color="#B08C1E"/>
+    </linearGradient>
+    <radialGradient id="brand-termshtml-bg" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0%" stop-color="#2C2721"/>
+      <stop offset="100%" stop-color="#12100C"/>
+    </radialGradient>
+  </defs>
+  <rect width="108" height="108" rx="20" fill="url(#brand-termshtml-bg)"/>
+  <circle cx="54" cy="54" r="33" fill="none" stroke="url(#brand-termshtml-gold)" stroke-width="3.5" opacity="0.55"/>
+  <circle cx="54" cy="54" r="24.5" fill="none" stroke="url(#brand-termshtml-gold)" stroke-width="1.5" opacity="0.3"/>
+  <path d="M54 26 Q57.5 50.5 82 54 Q57.5 57.5 54 82 Q50.5 57.5 26 54 Q50.5 50.5 54 26 Z" fill="url(#brand-termshtml-gold)"/>
+</svg><span>Exiva</span></a>
+    <nav class="site-nav" aria-label="Główna nawigacja / Main navigation">
+      <a href="privacy.html"><span lang="pl">Prywatność</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Privacy</span></a>
+      <a href="terms.html" aria-current="page"><span lang="pl">Regulamin</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Terms</span></a>
+      <a href="licenses.html"><span lang="pl">Licencje</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Licences</span></a>
+      <a href="delete-account.html"><span lang="pl">Usuń konto</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Delete account</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap page-head">
+  <div class="prose">
+    <h1>Regulamin <span class="visually-hidden">/ Terms of Service</span></h1>
+    <div class="doc-meta"><!-- TODO: TODO(research): ustalić datę publikacji aplikacji w Google Play i wpisać ją jako datę wejścia w życie -->
+<blockquote><p>Wersja: 1.0 · Data sporządzenia: 2026-07-26 · Data wejścia w życie: <strong><span class="todo-mark">TODO(research)</span>: ustalić datę publikacji aplikacji w Google Play i wpisać ją jako datę wejścia w życie</strong></p><p>Dokument gotowy do publikacji na stronie internetowej i do podlinkowania z Google Play.<br>
+Wersja polska jest wersją wiążącą; wersja angielska ma charakter informacyjny.</p><p>Powiązane dokumenty: <a href="privacy.html">Polityka prywatności</a> · <a href="licenses.html#disclaimer">Informacja o braku afiliacji z CipSoft</a> · <a href="licenses.html">Źródła i licencje</a></p></blockquote></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="prose">
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Język / Language">
+    <button type="button" data-lang-btn="pl" aria-pressed="true" lang="pl">Polski</button>
+    <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">English</button>
+  </div>
+  <p class="hint" data-lang="pl" data-active lang="pl">Wersja polska jest wersją wiążącą.</p>
+  <p class="hint" data-lang="en" lang="en">The Polish version is the binding one; this translation is informative.</p>
+</div>
+  </div>
+</div>
+
+<article class="wrap legal-body">
+  <section class="prose" data-lang="pl" data-active lang="pl" aria-label="Regulamin">
+    <h2 class="visually-hidden">Regulamin (PL)</h2>
+<h3 id="pl-1-kto-swiadczy-usluge">1. Kto świadczy usługę</h3>
+<p>Usługę świadczy:</p>
+<!-- TODO: TODO(research): uzupełnić NIP działalności gospodarczej -->
+<!-- TODO: TODO(research): uzupełnić REGON, jeśli ma być podawany -->
+<!-- TODO: TODO(research): uzupełnić adres pocztowy działalności gospodarczej -->
+<blockquote><p><strong>Paweł Orzech</strong>, prowadzący jednoosobową działalność gospodarczą wpisaną do CEIDG<br>
+NIP: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić NIP działalności gospodarczej</strong><br>
+REGON: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić REGON, jeśli ma być podawany</strong><br>
+Adres wykonywania działalności i adres do doręczeń: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić adres pocztowy działalności gospodarczej</strong><br>
+Kraj: Polska<br>
+E-mail: <strong>pawel@orzech.me</strong></p></blockquote>
+<p>Adres e-mail <code>pawel@orzech.me</code> jest podstawowym kanałem kontaktu we wszystkich sprawach: technicznych, reklamacyjnych, dotyczących subskrypcji i dotyczących danych osobowych.</p>
+<p>Sprzedaż subskrypcji odbywa się za pośrednictwem <strong>Google Play</strong>, którego operatorem dla użytkowników z Europejskiego Obszaru Gospodarczego jest Google Ireland Limited. Google Play jest odrębnym podmiotem, a korzystanie z niego podlega jego własnym warunkom.</p>
+<h3 id="pl-2-definicje">2. Definicje</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Pojęcie</th><th scope="col">Znaczenie</th></tr></thead><tbody><tr><td><strong>Aplikacja</strong> / <strong>Exiva</strong></td><td>aplikacja mobilna Exiva (<code>me.orzech.exiva</code>) na system Android wraz z powiązanymi usługami serwerowymi</td></tr><tr><td><strong>Usługodawca</strong> / <strong>my</strong></td><td>Paweł Orzech, dane w rozdziale 1</td></tr><tr><td><strong>Użytkownik</strong> / <strong>Ty</strong></td><td>osoba korzystająca z Aplikacji</td></tr><tr><td><strong>Konsument</strong></td><td>osoba fizyczna dokonująca czynności prawnej niezwiązanej bezpośrednio z jej działalnością gospodarczą lub zawodową</td></tr><tr><td><strong>Przedsiębiorca na prawach konsumenta</strong></td><td>osoba fizyczna zawierająca umowę bezpośrednio związaną z jej działalnością gospodarczą, gdy umowa nie ma dla niej charakteru zawodowego — przysługuje jej część uprawnień konsumenckich</td></tr><tr><td><strong>Tier Free</strong></td><td>darmowy zakres funkcji Aplikacji, dostępny bez konta i bez płatności</td></tr><tr><td><strong>Tier Premium</strong></td><td>płatny zakres funkcji dostępny w ramach aktywnej Subskrypcji</td></tr><tr><td><strong>Subskrypcja</strong></td><td>odpłatna, odnawialna usługa dostępu do funkcji Premium, sprzedawana przez Google Play</td></tr><tr><td><strong>Konto Exiva</strong></td><td>opcjonalne konto zakładane logowaniem przez Google, służące wyłącznie przywróceniu Subskrypcji i synchronizacji danych</td></tr><tr><td><strong>Treści Użytkownika</strong></td><td>notatki, cele, logi sesji polowań, reguły alertów i inne dane wprowadzone przez Użytkownika</td></tr><tr><td><strong>Źródła zewnętrzne</strong></td><td>publicznie dostępne serwisy i interfejsy, z których Aplikacja pobiera dane — w szczególności TibiaData API, TibiaWiki (Fandom), tibia.com</td></tr><tr><td><strong>Tibia</strong></td><td>gra komputerowa Tibia, tworzona i wydawana przez CipSoft GmbH</td></tr><tr><td><strong>Server save</strong></td><td>codzienna przerwa techniczna po stronie serwerów gry Tibia, w trakcie której dane o postaciach są niedostępne lub niepełne</td></tr></tbody></table></div>
+<h3 id="pl-3-status-nieoficjalny-najwazniejsza-informacja-w-tym-dokumen">3. Status nieoficjalny — najważniejsza informacja w tym dokumencie</h3>
+<p><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong></p>
+<p>Exiva <strong>nie jest</strong> tworzona, wydawana, sponsorowana, autoryzowana ani w żaden inny sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>.</p>
+<p><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH.</p>
+<p><strong>Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</strong></p>
+<p>Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w Aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
+<p>Pełny tekst informacji o braku afiliacji: <a href="licenses.html#disclaimer">DISCLAIMER.md</a>.</p>
+<p><strong>Opłata za Subskrypcję jest opłatą za funkcje Aplikacji — nie jest opłatą za dostęp do gry Tibia, do jej treści ani do danych CipSoft GmbH.</strong> Zakup Subskrypcji nie daje żadnych uprawnień w grze Tibia i nie ma żadnego związku z Premium Time ani z innymi usługami CipSoft GmbH.</p>
+<h3 id="pl-4-przedmiot-uslugi">4. Przedmiot usługi</h3>
+<p>Exiva to towarzysz gracza Tibii: pozwala śledzić postacie, obserwować gildie, domy i rankingi, prowadzić notatki i cele, analizować sesje polowań, korzystać z kalkulatorów i encyklopedii oraz otrzymywać powiadomienia o zdarzeniach, które sam zdefiniujesz.</p>
+<p><strong>Exiva nie jest i nigdy nie będzie:</strong></p>
+<ul><li>narzędziem automatyzującym rozgrywkę (botem, makrem, skryptem sterującym klientem gry);</li><li>narzędziem integrującym się z klientem gry, przechwytującym pakiety lub modyfikującym grę;</li><li>narzędziem wymagającym lub przyjmującym Twoje dane logowania do Tibii.</li></ul>
+<h4 id="pl-4-1-tier-free">4.1. Tier Free</h4>
+<p>Bezpłatny, dostępny bez konta i bez rejestracji. Obejmuje między innymi: śledzenie jednej postaci, podstawowe kalkulatory, przeglądanie encyklopedii i danych publicznych, ograniczoną historię oraz powiadomienia rozgłoszeniowe (newsy, wydarzenia, dzienne podsumowanie).</p>
+<p>W Tierze Free <strong>nie zakładamy konta i nie przechowujemy Twoich danych na naszym serwerze</strong> — wszystko zostaje na Twoim urządzeniu.</p>
+<h4 id="pl-4-2-tier-premium">4.2. Tier Premium</h4>
+<p>Płatny, dostępny po wykupieniu Subskrypcji. Obejmuje między innymi: śledzenie do 50 postaci, zaawansowane reguły alertów, synchronizację między urządzeniami, pełną historię, analizator sesji polowań, cele, encyklopedię offline, obserwowanie domów i aukcji oraz rozszerzone narzędzia dla gildii.</p>
+<p>Aktualny, wiążący zakres funkcji obu Tierów jest prezentowany w Aplikacji na ekranie subskrypcji przed dokonaniem zakupu. Zakres funkcji może się zmieniać zgodnie z rozdziałem 9 i 19.</p>
+<p><strong>Aplikacja nie zawiera reklam.</strong> Nie planujemy ich wprowadzenia w żadnym Tierze.</p>
+<h4 id="pl-4-3-wymagania-techniczne">4.3. Wymagania techniczne</h4>
+<p>Android w wersji 8.0 (API 26) lub nowszej, połączenie z internetem, wolna przestrzeń na urządzeniu. Do zakupu Subskrypcji wymagane jest konto Google Play z dostępną metodą płatności. Do korzystania z powiadomień wymagane są Usługi Google Play. Do korzystania z Konta Exiva wymagane jest konto Google.</p>
+<h3 id="pl-5-zawarcie-umowy">5. Zawarcie umowy</h3>
+<p>Umowa o korzystanie z Tieru Free zostaje zawarta z chwilą pierwszego uruchomienia Aplikacji i zaakceptowania niniejszego Regulaminu.</p>
+<p>Umowa o świadczenie usługi płatnej (Subskrypcja) zostaje zawarta z chwilą potwierdzenia zakupu w Google Play i pobrania pierwszej opłaty. Płatność realizuje Google — my nie otrzymujemy i nie przetwarzamy danych Twojej karty ani innych danych płatniczych.</p>
+<p>Umowa o prowadzenie Konta Exiva zostaje zawarta z chwilą pierwszego zalogowania przez Google. Założenie Konta jest <strong>opcjonalne</strong> i nie jest warunkiem korzystania z Subskrypcji.</p>
+<h3 id="pl-6-subskrypcja-ceny-rozliczenia-odnowienie-rezygnacja">6. Subskrypcja — ceny, rozliczenia, odnowienie, rezygnacja</h3>
+<h4 id="pl-6-1-ceny-i-okresy-rozliczeniowe">6.1. Ceny i okresy rozliczeniowe</h4>
+<div class="table-wrap"><table><thead><tr><th scope="col">Plan</th><th scope="col">Cena orientacyjna (PLN, brutto)</th><th scope="col">Okres rozliczeniowy</th></tr></thead><tbody><tr><td>Premium miesięczny</td><td><strong>8,99 zł</strong></td><td>1 miesiąc</td></tr><tr><td>Premium roczny</td><td><strong>69,99 zł</strong></td><td>12 miesięcy</td></tr><tr><td>Oferta Founders (pierwszy rok)</td><td><strong>49,99 zł</strong></td><td>12 miesięcy, następnie odnowienie po cenie standardowej planu rocznego</td></tr></tbody></table></div>
+<p><strong>Ceny podane wyżej mają charakter orientacyjny.</strong> Wiążąca jest zawsze cena wyświetlona w Aplikacji i w Google Play w chwili zakupu — jest ona lokalizowana do Twojego kraju i waluty, pobierana bezpośrednio z Google Play i może różnić się od powyższej. Wszystkie ceny zawierają należne podatki, w tym VAT rozliczany przez Google Play zgodnie z krajem Twojej rezydencji.</p>
+<p><strong>Nie oferujemy zakupu dożywotniego (lifetime).</strong> Powodem jest struktura kosztu: usługa generuje stały koszt serwerowy, a jednorazowa opłata nie ma jak go pokrywać w czasie. Oferta Founders jest rabatem na pierwszy rok, nie zakupem dożywotnim.</p>
+<h4 id="pl-6-2-automatyczne-odnowienie">6.2. Automatyczne odnowienie</h4>
+<p><strong>Subskrypcja odnawia się automatycznie</strong> na kolejny okres rozliczeniowy, chyba że anulujesz ją najpóźniej <strong>24 godziny przed</strong> końcem bieżącego okresu. Opłata za kolejny okres jest pobierana przez Google Play w ostatnim dniu bieżącego okresu.</p>
+<p>Google Play informuje o zbliżającym się odnowieniu zgodnie ze swoimi zasadami. Jeżeli cena planu ulegnie zmianie, Google Play poinformuje Cię o tym z wyprzedzeniem i — zgodnie ze swoimi zasadami — poprosi o zgodę albo umożliwi anulowanie przed wejściem nowej ceny w życie. Zmiana ceny nigdy nie działa wstecz wobec okresu już opłaconego.</p>
+<h4 id="pl-6-3-rezygnacja">6.3. Rezygnacja</h4>
+<p><strong>Subskrypcję anulujesz w Google Play</strong>, nie u nas — my nie mamy technicznej możliwości anulowania Twojej Subskrypcji:</p>
+<blockquote><p>Aplikacja Google Play → ikona profilu → <strong>Płatności i subskrypcje</strong> → <strong>Subskrypcje</strong> → Exiva → <strong>Anuluj subskrypcję</strong></p></blockquote>
+<p>Skrót do tego ekranu znajduje się także w Aplikacji: Ustawienia → Subskrypcja → „Zarządzaj subskrypcją".</p>
+<p>Anulowanie oznacza brak kolejnego odnowienia. <strong>Dostęp do funkcji Premium zachowujesz do końca opłaconego okresu</strong> — nie tracisz go w chwili anulowania i nie przysługuje za ten okres zwrot proporcjonalny (poza przypadkami z rozdziałów 7, 8 i 9).</p>
+<h4 id="pl-6-4-okres-karencji-wstrzymanie-konta-pauza">6.4. Okres karencji, wstrzymanie konta, pauza</h4>
+<p>Te mechanizmy zapewnia Google Play; my jedynie respektujemy przekazywane przez nie statusy.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Sytuacja</th><th scope="col">Co się dzieje</th></tr></thead><tbody><tr><td><strong>Okres karencji (grace period)</strong> — płatność się nie powiodła</td><td>Funkcje Premium <strong>działają dalej</strong> przez okres karencji ustawiony w Google Play, a Google ponawia próbę pobrania opłaty. Widzisz w Aplikacji komunikat z prośbą o poprawienie metody płatności</td></tr><tr><td><strong>Wstrzymanie konta (account hold)</strong> — płatność nie powiodła się także po okresie karencji</td><td>Funkcje Premium są <strong>zawieszone</strong>. Subskrypcja nie jest jeszcze anulowana. Po skutecznej płatności dostęp wraca automatycznie, bez utraty danych</td></tr><tr><td><strong>Pauza (pause)</strong> — jeśli Google Play udostępnia ją dla naszych planów</td><td>Funkcje Premium są zawieszone na wskazany okres i wznawiają się automatycznie po jego upływie. Twoje dane są zachowane przez cały czas pauzy</td></tr><tr><td><strong>Wygaśnięcie</strong> — subskrypcja zakończona i nieodnowiona</td><td>Aplikacja wraca do Tieru Free. Dane lokalne pozostają na urządzeniu; kopia synchronizacyjna na serwerze jest zachowana zgodnie z okresami z <a href="privacy.html">Polityki prywatności</a> i odzyskujesz do niej dostęp po ponownym wykupieniu Subskrypcji</td></tr></tbody></table></div>
+<p><strong>Utrata dostępu do Premium nigdy nie kasuje Twoich Treści Użytkownika zapisanych na urządzeniu.</strong> Możesz je odczytać i wyeksportować także w Tierze Free.</p>
+<h4 id="pl-6-5-zwroty">6.5. Zwroty</h4>
+<p>Obowiązują dwie równoległe ścieżki i możesz skorzystać z każdej z nich.</p>
+<p><strong>Ścieżka Google Play.</strong> Zwrotów za zakupy w Google Play udziela Google zgodnie ze swoją polityką. Wniosek składasz bezpośrednio w Google Play (<code>play.google.com/store/account/orderhistory</code>). To najszybsza ścieżka i zalecamy zaczynać od niej.</p>
+<p><strong>Ścieżka bezpośrednia.</strong> Niezależnie od polityki Google, honorujemy przysługujące Ci uprawnienia ustawowe: prawo odstąpienia od umowy (rozdział 7) oraz uprawnienia z tytułu braku zgodności usługi cyfrowej z umową (rozdział 8). Jeżeli Google odmówi zwrotu, a uważasz, że przysługuje Ci on z mocy prawa — napisz na <code>pawel@orzech.me</code>. Rozpatrzymy sprawę i, jeśli roszczenie jest zasadne, zrealizujemy zwrot lub obniżenie ceny <strong>niezależnie od stanowiska Google</strong>, w terminie 14 dni od uznania reklamacji.</p>
+<p>Żadne postanowienie tego rozdziału nie ogranicza Twoich praw ustawowych jako Konsumenta.</p>
+<h3 id="pl-7-prawo-odstapienia-od-umowy-14-dni">7. Prawo odstąpienia od umowy — 14 dni</h3>
+<p>Jeżeli jesteś <strong>Konsumentem</strong> lub <strong>Przedsiębiorcą na prawach konsumenta</strong>, przysługuje Ci prawo odstąpienia od umowy zawartej na odległość <strong>w terminie 14 dni</strong> od jej zawarcia, bez podawania przyczyny i bez ponoszenia kosztów. Podstawa: ustawa z dnia 30 maja 2014 r. o prawach konsumenta, wdrażająca dyrektywę 2011/83/UE.</p>
+<h4 id="pl-7-1-jak-odstapic">7.1. Jak odstąpić</h4>
+<p>Wystarczy jednoznaczne oświadczenie wysłane na <code>pawel@orzech.me</code> przed upływem terminu — na przykład: <em>„Odstępuję od umowy o świadczenie usługi Exiva Premium zawartej w dniu [data]. [Imię i nazwisko lub identyfikator zamówienia Google Play]."</em> Nie ma obowiązku używania formularza; możesz też skorzystać z ustawowego wzoru formularza odstąpienia.</p>
+<p>Dla szybszego rozpatrzenia dołącz identyfikator zamówienia z Google Play. Zwrot płatności następuje niezwłocznie, nie później niż w terminie <strong>14 dni</strong> od otrzymania oświadczenia, tym samym sposobem, którym dokonano płatności.</p>
+<h4 id="pl-7-2-kiedy-prawo-odstapienia-wygasa-przeczytaj-to-uwaznie">7.2. Kiedy prawo odstąpienia wygasa — przeczytaj to uważnie</h4>
+<p>Zgodnie z art. 38 pkt 13 ustawy o prawach konsumenta prawo odstąpienia <strong>nie przysługuje</strong> w odniesieniu do umów o dostarczanie treści cyfrowych lub usług cyfrowych niedostarczanych na nośniku materialnym, jeżeli spełnione są łącznie trzy warunki:</p>
+<ol><li><strong>wyraziłeś uprzednią wyraźną zgodę</strong> na rozpoczęcie świadczenia przed upływem terminu do odstąpienia,</li><li><strong>przyjąłeś do wiadomości</strong>, że w ten sposób <strong>utracisz prawo odstąpienia</strong>,</li><li><strong>otrzymałeś potwierdzenie</strong> zawarcia umowy na trwałym nośniku.</li></ol>
+<p><strong>Jak realizujemy ten wymóg w Exivie.</strong> Na ekranie zakupu, przed potwierdzeniem płatności, wyświetlamy osobne, niezaznaczone domyślnie pole wyboru o treści:</p>
+<blockquote><p>☐ <strong>Żądam rozpoczęcia świadczenia usługi Premium natychmiast po zakupie, przed upływem 14-dniowego terminu na odstąpienie od umowy. Przyjmuję do wiadomości, że po pełnym wykonaniu usługi utracę prawo do odstąpienia od umowy.</strong></p></blockquote>
+<p>Zaznaczenie tego pola jest dobrowolne i jest odnotowywane wraz z datą i godziną. Potwierdzenie zawarcia umowy — wraz z treścią tej zgody, niniejszym Regulaminem i pouczeniem o prawie odstąpienia — wysyłamy na trwałym nośniku (e-mail na adres konta, jeżeli je posiadasz; w każdym przypadku dokument jest dostępny do pobrania w Aplikacji: Ustawienia → Subskrypcja → „Potwierdzenie zakupu").</p>
+<p><strong>Jeżeli nie zaznaczysz tego pola</strong>, funkcje Premium zostaną uruchomione dopiero po upływie 14 dni od zakupu, a przez ten czas zachowujesz pełne prawo odstąpienia.</p>
+<!-- TODO: TODO(research): -->
+<p><strong><span class="todo-mark">TODO(research)</span>:</strong> potwierdzić z prawnikiem, czy przy sprzedaży realizowanej technicznie przez Google Play (gdzie to Google jest stroną transakcji płatniczej i to Google dostarcza potwierdzenie zakupu) obowiązek pouczenia i odebrania zgody z art. 38 pkt 13 spoczywa na nas, na Google, czy na obu podmiotach — oraz czy opisany wyżej mechanizm zgody w Aplikacji jest wystarczający, czy konieczne jest odrębne potwierdzenie e-mailowe w każdym przypadku.</p>
+<h3 id="pl-8-zgodnosc-uslugi-cyfrowej-z-umowa">8. Zgodność usługi cyfrowej z umową</h3>
+<p>Jesteśmy odpowiedzialni wobec Konsumentów i Przedsiębiorców na prawach konsumenta za zgodność usługi cyfrowej z umową, na zasadach określonych w rozdziale 5b ustawy o prawach konsumenta, wdrażającym <strong>dyrektywę (UE) 2019/770</strong> o niektórych aspektach umów o dostarczanie treści cyfrowych i usług cyfrowych.</p>
+<p><strong>Co to oznacza w praktyce.</strong> Usługa musi odpowiadać opisowi, nadawać się do celu, do którego zwykle się jej używa, być dostarczana w najnowszej dostępnej wersji i wraz z aktualizacjami niezbędnymi do zachowania zgodności z umową. Ponieważ Subskrypcja jest usługą ciągłą, ta odpowiedzialność obejmuje <strong>cały okres jej trwania</strong>, a nie tylko moment zakupu.</p>
+<p><strong>Jeżeli usługa jest niezgodna z umową</strong>, możesz żądać doprowadzenia jej do zgodności. Możemy odmówić, jeżeli byłoby to niemożliwe albo wymagałoby nadmiernych kosztów. Jeżeli nie doprowadzimy usługi do zgodności w rozsądnym terminie i bez nadmiernych niedogodności dla Ciebie, albo brak zgodności jest istotny, możesz złożyć oświadczenie o <strong>obniżeniu ceny</strong> albo o <strong>odstąpieniu od umowy</strong>. Obniżenie ceny musi pozostawać w takiej proporcji do ceny, w jakiej wartość usługi niezgodnej z umową pozostaje do wartości usługi zgodnej.</p>
+<p>Ciężar dowodu zgodności usługi z umową spoczywa na nas przez cały okres, w którym usługa ma być dostarczana.</p>
+<p><strong>Aktualizacje.</strong> Będziemy informować Cię o aktualizacjach niezbędnych do zachowania zgodności usługi z umową i dostarczać je przez okres trwania Subskrypcji. Jeżeli nie zainstalujesz takiej aktualizacji w rozsądnym czasie, nie odpowiadamy za brak zgodności wynikający wyłącznie z jej braku — pod warunkiem, że poinformowaliśmy Cię o aktualizacji i skutkach jej niezainstalowania.</p>
+<p><strong>Zmiany usługi w trakcie trwania Subskrypcji</strong> reguluje rozdział 19.</p>
+<h3 id="pl-9-zrodla-zewnetrzne-brak-sla-i-granice-naszej-odpowiedzialno">9. Źródła zewnętrzne — brak SLA i granice naszej odpowiedzialności</h3>
+<p><strong>To jest rozdział, którego nie należy pomijać.</strong></p>
+<p>Exiva pobiera dane o świecie gry z publicznie dostępnych Źródeł zewnętrznych, przede wszystkim z <strong>TibiaData API</strong> (<code>api.tibiadata.com</code>), a także z TibiaWiki i innych serwisów wymienionych w <a href="licenses.html">ATTRIBUTIONS.md</a>.</p>
+<p><strong>Te źródła są prowadzone przez podmioty trzecie, są bezpłatne i nie udzielają żadnych gwarancji dostępności ani poprawności danych. Nie łączy nas z nimi żadna umowa o poziom usług (SLA).</strong> Dotyczy to również sytuacji, w których źródło działa, ale zwraca dane opóźnione, niepełne albo błędne — na przykład w trakcie codziennego <strong>server save</strong> po stronie serwerów gry, gdy dane o postaciach są przez kilkanaście minut niedostępne.</p>
+<p>Z tego wynikają następujące, uczciwie postawione granice:</p>
+<ol><li><strong>Nie gwarantujemy dostępności, aktualności ani poprawności danych pochodzących ze Źródeł zewnętrznych.</strong> Aplikacja zawsze pokazuje, kiedy dane zostały sprawdzone — traktuj tę informację jako element usługi, nie jako drobny druk.</li><li><strong>Nie odpowiadamy za awarie, zmiany, ograniczenia ani zakończenie działania Źródeł zewnętrznych</strong> ani za decyzje ich operatorów, w tym za wprowadzenie przez nie ograniczeń dostępu.</li><li><strong>Odpowiadamy natomiast za działanie samej Aplikacji</strong> — za to, żeby poprawnie pobierała, przechowywała, prezentowała i przetwarzała dane, żeby czytelnie sygnalizowała ich brak lub nieaktualność i żeby jej własne funkcje (kalkulatory, analizy, notatki, alerty) działały zgodnie z opisem. Ta odpowiedzialność nie jest w żaden sposób ograniczona niniejszym rozdziałem.</li><li><strong>Opłata za Subskrypcję jest opłatą za funkcje Aplikacji, nie za dostęp do danych gry.</strong></li></ol>
+<p><strong>Co robimy, gdy Źródło zewnętrzne zawodzi.</strong> Utrzymujemy lokalną pamięć podręczną, żeby krótkotrwała awaria nie unieruchamiała Aplikacji. Wyciszamy alerty i odświeżanie w oknie prawdopodobnego server save. Jeżeli awaria jest długotrwała, informujemy o tym w Aplikacji. Warstwa sieciowa Aplikacji jest zaprojektowana tak, żeby dało się przełączyć ją na alternatywne źródło lub na własne wdrożenie, jeżeli okaże się to konieczne.</p>
+<p><strong>Ograniczenie odpowiedzialności.</strong> W zakresie dopuszczalnym przez prawo nie odpowiadamy za szkody wynikające z niedostępności lub nieprawidłowości danych ze Źródeł zewnętrznych, ani za decyzje podjęte w grze na podstawie informacji z Aplikacji. <strong>Ograniczenie to nie stosuje się</strong> do szkód wyrządzonych umyślnie, do szkody na osobie, ani do odpowiedzialności, której nie można wyłączyć ani ograniczyć wobec Konsumenta na podstawie bezwzględnie obowiązujących przepisów prawa polskiego i unijnego — w szczególności odpowiedzialności za brak zgodności usługi cyfrowej z umową (rozdział 8) i odpowiedzialności z tytułu niewykonania lub nienależytego wykonania zobowiązania przez nas samych.</p>
+<p>Postanowienia tego rozdziału nie stanowią wyłączenia odpowiedzialności za funkcje własne Aplikacji i nie mogą być tak interpretowane.</p>
+<!-- TODO: TODO(research): -->
+<p><strong><span class="todo-mark">TODO(research)</span>:</strong> przedstawić prawnikowi konstrukcję tego rozdziału do oceny, czy rozgraniczenie „odpowiadamy za Aplikację / nie odpowiadamy za cudze API" utrzyma się wobec Konsumenta w świetle art. 385(1) Kodeksu cywilnego (klauzule niedozwolone) oraz art. 43k i nast. ustawy o prawach konsumenta — pytanie <strong>#9</strong> z listy w <code>docs/DATA_LICENSING.md</code>.</p>
+<h3 id="pl-10-dostepnosc-uslugi-i-przerwy-techniczne">10. Dostępność usługi i przerwy techniczne</h3>
+<p>Dokładamy starań, aby usługa działała nieprzerwanie, ale nie gwarantujemy jej nieprzerwanej dostępności — usługa jest prowadzona przez jedną osobę i utrzymywana na infrastrukturze komercyjnego dostawcy.</p>
+<ul><li><strong>Przerwy planowane</strong> (aktualizacje, migracje, konserwacja) zapowiadamy w Aplikacji z wyprzedzeniem co najmniej <strong>24 godzin</strong>, o ile jest to możliwe, i staramy się umieszczać je poza godzinami największego ruchu.</li><li><strong>Przerwy nieplanowane</strong> (awarie) usuwamy niezwłocznie; o dłuższych informujemy w Aplikacji i na stronie internetowej projektu.</li><li><strong>Server save</strong> gry Tibia to przerwa po stronie CipSoft GmbH, nie po naszej. W tym czasie dane o postaciach mogą być niedostępne lub nieaktualne, a alerty są celowo wyciszane. Nie jest to awaria Aplikacji.</li></ul>
+<p>Jeżeli przerwa po naszej stronie jest istotna i długotrwała, a masz aktywną Subskrypcję, przysługują Ci uprawnienia z rozdziału 8 — w tym żądanie obniżenia ceny proporcjonalnie do okresu, w którym usługa nie była świadczona.</p>
+<h3 id="pl-11-zasady-korzystania-czego-nie-wolno">11. Zasady korzystania — czego nie wolno</h3>
+<p>Korzystając z Exivy, zobowiązujesz się <strong>nie</strong>:</p>
+<ol><li><strong>Automatyzować rozgrywki w Tibii</strong> ani używać Aplikacji jako elementu bota, makra, skryptu sterującego klientem gry lub jakiegokolwiek narzędzia naruszającego <a href="https://www.tibia.com/support/?subtopic=legaldocuments&amp;page=rules" rel="noopener noreferrer" target="_blank">zasady gry Tibia</a>. Exiva nie oferuje takich funkcji, a próba wykorzystania jej w ten sposób jest naruszeniem Regulaminu.</li><li><strong>Dokonywać inżynierii wstecznej</strong>, dekompilować, dezasemblować ani modyfikować Aplikacji ponad zakres bezwzględnie dozwolony przepisami prawa (w szczególności art. 74 ust. 4 i art. 75 ustawy o prawie autorskim i prawach pokrewnych — uprawnienia do dekompilacji w celu osiągnięcia współdziałania pozostają nienaruszone).</li><li><strong>Nadużywać interfejsów Aplikacji ani naszych serwerów</strong> — obchodzić limitów częstotliwości żądań, wykorzystywać naszego backendu jako darmowego serwera pośredniczącego do własnych projektów, generować sztucznego ruchu, prowadzić ataków odmowy usługi.</li><li><strong>Obchodzić mechanizmów płatności i uprawnień</strong> — modyfikować Aplikacji w celu odblokowania funkcji Premium, współdzielić ani odsprzedawać tokenów zakupu, wykorzystywać jednej Subskrypcji na potrzeby wielu osób poza zakresem dozwolonym przez Google Play (współdzielenie rodzinne).</li><li><strong>Handlować kontami</strong> — używać Aplikacji do sprzedaży, kupna lub wymiany kont i postaci w Tibii za środki rzeczywiste. Jest to zakazane zarówno przez zasady gry, jak i przez Tibia Fansite Agreement.</li><li><strong>Wprowadzać treści bezprawnych</strong> — w notatkach, nazwach celów ani w żadnym innym polu: treści naruszających prawa osób trzecich, obraźliwych, nawołujących do nienawiści, zawierających dane osobowe osób trzecich bez podstawy prawnej, złośliwego oprogramowania, linków phishingowych.</li><li><strong>Podszywać się</strong> pod Aplikację, pod nas, pod CipSoft GmbH ani pod inny podmiot; dystrybuować zmodyfikowanych wersji Aplikacji.</li><li><strong>Naruszać praw autorskich i licencji</strong> treści prezentowanych w Aplikacji — w szczególności masowo pobierać i redystrybuować bazy danych Aplikacji poza zakresem dozwolonym licencjami źródeł (rozdział 12).</li></ol>
+<p>Naruszenie tych zasad może skutkować zawieszeniem lub zakończeniem dostępu — na warunkach z rozdziału 14.</p>
+<h3 id="pl-12-tresci-uzytkownika-i-wlasnosc-intelektualna">12. Treści Użytkownika i własność intelektualna</h3>
+<h4 id="pl-12-1-twoje-tresci-pozostaja-twoje">12.1. Twoje treści pozostają Twoje</h4>
+<p>Zachowujesz wszelkie prawa do Treści Użytkownika, które wprowadzasz do Aplikacji: notatek, celów, logów sesji polowań i reguł alertów. <strong>Nie nabywamy do nich żadnych praw.</strong></p>
+<p>Udzielasz nam wyłącznie <strong>niewyłącznej, nieodpłatnej, ograniczonej licencji</strong> na przechowywanie, zwielokrotnianie i przetwarzanie Treści Użytkownika <strong>wyłącznie w zakresie niezbędnym do świadczenia usługi</strong> — czyli do ich zapisania, zsynchronizowania między Twoimi urządzeniami, wykonania kopii zapasowej i wyświetlenia Tobie. Licencja obowiązuje tak długo, jak długo przechowujemy dane, i wygasa z chwilą ich usunięcia.</p>
+<p><strong>Nie wykorzystujemy Twoich treści do żadnego innego celu.</strong> Nie analizujemy ich w celach marketingowych, nie udostępniamy ich innym użytkownikom, nie sprzedajemy ich, nie wykorzystujemy do trenowania modeli uczenia maszynowego.</p>
+<h4 id="pl-12-2-nasze-prawa">12.2. Nasze prawa</h4>
+<p>Aplikacja, jej kod, interfejs, identyfikacja wizualna, nazwa „Exiva", ikony, ilustracje, oryginalne teksty i własne wyliczenia stanowią przedmiot praw autorskich i innych praw własności intelektualnej przysługujących Usługodawcy. Regulamin nie przenosi na Ciebie żadnych z tych praw — otrzymujesz jedynie niewyłączną, nieprzenoszalną licencję na korzystanie z Aplikacji zgodnie z jej przeznaczeniem, na czas trwania umowy.</p>
+<h4 id="pl-12-3-prawa-cipsoft-gmbh">12.3. Prawa CipSoft GmbH</h4>
+<p>Tibia, jej świat, nazwy, mechaniki, grafiki i wszelkie inne elementy są własnością <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> i objęte jej prawami autorskimi oraz prawami do znaków towarowych. Exiva korzysta z publicznie dostępnych informacji o grze w charakterze aplikacji fanowskiej. Wszelkie odwołania do Tibii i CipSoftu mają charakter opisowy i wskazują pochodzenie danych. Szczegóły: <a href="licenses.html#disclaimer">DISCLAIMER.md</a>.</p>
+<h4 id="pl-12-4-tresci-na-licencji-cc-by-sa-3-0">12.4. Treści na licencji CC BY-SA 3.0</h4>
+<p>Część treści encyklopedycznych (opisy potworów, przedmiotów, zaklęć, NPC-ów i questów) pochodzi z <strong>TibiaWiki</strong> i jest wykorzystywana na licencji <strong><a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-ShareAlike 3.0 Unported</a></strong>.</p>
+<p>Przy każdym takim rekordzie Aplikacja wskazuje źródło, autorów (przez link do historii edycji artykułu), licencję oraz — jeżeli treść była skracana, przeformatowana lub tłumaczona — informację o dokonanych zmianach. Treści te pozostają dostępne na licencji CC BY-SA 3.0 również w wersji prezentowanej przez nas.</p>
+<p>Pełna lista źródeł, licencji i wymaganych atrybucji: <a href="licenses.html">ATTRIBUTIONS.md</a>.</p>
+<h3 id="pl-13-powiadomienia">13. Powiadomienia</h3>
+<p>Aplikacja może wysyłać dwa rodzaje powiadomień:</p>
+<ul><li><strong>rozgłoszeniowe</strong> — newsy, informacje o wydarzeniach w grze, dzienne podsumowanie; wysyłane do kanału tematycznego, bez identyfikowania odbiorców;</li><li><strong>adresowane</strong> — alerty, które sam skonfigurowałeś (dostępne w Tierze Premium).</li></ul>
+<p>Oba rodzaje możesz wyłączyć w każdej chwili w ustawieniach Aplikacji lub systemu Android. <strong>Nie wysyłamy powiadomień reklamowych</strong> i nie wysyłamy powiadomień marketingowych bez Twojej zgody. Nie gwarantujemy dostarczenia powiadomienia w określonym czasie — dostarczanie realizuje usługa Firebase Cloud Messaging, a system Android może je opóźnić lub wstrzymać w ramach optymalizacji zużycia baterii.</p>
+<h3 id="pl-14-zawieszenie-i-zakonczenie-dostepu">14. Zawieszenie i zakończenie dostępu</h3>
+<h4 id="pl-14-1-rezygnacja-z-twojej-strony">14.1. Rezygnacja z Twojej strony</h4>
+<p>Możesz w każdej chwili przestać korzystać z Aplikacji, usunąć Konto Exiva (Ustawienia → Konto → Usuń konto lub przez stronę wskazaną w <a href="privacy.html">Polityce prywatności</a>) oraz odinstalować Aplikację. Usunięcie Konta <strong>nie anuluje automatycznie Subskrypcji</strong> — Subskrypcję anulujesz w Google Play (rozdział 6.3). Jeżeli usuniesz Konto, nie anulując Subskrypcji, opłaty będą nadal pobierane przez Google.</p>
+<h4 id="pl-14-2-zawieszenie-lub-zakonczenie-z-naszej-strony">14.2. Zawieszenie lub zakończenie z naszej strony</h4>
+<p>Możemy zawiesić lub zakończyć dostęp do usługi, jeżeli:</p>
+<ul><li>naruszasz Regulamin w sposób istotny lub uporczywy, w szczególności zasady z rozdziału 11;</li><li>Twoje działania zagrażają bezpieczeństwu, stabilności lub integralności usługi albo innych użytkowników;</li><li>wymaga tego bezwzględnie obowiązujący przepis prawa, decyzja organu lub orzeczenie sądu.</li></ul>
+<p><strong>Procedura.</strong> Poza przypadkami wymagającymi natychmiastowego działania (aktywny atak, ryzyko dla innych użytkowników, żądanie organu), przed zawieszeniem informujemy Cię o stwierdzonym naruszeniu na adres e-mail powiązany z Kontem i wyznaczamy <strong>co najmniej 7 dni</strong> na jego usunięcie albo na złożenie wyjaśnień. Zawieszenie natychmiastowe uzasadniamy niezwłocznie po jego zastosowaniu. Od każdej decyzji przysługuje Ci odwołanie na <code>pawel@orzech.me</code>, rozpatrywane w terminie 14 dni.</p>
+<h4 id="pl-14-3-skutki-dla-aktywnej-subskrypcji">14.3. Skutki dla aktywnej Subskrypcji</h4>
+<div class="table-wrap"><table><thead><tr><th scope="col">Sytuacja</th><th scope="col">Skutek finansowy</th></tr></thead><tbody><tr><td>Zawieszenie lub zakończenie <strong>z naszej winy</strong> albo bez podstawy w Regulaminie</td><td>zwrot <strong>proporcjonalny</strong> za niewykorzystany okres opłacony</td></tr><tr><td>Zawieszenie lub zakończenie <strong>z powodu Twojego istotnego naruszenia</strong> Regulaminu</td><td>zwrot nie przysługuje w zakresie okresu, w którym dostęp był zawieszony z tej przyczyny; nie wyłącza to Twoich uprawnień ustawowych ani prawa do odwołania</td></tr><tr><td>Zakończenie świadczenia usługi <strong>przez nas</strong> (zaprzestanie działalności)</td><td>rozdział 15</td></tr></tbody></table></div>
+<p>Ponieważ płatności realizuje Google Play, zwrot może wymagać złożenia wniosku po naszej stronie w Google Play Console lub wypłaty bezpośredniej — wskażemy tryb w odpowiedzi na Twoje zgłoszenie.</p>
+<h3 id="pl-15-plan-awaryjny-co-jesli-zniknie-zrodlo-danych-albo-status-">15. Plan awaryjny — co jeśli zniknie źródło danych albo status fansite</h3>
+<p>Exiva opiera się na danych z serwisów, których nie kontrolujemy, i działa w ekosystemie, którego zasady ustala CipSoft GmbH. Uznajemy to za istotne ryzyko i mówimy o nim wprost, zamiast chować je w ogólnej klauzuli siły wyższej.</p>
+<p><strong>Scenariusz A — trwała niedostępność głównego źródła danych</strong> (np. zakończenie działania TibiaData API lub trwałe odcięcie nas od niego).</p>
+<ol><li>Niezwłocznie informujemy o sytuacji w Aplikacji i na stronie projektu.</li><li>Podejmujemy próbę przełączenia na źródło alternatywne albo na własne wdrożenie oprogramowania źródłowego, jeżeli jego licencja na to pozwala.</li><li>Jeżeli w terminie <strong>30 dni</strong> nie przywrócimy funkcji zależnych od tego źródła w zakresie istotnym dla Subskrypcji:<ul><li><strong>wstrzymujemy sprzedaż nowych Subskrypcji</strong>;</li><li><strong>wyłączamy automatyczne odnowienia</strong>;</li><li>posiadaczom aktywnych Subskrypcji oferujemy <strong>zwrot proporcjonalny</strong> za niewykorzystany okres albo, do wyboru, przedłużenie Subskrypcji o czas trwania awarii;</li><li>funkcje niezależne od tego źródła (notatki, cele, kalkulatory, dane offline) pozostają dostępne.</li></ul></li></ol>
+<p><strong>Scenariusz B — utrata lub nieuzyskanie statusu Supported/Promoted Tibia Fansite albo sprzeciw CipSoft GmbH wobec działania Aplikacji.</strong> Tibia Fansite Agreement pozwala CipSoftowi zakończyć współpracę w każdej chwili i bez podania przyczyny; z góry przyjmujemy, że taka decyzja jest wiążąca i nie zamierzamy jej kwestionować kosztem użytkowników.</p>
+<ol><li>Dostosowujemy Aplikację do stanowiska CipSoftu — usuwamy sporne funkcje lub treści.</li><li>Jeżeli dostosowanie nie jest możliwe i musimy zakończyć świadczenie usługi:<ul><li><strong>wstrzymujemy sprzedaż i wyłączamy automatyczne odnowienia</strong> niezwłocznie;</li><li>zapowiadamy zakończenie usługi z wyprzedzeniem <strong>co najmniej 30 dni</strong>;</li><li>posiadaczom aktywnych Subskrypcji przysługuje <strong>zwrot proporcjonalny</strong> za niewykorzystany opłacony okres;</li><li>udostępniamy <strong>eksport wszystkich Twoich danych</strong> do pliku JSON i utrzymujemy tę możliwość przez cały okres wypowiedzenia;</li><li>w miarę możliwości wydajemy końcową wersję Aplikacji działającą wyłącznie na danych lokalnych, bez funkcji zależnych od naszego serwera.</li></ul></li></ol>
+<p><strong>Scenariusz C — zaprzestanie działalności przez nas z innych przyczyn.</strong> Stosujemy tryb jak w scenariuszu B pkt 2: co najmniej 30 dni wypowiedzenia, wyłączenie odnowień, zwroty proporcjonalne, gwarantowany eksport danych.</p>
+<p>W żadnym z tych scenariuszy nie zatrzymujemy opłat za okres, w którym usługa nie jest świadczona.</p>
+<h3 id="pl-16-reklamacje">16. Reklamacje</h3>
+<p>Reklamacje składasz na adres <strong><code>pawel@orzech.me</code></strong>. W zgłoszeniu podaj: opis problemu, datę jego wystąpienia, wersję Aplikacji i modelu urządzenia (Ustawienia → O aplikacji), identyfikator zamówienia z Google Play, jeżeli sprawa dotyczy płatności, oraz swoje żądanie.</p>
+<ul><li><strong>Potwierdzenie przyjęcia</strong> zgłoszenia: w ciągu <strong>7 dni roboczych</strong>.</li><li><strong>Rozpatrzenie reklamacji</strong>: w terminie <strong>14 dni</strong> od jej otrzymania. Brak odpowiedzi w tym terminie oznacza uznanie reklamacji zgodnie z żądaniem, w zakresie, w jakim przewidują to przepisy o prawach konsumenta.</li><li>Odpowiedź przekazujemy na trwałym nośniku — na adres e-mail, z którego wysłano zgłoszenie.</li></ul>
+<p>Reklamacje dotyczące <strong>samej transakcji płatniczej</strong> (obciążenie, brak zaksięgowania płatności, zwrot środków) najszybciej rozpatruje Google Play, ponieważ to Google realizuje płatność. Nie zwalnia to nas z odpowiedzialności za usługę — patrz rozdział 6.5 i 8.</p>
+<h3 id="pl-17-pozasadowe-rozwiazywanie-sporow">17. Pozasądowe rozwiązywanie sporów</h3>
+<p>Jeżeli jesteś Konsumentem, masz dostęp do pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń. Skorzystanie z nich jest dobrowolne dla obu stron.</p>
+<ul><li><strong>Miejski lub powiatowy rzecznik konsumentów</strong> — bezpłatna pomoc prawna, mediacja i wystąpienia do przedsiębiorcy. Rzecznik właściwy według Twojego miejsca zamieszkania.</li><li><strong>Wojewódzkie Inspektoraty Inspekcji Handlowej</strong> — postępowanie mediacyjne oraz stałe polubowne sądy konsumenckie. Informacje: <a href="https://uokik.gov.pl" rel="noopener noreferrer" target="_blank">https://uokik.gov.pl</a></li><li><strong>Urząd Ochrony Konkurencji i Konsumentów</strong> — informacje o pozasądowym rozwiązywaniu sporów i rejestr podmiotów uprawnionych: <a href="https://uokik.gov.pl" rel="noopener noreferrer" target="_blank">https://uokik.gov.pl</a></li><li><strong>Infolinia konsumencka</strong> oraz <strong>Konsumenckie Centrum E-Porad</strong> prowadzone przez organizacje konsumenckie.</li><li><strong>Europejskie Centrum Konsumenckie</strong> — pomoc w sporach transgranicznych w ramach UE: <a href="https://konsument.gov.pl" rel="noopener noreferrer" target="_blank">https://konsument.gov.pl</a></li></ul>
+<!-- TODO: TODO(research): -->
+<p><strong>Platforma ODR.</strong> Unijna platforma internetowego rozstrzygania sporów (ODR) została utworzona na podstawie rozporządzenia (UE) nr 524/2013. <strong><span class="todo-mark">TODO(research)</span>:</strong> zweryfikować przed publikacją aktualny status tej platformy i obowiązku zamieszczania do niej linku — przepisy w tym zakresie były zmieniane, a obowiązek informacyjny mógł zostać zastąpiony innym. Jeżeli platforma nadal działa, wpisać tu jej adres i uzupełnić link w Aplikacji; jeżeli nie — usunąć ten akapit i pozostawić pozostałe kanały wymienione wyżej.</p>
+<p>Nie zobowiązaliśmy się do korzystania z żadnego konkretnego podmiotu uprawnionego do pozasądowego rozwiązywania sporów, ale rozpatrzymy w dobrej wierze każdą propozycję mediacji.</p>
+<h3 id="pl-18-prawo-wlasciwe-i-jurysdykcja">18. Prawo właściwe i jurysdykcja</h3>
+<p>Do niniejszego Regulaminu i do umów zawartych na jego podstawie stosuje się <strong>prawo polskie</strong>.</p>
+<p><strong>Zastrzeżenie na rzecz Konsumentów:</strong> wybór prawa polskiego nie pozbawia Cię ochrony wynikającej z bezwzględnie obowiązujących przepisów prawa państwa Twojego zwykłego pobytu, jeżeli jest to inne państwo — zgodnie z art. 6 rozporządzenia (WE) nr 593/2008 (Rzym I).</p>
+<p><strong>Jurysdykcja.</strong> Spory rozstrzygają sądy powszechne właściwe według przepisów prawa polskiego. Jeżeli jesteś Konsumentem, możesz wytoczyć powództwo przed sąd właściwy dla Twojego miejsca zamieszkania — zgodnie z rozporządzeniem (UE) nr 1215/2012 (Bruksela I bis) nie możesz zostać pozwany przed sąd innego państwa niż państwo Twojego miejsca zamieszkania.</p>
+<p>W stosunkach z Użytkownikami niebędącymi Konsumentami ani Przedsiębiorcami na prawach konsumenta sądem właściwym jest sąd właściwy dla siedziby Usługodawcy.</p>
+<h3 id="pl-19-zmiany-regulaminu-i-zmiany-uslugi">19. Zmiany Regulaminu i zmiany usługi</h3>
+<h4 id="pl-19-1-zmiany-regulaminu">19.1. Zmiany Regulaminu</h4>
+<p>Możemy zmienić Regulamin z ważnych przyczyn: zmiany przepisów prawa, zmiany zakresu lub sposobu świadczenia usługi, zmiany modelu cenowego, zmiany po stronie Google Play lub Źródeł zewnętrznych, konieczności przeciwdziałania nadużyciom, poprawy bezpieczeństwa.</p>
+<ul><li>O zmianie informujemy <strong>co najmniej 14 dni przed</strong> jej wejściem w życie: komunikatem w Aplikacji, a posiadaczy Konta Exiva dodatkowo e-mailem.</li><li>Informacja wskazuje, co dokładnie się zmienia i od kiedy.</li><li>Jeżeli nie akceptujesz zmiany, możesz przed jej wejściem w życie anulować Subskrypcję w Google Play i zaprzestać korzystania z Aplikacji. Jeżeli zmiana istotnie i niekorzystnie wpływa na dostęp do funkcji, za które zapłaciłeś, przysługuje Ci <strong>zwrot proporcjonalny</strong> za niewykorzystany okres.</li><li>Do umów zawartych przed wejściem zmian w życie stosuje się dotychczasowy Regulamin do końca bieżącego okresu rozliczeniowego, chyba że zmiana wynika z bezwzględnie obowiązujących przepisów prawa.</li><li>Archiwum poprzednich wersji Regulaminu jest dostępne w historii repozytorium projektu.</li></ul>
+<h4 id="pl-19-2-zmiany-uslugi-w-trakcie-trwania-subskrypcji">19.2. Zmiany usługi w trakcie trwania Subskrypcji</h4>
+<p>Zgodnie z przepisami wdrażającymi dyrektywę 2019/770 możemy dokonywać zmian usługi cyfrowej wykraczających poza to, co niezbędne do zachowania jej zgodności z umową, wyłącznie gdy: przemawia za tym uzasadniona przyczyna wskazana w rozdziale 19.1, zmiana nie wiąże się dla Ciebie z żadnymi kosztami, a my poinformujemy Cię o niej wyraźnie i z wyprzedzeniem.</p>
+<p>Jeżeli taka zmiana <strong>istotnie i negatywnie</strong> wpływa na Twój dostęp do usługi lub korzystanie z niej, możesz wypowiedzieć umowę bez zachowania terminu wypowiedzenia w ciągu <strong>30 dni</strong> od poinformowania o zmianie lub od jej dokonania — z prawem do zwrotu proporcjonalnego. Uprawnienie to nie przysługuje, jeżeli zapewnimy Ci możliwość zachowania usługi bez zmian, bez dodatkowych kosztów.</p>
+<p><strong>Usunięcie funkcji z Tieru Premium i przeniesienie jej do wyższego, płatnego pakietu w trakcie opłaconego okresu jest wyłączone.</strong> Nie odbieramy funkcji, za które już zapłaciłeś.</p>
+<h3 id="pl-20-postanowienia-koncowe">20. Postanowienia końcowe</h3>
+<ol><li><strong>Rozdzielność postanowień.</strong> Jeżeli którekolwiek postanowienie Regulaminu okaże się nieważne lub bezskuteczne, pozostałe postanowienia zachowują moc. W miejsce postanowienia nieważnego stosuje się odpowiedni przepis prawa.</li><li><strong>Brak zrzeczenia się praw.</strong> Niewykonanie przez którąkolwiek ze stron przysługującego jej uprawnienia nie oznacza zrzeczenia się go.</li><li><strong>Przeniesienie praw.</strong> Nie możesz przenieść praw i obowiązków wynikających z umowy na osobę trzecią bez naszej zgody. Możemy przenieść je w związku ze zbyciem lub reorganizacją przedsiębiorstwa, informując o tym z wyprzedzeniem <strong>co najmniej 30 dni</strong>; Konsumentowi przysługuje wówczas prawo wypowiedzenia umowy ze skutkiem natychmiastowym i zwrot proporcjonalny.</li><li><strong>Język.</strong> Regulamin sporządzono w języku polskim; wersja angielska ma charakter pomocniczy. W razie rozbieżności rozstrzyga wersja polska — z zastrzeżeniem, że jeżeli bezwzględnie obowiązujące przepisy prawa państwa Twojego zwykłego pobytu wymagają udostępnienia warunków umownych w innym języku, stosuje się te przepisy.</li><li><strong>Całość porozumienia.</strong> Regulamin wraz z <a href="privacy.html">Polityką prywatności</a> stanowi całość umowy między Tobą a nami w zakresie korzystania z Aplikacji.</li><li><strong>Klauzule niedozwolone.</strong> Żadne postanowienie Regulaminu nie ma na celu ograniczenia praw Konsumenta wynikających z bezwzględnie obowiązujących przepisów. W razie sprzeczności pierwszeństwo mają te przepisy.</li></ol>
+<h3 id="pl-21-kontakt">21. Kontakt</h3>
+<!-- TODO: TODO(research): uzupełnić NIP -->
+<!-- TODO: TODO(research): uzupełnić adres pocztowy -->
+<blockquote><p><strong>pawel@orzech.me</strong><br>
+Paweł Orzech, jednoosobowa działalność gospodarcza, Polska<br>
+NIP: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić NIP</strong><br>
+Adres do doręczeń: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić adres pocztowy</strong></p></blockquote>
+<!-- TODO: TODO(research): uzupełnić datę publikacji aplikacji w Google Play -->
+<p>Data sporządzenia: <strong>2026-07-26</strong> · Wersja: <strong>1.0</strong> Data wejścia w życie: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić datę publikacji aplikacji w Google Play</strong></p>
+<hr>
+<hr>
+  </section>
+  <section class="prose" data-lang="en" lang="en" aria-label="Terms of Service">
+    <h2 class="visually-hidden">Terms of Service (EN)</h2>
+<!-- TODO: TODO(research): determine the Google Play publication date and use it as the effective date -->
+<blockquote><p>Version: 1.0 · Drafted: 2026-07-26 · Effective date: <strong><span class="todo-mark">TODO(research)</span>: determine the Google Play publication date and use it as the effective date</strong></p><p>The Polish version of this document is the binding one; this English version is provided for convenience.</p><p>Related documents: <a href="privacy.html">Privacy Policy</a> · <a href="licenses.html#disclaimer">Non-affiliation notice</a> · <a href="licenses.html">Sources and licences</a></p></blockquote>
+<h3 id="en-1-who-provides-the-service">1. Who provides the service</h3>
+<p>The service is provided by:</p>
+<!-- TODO: TODO(research): fill in the business tax identification number -->
+<!-- TODO: TODO(research): fill in the REGON if it is to be published -->
+<!-- TODO: TODO(research): fill in the postal address of the business -->
+<blockquote><p><strong>Paweł Orzech</strong>, sole trader registered in the Polish CEIDG business register<br>
+Tax ID (NIP): <strong><span class="todo-mark">TODO(research)</span>: fill in the business tax identification number</strong><br>
+Statistical number (REGON): <strong><span class="todo-mark">TODO(research)</span>: fill in the REGON if it is to be published</strong><br>
+Business and service-of-process address: <strong><span class="todo-mark">TODO(research)</span>: fill in the postal address of the business</strong><br>
+Country: Poland<br>
+Email: <strong>pawel@orzech.me</strong></p></blockquote>
+<p><code>pawel@orzech.me</code> is the primary contact channel for everything: technical issues, complaints, subscription matters and personal data requests.</p>
+<p>Subscriptions are sold through <strong>Google Play</strong>, operated for users in the European Economic Area by Google Ireland Limited. Google Play is a separate entity and its use is governed by its own terms.</p>
+<h3 id="en-2-definitions">2. Definitions</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Term</th><th scope="col">Meaning</th></tr></thead><tbody><tr><td><strong>App</strong> / <strong>Exiva</strong></td><td>the Exiva Android application (<code>me.orzech.exiva</code>) together with its associated server services</td></tr><tr><td><strong>Provider</strong> / <strong>we</strong></td><td>Paweł Orzech, details in section 1</td></tr><tr><td><strong>User</strong> / <strong>you</strong></td><td>the person using the App</td></tr><tr><td><strong>Consumer</strong></td><td>a natural person entering into a legal transaction not directly connected with their business or profession</td></tr><tr><td><strong>Trader with consumer rights</strong></td><td>a natural person entering into a contract directly connected with their business where that contract is not of a professional character for them — entitled to part of consumer protections under Polish law</td></tr><tr><td><strong>Free tier</strong></td><td>the free feature set, available without an account and without payment</td></tr><tr><td><strong>Premium tier</strong></td><td>the paid feature set available under an active Subscription</td></tr><tr><td><strong>Subscription</strong></td><td>the paid, renewable service granting access to Premium features, sold via Google Play</td></tr><tr><td><strong>Exiva Account</strong></td><td>an optional account created by signing in with Google, used solely to restore a Subscription and to sync data</td></tr><tr><td><strong>User Content</strong></td><td>notes, goals, hunt session logs, alert rules and other data entered by the User</td></tr><tr><td><strong>External Sources</strong></td><td>publicly available services and interfaces the App fetches data from — in particular the TibiaData API, TibiaWiki (Fandom) and tibia.com</td></tr><tr><td><strong>Tibia</strong></td><td>the computer game Tibia, made and published by CipSoft GmbH</td></tr><tr><td><strong>Server save</strong></td><td>the daily maintenance window on the Tibia game servers, during which character data is unavailable or incomplete</td></tr></tbody></table></div>
+<h3 id="en-3-unofficial-status-the-most-important-statement-in-this-doc">3. Unofficial status — the most important statement in this document</h3>
+<p><strong>Exiva is an unofficial fan-made application.</strong></p>
+<p>Exiva is <strong>not</strong> created, published, sponsored, authorised by, or in any other way affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>.</p>
+<p><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH.</p>
+<p><strong>The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</strong></p>
+<p>The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in the App may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+<p>Full non-affiliation notice: <a href="licenses.html#disclaimer">DISCLAIMER.md</a>.</p>
+<p><strong>The Subscription fee is a fee for the App's features — it is not a fee for access to the game Tibia, to its content, or to CipSoft GmbH's data.</strong> Buying a Subscription grants no in-game entitlements and has no connection to Premium Time or any other CipSoft GmbH service.</p>
+<h3 id="en-4-what-the-service-is">4. What the service is</h3>
+<p>Exiva is a companion for Tibia players: track characters, watch guilds, houses and highscores, keep notes and goals, analyse hunt sessions, use calculators and an encyclopaedia, and receive notifications about events you define yourself.</p>
+<p><strong>Exiva is not, and will never be:</strong></p>
+<ul><li>a gameplay automation tool (bot, macro, or script controlling the game client);</li><li>a tool integrating with the game client, capturing packets, or modifying the game;</li><li>a tool that requires or accepts your Tibia login credentials.</li></ul>
+<h4 id="en-4-1-free-tier">4.1. Free tier</h4>
+<p>Free of charge, available without an account or registration. It includes, among other things: tracking one character, basic calculators, browsing the encyclopaedia and public data, limited history, and broadcast notifications (news, events, daily digest).</p>
+<p>In the Free tier <strong>we create no account and store none of your data on our server</strong> — everything stays on your device.</p>
+<h4 id="en-4-2-premium-tier">4.2. Premium tier</h4>
+<p>Paid, available after purchasing a Subscription. It includes, among other things: tracking up to 50 characters, advanced alert rules, cross-device sync, full history, hunt session analyser, goals, offline encyclopaedia, house and auction watching, and extended guild tooling.</p>
+<p>The current, binding feature scope of both tiers is presented in the App on the subscription screen before purchase. Feature scope may change in accordance with sections 9 and 19.</p>
+<p><strong>The App contains no ads.</strong> We have no plans to introduce them in any tier.</p>
+<h4 id="en-4-3-technical-requirements">4.3. Technical requirements</h4>
+<p>Android 8.0 (API 26) or newer, an internet connection, and free storage space. Purchasing a Subscription requires a Google Play account with an available payment method. Notifications require Google Play Services. An Exiva Account requires a Google account.</p>
+<h3 id="en-5-formation-of-the-contract">5. Formation of the contract</h3>
+<p>The contract for the Free tier is formed when you first launch the App and accept these Terms.</p>
+<p>The contract for the paid service (Subscription) is formed when the purchase is confirmed in Google Play and the first payment is taken. Payment is processed by Google — we neither receive nor process your card details or any other payment data.</p>
+<p>The contract for an Exiva Account is formed the first time you sign in with Google. Creating an Account is <strong>optional</strong> and is not a condition of using a Subscription.</p>
+<h3 id="en-6-subscription-prices-billing-renewal-cancellation">6. Subscription — prices, billing, renewal, cancellation</h3>
+<h4 id="en-6-1-prices-and-billing-periods">6.1. Prices and billing periods</h4>
+<div class="table-wrap"><table><thead><tr><th scope="col">Plan</th><th scope="col">Indicative price (PLN, incl. tax)</th><th scope="col">Billing period</th></tr></thead><tbody><tr><td>Premium monthly</td><td><strong>8.99 PLN</strong></td><td>1 month</td></tr><tr><td>Premium annual</td><td><strong>69.99 PLN</strong></td><td>12 months</td></tr><tr><td>Founders offer (first year)</td><td><strong>49.99 PLN</strong></td><td>12 months, then renewing at the standard annual price</td></tr></tbody></table></div>
+<p><strong>The prices above are indicative.</strong> The binding price is always the one shown in the App and in Google Play at the moment of purchase — it is localised to your country and currency, fetched directly from Google Play, and may differ from the above. All prices include applicable taxes, including VAT accounted for by Google Play according to your country of residence.</p>
+<p><strong>We offer no lifetime purchase.</strong> The reason is the cost structure: the service incurs ongoing server costs that a one-off payment cannot cover over time. The Founders offer is a first-year discount, not a lifetime purchase.</p>
+<h4 id="en-6-2-automatic-renewal">6.2. Automatic renewal</h4>
+<p><strong>The Subscription renews automatically</strong> for a further billing period unless you cancel it at least <strong>24 hours before</strong> the end of the current period. The charge for the next period is taken by Google Play on the last day of the current period.</p>
+<p>Google Play notifies you of upcoming renewals in accordance with its own rules. If the plan price changes, Google Play will inform you in advance and — under its own rules — either ask for your consent or allow you to cancel before the new price takes effect. A price change never applies retroactively to a period already paid for.</p>
+<h4 id="en-6-3-cancellation">6.3. Cancellation</h4>
+<p><strong>You cancel the Subscription in Google Play</strong>, not with us — we have no technical ability to cancel your Subscription:</p>
+<blockquote><p>Google Play app → profile icon → <strong>Payments and subscriptions</strong> → <strong>Subscriptions</strong> → Exiva → <strong>Cancel subscription</strong></p></blockquote>
+<p>A shortcut to that screen is also in the App: Settings → Subscription → "Manage subscription".</p>
+<p>Cancelling means no further renewal. <strong>You keep access to Premium features until the end of the period you paid for</strong> — you do not lose it at the moment of cancelling, and no pro-rata refund is due for that period (except under sections 7, 8 and 9).</p>
+<h4 id="en-6-4-grace-period-account-hold-pause">6.4. Grace period, account hold, pause</h4>
+<p>These mechanisms are provided by Google Play; we merely honour the statuses it reports.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Situation</th><th scope="col">What happens</th></tr></thead><tbody><tr><td><strong>Grace period</strong> — payment failed</td><td>Premium features <strong>keep working</strong> for the grace period configured in Google Play while Google retries the charge. The App shows a message asking you to fix your payment method</td></tr><tr><td><strong>Account hold</strong> — payment still failing after the grace period</td><td>Premium features are <strong>suspended</strong>. The Subscription is not yet cancelled. Once payment succeeds, access returns automatically with no data loss</td></tr><tr><td><strong>Pause</strong> — where Google Play offers it for our plans</td><td>Premium features are suspended for the chosen period and resume automatically afterwards. Your data is retained throughout</td></tr><tr><td><strong>Expiry</strong> — subscription ended and not renewed</td><td>The App returns to the Free tier. Local data stays on your device; the server-side sync copy is retained per the periods in the <a href="privacy.html">Privacy Policy</a> and becomes accessible again if you resubscribe</td></tr></tbody></table></div>
+<p><strong>Losing Premium access never deletes User Content stored on your device.</strong> You can read and export it in the Free tier too.</p>
+<h4 id="en-6-5-refunds">6.5. Refunds</h4>
+<p>Two parallel routes apply and you may use either.</p>
+<p><strong>Google Play route.</strong> Refunds for Google Play purchases are granted by Google under its own policy. You submit the request directly in Google Play (<code>play.google.com/store/account/orderhistory</code>). This is the fastest route and we recommend starting there.</p>
+<p><strong>Direct route.</strong> Independently of Google's policy, we honour your statutory rights: the right of withdrawal (section 7) and the remedies for lack of conformity of a digital service (section 8). If Google refuses a refund and you believe you are entitled to one by law — write to <code>pawel@orzech.me</code>. We will examine the case and, if the claim is well founded, issue a refund or price reduction <strong>regardless of Google's position</strong>, within 14 days of accepting the complaint.</p>
+<p>Nothing in this section limits your statutory rights as a Consumer.</p>
+<h3 id="en-7-right-of-withdrawal-14-days">7. Right of withdrawal — 14 days</h3>
+<p>If you are a <strong>Consumer</strong> or a <strong>Trader with consumer rights</strong>, you have the right to withdraw from a distance contract <strong>within 14 days</strong> of its conclusion, without giving a reason and without incurring costs. Basis: the Polish Consumer Rights Act of 30 May 2014, implementing Directive 2011/83/EU.</p>
+<h4 id="en-7-1-how-to-withdraw">7.1. How to withdraw</h4>
+<p>An unequivocal statement sent to <code>pawel@orzech.me</code> before the deadline is enough — for example: <em>"I withdraw from the contract for the Exiva Premium service concluded on [date]. [Name or Google Play order ID]."</em> You are not required to use a form; you may also use the statutory model withdrawal form.</p>
+<p>Including your Google Play order ID speeds things up. Payment is refunded promptly and no later than <strong>14 days</strong> after we receive your statement, using the same payment method.</p>
+<h4 id="en-7-2-when-the-right-of-withdrawal-ceases-read-this-carefully">7.2. When the right of withdrawal ceases — read this carefully</h4>
+<p>Under Art. 38(13) of the Polish Consumer Rights Act, the right of withdrawal <strong>does not apply</strong> to contracts for the supply of digital content or digital services not supplied on a tangible medium where all three of the following are met:</p>
+<ol><li>you gave <strong>prior express consent</strong> to performance beginning before the withdrawal period ends,</li><li>you <strong>acknowledged</strong> that you would thereby <strong>lose the right of withdrawal</strong>,</li><li>you <strong>received confirmation</strong> of the contract on a durable medium.</li></ol>
+<p><strong>How Exiva implements this.</strong> On the purchase screen, before payment is confirmed, we show a separate, not pre-ticked checkbox reading:</p>
+<blockquote><p>☐ <strong>I request that the Premium service begin immediately after purchase, before the 14-day withdrawal period expires. I acknowledge that once the service has been fully performed I will lose my right of withdrawal.</strong></p></blockquote>
+<p>Ticking this box is voluntary and is recorded together with the date and time. Confirmation of the contract — including the text of that consent, these Terms and the withdrawal notice — is provided on a durable medium (email to your account address if you have one; in every case the document is downloadable in the App under Settings → Subscription → "Purchase confirmation").</p>
+<p><strong>If you do not tick the box</strong>, Premium features are activated only after 14 days from purchase, and you retain the full right of withdrawal during that time.</p>
+<!-- TODO: TODO(research): -->
+<p><strong><span class="todo-mark">TODO(research)</span>:</strong> confirm with a lawyer whether, where the sale is technically executed through Google Play (Google being the party to the payment transaction and issuing the purchase confirmation), the obligation to inform and to obtain consent under Art. 38(13) rests with us, with Google, or with both — and whether the in-app consent mechanism described above is sufficient or a separate email confirmation is required in every case.</p>
+<h3 id="en-8-conformity-of-the-digital-service-with-the-contract">8. Conformity of the digital service with the contract</h3>
+<p>We are liable to Consumers and Traders with consumer rights for the conformity of the digital service with the contract, on the terms set out in Chapter 5b of the Polish Consumer Rights Act, implementing <strong>Directive (EU) 2019/770</strong> on certain aspects concerning contracts for the supply of digital content and digital services.</p>
+<p><strong>What this means in practice.</strong> The service must match its description, be fit for the purposes for which such services are normally used, be supplied in the most recent version available, and come with the updates necessary to keep it in conformity. Because a Subscription is a continuous service, this liability covers <strong>its entire duration</strong>, not just the moment of purchase.</p>
+<p><strong>If the service is not in conformity</strong>, you may require us to bring it into conformity. We may refuse if that would be impossible or would impose disproportionate costs. If we fail to bring the service into conformity within a reasonable time and without significant inconvenience to you, or if the lack of conformity is material, you may declare a <strong>price reduction</strong> or <strong>withdraw from the contract</strong>. A price reduction must be proportionate to the decrease in the value of the service compared with a conforming one.</p>
+<p>The burden of proving conformity rests with us for the whole period during which the service is to be supplied.</p>
+<p><strong>Updates.</strong> We will inform you of, and supply, the updates necessary to keep the service in conformity for the duration of the Subscription. If you fail to install such an update within a reasonable time, we are not liable for a lack of conformity resulting solely from that failure — provided we informed you of the update and of the consequences of not installing it.</p>
+<p><strong>Changes to the service during a Subscription</strong> are governed by section 19.</p>
+<h3 id="en-9-external-sources-no-sla-and-the-limits-of-our-liability">9. External Sources — no SLA, and the limits of our liability</h3>
+<p><strong>This is the section not to skip.</strong></p>
+<p>Exiva fetches game world data from publicly available External Sources, chiefly the <strong>TibiaData API</strong> (<code>api.tibiadata.com</code>), as well as TibiaWiki and the other services listed in <a href="licenses.html">ATTRIBUTIONS.md</a>.</p>
+<p><strong>These sources are operated by third parties, are free of charge, and give no warranty of availability or data accuracy. We have no service level agreement (SLA) with any of them.</strong> This also covers situations where a source is up but returns delayed, incomplete or incorrect data — for example during the daily <strong>server save</strong> on the game's servers, when character data is unavailable for some minutes.</p>
+<p>The honest boundaries that follow from this:</p>
+<ol><li><strong>We do not guarantee the availability, timeliness or accuracy of data originating from External Sources.</strong> The App always shows when data was last checked — treat that as part of the service, not as fine print.</li><li><strong>We are not liable for outages, changes, restrictions or discontinuation of External Sources</strong>, nor for their operators' decisions, including their introduction of access restrictions.</li><li><strong>We are liable for the App itself</strong> — for correctly fetching, storing, presenting and processing data, for clearly signalling when data is missing or stale, and for its own features (calculators, analyses, notes, alerts) working as described. This liability is in no way limited by this section.</li><li><strong>The Subscription fee is a fee for the App's features, not for access to game data.</strong></li></ol>
+<p><strong>What we do when an External Source fails.</strong> We maintain a local cache so a short outage does not disable the App. We silence alerts and refreshes during the probable server save window. If an outage is prolonged, we say so in the App. The App's network layer is designed so it can be switched to an alternative source or to our own deployment should that become necessary.</p>
+<p><strong>Limitation of liability.</strong> To the extent permitted by law, we are not liable for damage resulting from the unavailability or inaccuracy of data from External Sources, nor for in-game decisions made on the basis of information from the App. <strong>This limitation does not apply</strong> to damage caused intentionally, to personal injury, or to any liability that cannot be excluded or limited towards a Consumer under mandatory provisions of Polish and EU law — in particular liability for lack of conformity of a digital service (section 8) and liability for our own non-performance or improper performance.</p>
+<p>Nothing in this section excludes liability for the App's own features and it may not be construed that way.</p>
+<!-- TODO: TODO(research): -->
+<p><strong><span class="todo-mark">TODO(research)</span>:</strong> have a lawyer assess whether the "we are liable for the App / not liable for a third party's API" split holds up against a Consumer in light of Art. 385(1) of the Polish Civil Code (unfair contract terms) and Art. 43k et seq. of the Consumer Rights Act — question <strong>#9</strong> on the list in <code>docs/DATA_LICENSING.md</code>.</p>
+<h3 id="en-10-service-availability-and-maintenance">10. Service availability and maintenance</h3>
+<p>We make every effort to keep the service running, but we do not guarantee uninterrupted availability — it is run by one person on a commercial provider's infrastructure.</p>
+<ul><li><strong>Planned maintenance</strong> (updates, migrations) is announced in the App at least <strong>24 hours</strong> in advance where possible, and we try to schedule it outside peak hours.</li><li><strong>Unplanned outages</strong> are addressed promptly; longer ones are announced in the App and on the project website.</li><li><strong>Tibia's server save</strong> is downtime on CipSoft GmbH's side, not ours. During it character data may be unavailable or stale, and alerts are deliberately silenced. This is not an App failure.</li></ul>
+<p>If an outage on our side is material and prolonged while you hold an active Subscription, the remedies in section 8 apply — including a price reduction proportionate to the period during which the service was not supplied.</p>
+<h3 id="en-11-rules-of-use-what-is-not-allowed">11. Rules of use — what is not allowed</h3>
+<p>By using Exiva you undertake <strong>not</strong> to:</p>
+<ol><li><strong>Automate Tibia gameplay</strong> or use the App as part of a bot, macro, client-controlling script or any tool violating the <a href="https://www.tibia.com/support/?subtopic=legaldocuments&amp;page=rules" rel="noopener noreferrer" target="_blank">Tibia Rules</a>. Exiva offers no such features, and attempting to use it this way breaches these Terms.</li><li><strong>Reverse engineer</strong>, decompile, disassemble or modify the App beyond what is mandatorily permitted by law (in particular Arts. 74(4) and 75 of the Polish Copyright Act — decompilation rights for the purpose of achieving interoperability remain unaffected).</li><li><strong>Abuse the App's interfaces or our servers</strong> — circumvent rate limits, use our backend as a free proxy for your own projects, generate artificial traffic, or conduct denial-of-service attacks.</li><li><strong>Circumvent payment and entitlement mechanisms</strong> — modify the App to unlock Premium features, share or resell purchase tokens, or use one Subscription for multiple people beyond what Google Play permits (family sharing).</li><li><strong>Trade accounts</strong> — use the App to sell, buy or exchange Tibia accounts and characters for real-world value. This is prohibited both by the game's rules and by the Tibia Fansite Agreement.</li><li><strong>Submit unlawful content</strong> — in notes, goal names or any other field: content infringing third party rights, abusive content, hate speech, third parties' personal data without a legal basis, malware, or phishing links.</li><li><strong>Impersonate</strong> the App, us, CipSoft GmbH or any other entity; or distribute modified versions of the App.</li><li><strong>Infringe copyright and licences</strong> of content presented in the App — in particular by bulk extracting and redistributing the App's databases beyond what the source licences permit (section 12).</li></ol>
+<p>Breaching these rules may result in suspension or termination of access — on the terms in section 14.</p>
+<h3 id="en-12-user-content-and-intellectual-property">12. User Content and intellectual property</h3>
+<h4 id="en-12-1-your-content-stays-yours">12.1. Your content stays yours</h4>
+<p>You retain all rights to the User Content you enter into the App: notes, goals, hunt session logs and alert rules. <strong>We acquire no rights to it.</strong></p>
+<p>You grant us only a <strong>non-exclusive, royalty-free, limited licence</strong> to store, reproduce and process User Content <strong>solely to the extent necessary to provide the service</strong> — that is, to save it, synchronise it across your devices, back it up, and display it to you. The licence lasts as long as we store the data and expires when it is deleted.</p>
+<p><strong>We use your content for no other purpose.</strong> We do not analyse it for marketing, do not share it with other users, do not sell it, and do not use it to train machine learning models.</p>
+<h4 id="en-12-2-our-rights">12.2. Our rights</h4>
+<p>The App, its code, interface, visual identity, the name "Exiva", icons, illustrations, original texts and our own computations are protected by copyright and other intellectual property rights belonging to the Provider. These Terms transfer none of those rights to you — you receive only a non-exclusive, non-transferable licence to use the App for its intended purpose, for the duration of the contract.</p>
+<h4 id="en-12-3-cipsoft-gmbh-s-rights">12.3. CipSoft GmbH's rights</h4>
+<p>Tibia, its world, names, mechanics, graphics and all other elements belong to <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> and are protected by its copyright and trademark rights. Exiva uses publicly available information about the game as a fan-made application. All references to Tibia and CipSoft are descriptive and indicate the origin of the data. Details: <a href="licenses.html#disclaimer">DISCLAIMER.md</a>.</p>
+<h4 id="en-12-4-content-under-cc-by-sa-3-0">12.4. Content under CC BY-SA 3.0</h4>
+<p>Part of the encyclopaedic content (descriptions of creatures, items, spells, NPCs and quests) comes from <strong>TibiaWiki</strong> and is used under the <strong><a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-ShareAlike 3.0 Unported</a></strong> licence.</p>
+<p>For every such record the App indicates the source, the authors (via a link to the article's edit history), the licence, and — where the content was shortened, reformatted or translated — a note about the changes made. Such content remains available under CC BY-SA 3.0 in the version we present as well.</p>
+<p>Full list of sources, licences and required attributions: <a href="licenses.html">ATTRIBUTIONS.md</a>.</p>
+<h3 id="en-13-notifications">13. Notifications</h3>
+<p>The App may send two kinds of notifications:</p>
+<ul><li><strong>broadcast</strong> — news, in-game event information, daily digest; sent to a topic channel without identifying recipients;</li><li><strong>addressed</strong> — alerts you configured yourself (available in the Premium tier).</li></ul>
+<p>You can turn both off at any time in the App or in Android settings. <strong>We send no advertising notifications</strong> and no marketing notifications without your consent. We do not guarantee delivery within any particular time — delivery is handled by Firebase Cloud Messaging, and Android may delay or withhold notifications as part of battery optimisation.</p>
+<h3 id="en-14-suspension-and-termination-of-access">14. Suspension and termination of access</h3>
+<h4 id="en-14-1-your-termination">14.1. Your termination</h4>
+<p>You may stop using the App at any time, delete your Exiva Account (Settings → Account → Delete account, or via the web page indicated in the <a href="privacy.html">Privacy Policy</a>), and uninstall the App. Deleting your Account <strong>does not automatically cancel your Subscription</strong> — you cancel that in Google Play (section 6.3). If you delete the Account without cancelling, Google will keep charging you.</p>
+<h4 id="en-14-2-our-suspension-or-termination">14.2. Our suspension or termination</h4>
+<p>We may suspend or terminate access to the service if:</p>
+<ul><li>you breach these Terms materially or persistently, in particular the rules in section 11;</li><li>your actions threaten the security, stability or integrity of the service or of other users;</li><li>mandatory law, an authority's decision or a court order requires it.</li></ul>
+<p><strong>Procedure.</strong> Except where immediate action is required (an active attack, risk to other users, an authority's demand), before suspending we notify you of the identified breach at the email address linked to your Account and allow <strong>at least 7 days</strong> to remedy it or to explain. Immediate suspensions are justified to you promptly after they are applied. You may appeal any decision to <code>pawel@orzech.me</code>; appeals are handled within 14 days.</p>
+<h4 id="en-14-3-consequences-for-an-active-subscription">14.3. Consequences for an active Subscription</h4>
+<div class="table-wrap"><table><thead><tr><th scope="col">Situation</th><th scope="col">Financial consequence</th></tr></thead><tbody><tr><td>Suspension or termination <strong>caused by us</strong> or without a basis in these Terms</td><td><strong>pro-rata refund</strong> for the unused paid period</td></tr><tr><td>Suspension or termination <strong>due to your material breach</strong> of these Terms</td><td>no refund for the period during which access was suspended on that ground; this does not exclude your statutory rights or your right of appeal</td></tr><tr><td><strong>We</strong> discontinue the service (ceasing operations)</td><td>section 15</td></tr></tbody></table></div>
+<p>Because payments run through Google Play, a refund may require us to file it in Google Play Console or to pay you directly — we will indicate the route in our response to your request.</p>
+<h3 id="en-15-contingency-plan-if-a-data-source-disappears-or-fansite-s">15. Contingency plan — if a data source disappears or fansite status is withdrawn</h3>
+<p>Exiva depends on data from services we do not control and operates in an ecosystem whose rules are set by CipSoft GmbH. We consider this a material risk and state it plainly rather than burying it in a general force majeure clause.</p>
+<p><strong>Scenario A — permanent unavailability of the primary data source</strong> (e.g. the TibiaData API shuts down or we are permanently cut off from it).</p>
+<ol><li>We announce the situation promptly in the App and on the project website.</li><li>We attempt to switch to an alternative source or to our own deployment of the source software, where its licence permits.</li><li>If within <strong>30 days</strong> we have not restored the features depending on that source to an extent material to the Subscription:<ul><li>we <strong>stop selling new Subscriptions</strong>;</li><li>we <strong>turn off automatic renewals</strong>;</li><li>holders of active Subscriptions are offered a <strong>pro-rata refund</strong> for the unused period or, at their choice, an extension of the Subscription by the length of the outage;</li><li>features independent of that source (notes, goals, calculators, offline data) remain available.</li></ul></li></ol>
+<p><strong>Scenario B — loss or non-award of Supported/Promoted Tibia Fansite status, or CipSoft GmbH objecting to the App.</strong> The Tibia Fansite Agreement allows CipSoft to terminate the co-operation at any time without giving reasons; we accept in advance that such a decision is binding and we do not intend to contest it at users' expense.</p>
+<ol><li>We adapt the App to CipSoft's position — removing the disputed features or content.</li><li>If adaptation is not possible and we must discontinue the service:<ul><li>we <strong>stop sales and turn off automatic renewals</strong> immediately;</li><li>we announce discontinuation at least <strong>30 days</strong> in advance;</li><li>holders of active Subscriptions receive a <strong>pro-rata refund</strong> for the unused paid period;</li><li>we provide <strong>export of all your data</strong> to a JSON file and keep that available throughout the notice period;</li><li>where feasible, we release a final version of the App running on local data only, without server-dependent features.</li></ul></li></ol>
+<p><strong>Scenario C — we cease operations for other reasons.</strong> We follow Scenario B(2): at least 30 days' notice, renewals off, pro-rata refunds, guaranteed data export.</p>
+<p>In none of these scenarios do we keep payments for a period in which the service is not supplied.</p>
+<h3 id="en-16-complaints">16. Complaints</h3>
+<p>Complaints go to <strong><code>pawel@orzech.me</code></strong>. Please include: a description of the problem, when it occurred, the App version and device model (Settings → About), your Google Play order ID if the matter concerns payment, and what you are asking for.</p>
+<ul><li><strong>Acknowledgement of receipt</strong>: within <strong>7 business days</strong>.</li><li><strong>Resolution</strong>: within <strong>14 days</strong> of receipt. Failure to respond within that period means the complaint is deemed accepted as requested, to the extent provided for by consumer protection law.</li><li>Our response is provided on a durable medium — to the email address the complaint was sent from.</li></ul>
+<p>Complaints concerning <strong>the payment transaction itself</strong> (a charge, a payment not credited, a refund) are handled fastest by Google Play, since Google processes the payment. This does not release us from liability for the service — see sections 6.5 and 8.</p>
+<h3 id="en-17-out-of-court-dispute-resolution">17. Out-of-court dispute resolution</h3>
+<p>If you are a Consumer, out-of-court complaint and redress mechanisms are available to you. Using them is voluntary for both parties.</p>
+<ul><li><strong>Municipal or district consumer ombudsman (rzecznik konsumentów)</strong> — free legal help, mediation and representations to the trader. The ombudsman competent for your place of residence.</li><li><strong>Provincial Trade Inspection Authorities (Wojewódzkie Inspektoraty Inspekcji Handlowej)</strong> — mediation proceedings and permanent consumer arbitration courts. Information: <a href="https://uokik.gov.pl" rel="noopener noreferrer" target="_blank">https://uokik.gov.pl</a></li><li><strong>Office of Competition and Consumer Protection (UOKiK)</strong> — information on out-of-court dispute resolution and the register of authorised entities: <a href="https://uokik.gov.pl" rel="noopener noreferrer" target="_blank">https://uokik.gov.pl</a></li><li><strong>Consumer helpline</strong> and the <strong>Consumer E-Advice Centre</strong> run by consumer organisations.</li><li><strong>European Consumer Centre</strong> — help with cross-border disputes within the EU: <a href="https://konsument.gov.pl" rel="noopener noreferrer" target="_blank">https://konsument.gov.pl</a></li></ul>
+<!-- TODO: TODO(research): -->
+<p><strong>ODR platform.</strong> The EU online dispute resolution (ODR) platform was established under Regulation (EU) No 524/2013. <strong><span class="todo-mark">TODO(research)</span>:</strong> before publication, verify the current status of that platform and of the obligation to link to it — the rules in this area have been amended and the information duty may have been replaced. If the platform is still operating, insert its address here and add the link in the App; if not, delete this paragraph and keep the other channels listed above.</p>
+<p>We have not committed to using any particular authorised out-of-court dispute resolution body, but we will consider any mediation proposal in good faith.</p>
+<h3 id="en-18-governing-law-and-jurisdiction">18. Governing law and jurisdiction</h3>
+<p>These Terms and the contracts concluded under them are governed by <strong>Polish law</strong>.</p>
+<p><strong>Consumer reservation:</strong> choosing Polish law does not deprive you of the protection afforded by the mandatory provisions of the law of your country of habitual residence, if that is a different country — in accordance with Art. 6 of Regulation (EC) No 593/2008 (Rome I).</p>
+<p><strong>Jurisdiction.</strong> Disputes are resolved by the courts having jurisdiction under Polish law. If you are a Consumer, you may bring proceedings before the court for your place of residence — and under Regulation (EU) No 1215/2012 (Brussels I recast) you may not be sued in the courts of a country other than that of your domicile.</p>
+<p>For Users who are neither Consumers nor Traders with consumer rights, the competent court is the one having jurisdiction over the Provider's place of business.</p>
+<h3 id="en-19-changes-to-these-terms-and-to-the-service">19. Changes to these Terms and to the service</h3>
+<h4 id="en-19-1-changes-to-these-terms">19.1. Changes to these Terms</h4>
+<p>We may amend these Terms for valid reasons: changes in law, changes in the scope or manner of providing the service, changes to the pricing model, changes on the side of Google Play or External Sources, the need to counter abuse, or security improvements.</p>
+<ul><li>We announce changes <strong>at least 14 days before</strong> they take effect: an in-app message, and for Exiva Account holders also an email.</li><li>The announcement states exactly what changes and from when.</li><li>If you do not accept a change, you may cancel your Subscription in Google Play and stop using the App before it takes effect. If a change materially and adversely affects access to features you paid for, you are entitled to a <strong>pro-rata refund</strong> for the unused period.</li><li>Contracts concluded before the changes take effect remain governed by the previous version of these Terms until the end of the current billing period, unless the change follows from mandatory law.</li><li>An archive of previous versions is available in the project repository history.</li></ul>
+<h4 id="en-19-2-changes-to-the-service-during-a-subscription">19.2. Changes to the service during a Subscription</h4>
+<p>Under the provisions implementing Directive (EU) 2019/770, we may make changes to the digital service going beyond what is necessary to maintain conformity only where: there is a valid reason as set out in section 19.1, the change entails no cost to you, and we inform you clearly and in advance.</p>
+<p>If such a change <strong>materially and negatively</strong> affects your access to, or use of, the service, you may terminate the contract with immediate effect within <strong>30 days</strong> of being informed of the change or of the change being made — with a right to a pro-rata refund. This right does not apply if we enable you to keep the service unchanged at no additional cost.</p>
+<p><strong>Removing a feature from the Premium tier and moving it to a higher paid package during a paid period is excluded.</strong> We do not take away features you have already paid for.</p>
+<h3 id="en-20-final-provisions">20. Final provisions</h3>
+<ol><li><strong>Severability.</strong> If any provision of these Terms proves invalid or ineffective, the remaining provisions stay in force. The invalid provision is replaced by the relevant provision of law.</li><li><strong>No waiver.</strong> A party's failure to exercise a right does not constitute a waiver of it.</li><li><strong>Assignment.</strong> You may not assign your rights and obligations under the contract to a third party without our consent. We may assign them in connection with a sale or reorganisation of the business, giving at least <strong>30 days'</strong> notice; a Consumer may then terminate the contract with immediate effect and receive a pro-rata refund.</li><li><strong>Language.</strong> These Terms were drawn up in Polish; the English version is auxiliary. In the event of discrepancy the Polish version prevails — save that where mandatory provisions of the law of your country of habitual residence require contract terms in another language, those provisions apply.</li><li><strong>Entire agreement.</strong> These Terms together with the <a href="privacy.html">Privacy Policy</a> constitute the entire agreement between you and us regarding use of the App.</li><li><strong>Unfair terms.</strong> No provision of these Terms is intended to limit Consumer rights arising from mandatory law. In the event of conflict, those provisions prevail.</li></ol>
+<h3 id="en-21-contact">21. Contact</h3>
+<!-- TODO: TODO(research): fill in the NIP -->
+<!-- TODO: TODO(research): fill in the postal address -->
+<blockquote><p><strong>pawel@orzech.me</strong><br>
+Paweł Orzech, sole trader, Poland<br>
+Tax ID (NIP): <strong><span class="todo-mark">TODO(research)</span>: fill in the NIP</strong><br>
+Service-of-process address: <strong><span class="todo-mark">TODO(research)</span>: fill in the postal address</strong></p></blockquote>
+<!-- TODO: TODO(research): fill in the Google Play publication date -->
+<p>Drafted: <strong>2026-07-26</strong> · Version: <strong>1.0</strong> Effective date: <strong><span class="todo-mark">TODO(research)</span>: fill in the Google Play publication date</strong></p>
+  </section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Exiva</h2>
+        <ul>
+          <li><a href="index.html">Strona główna / Home</a></li>
+          <li><a href="mailto:pawel@orzech.me">pawel@orzech.me</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dokumenty / Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Polityka prywatności / Privacy Policy</a></li>
+          <li><a href="terms.html">Regulamin / Terms of Service</a></li>
+          <li><a href="licenses.html">Licencje i atrybucje / Licences &amp; attributions</a></li>
+          <li><a href="delete-account.html">Usuwanie konta / Delete your account</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Źródła / Sources</h2>
+        <ul>
+          <li><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a></li>
+          <li><a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">cipsoft.com</a></li>
+          <li><a href="https://tibiadata.com" rel="noopener noreferrer" target="_blank">TibiaData API</a></li>
+          <li><a href="https://tibia.fandom.com" rel="noopener noreferrer" target="_blank">TibiaWiki</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p lang="pl"><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong> Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p lang="en"><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p lang="pl">Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
+      <p lang="en">The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+    </div>
+
+    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · <span lang="pl">Część danych encyklopedycznych pochodzi z TibiaWiki i jest dostępna na licencji <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>.</span> <span lang="en">Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</span></p>
+  </div>
+</footer>
+</body>
+</html>

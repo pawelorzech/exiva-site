@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usunięcie konta i danych / Delete your account — Exiva</title>
+<meta name="description" content="Jak usunąć konto Exiva i powiązane dane — w aplikacji albo przez e-mail. Co usuwamy, co zostaje i na jak długo.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#12100C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FDF8EF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Usunięcie konta i danych / Delete your account — Exiva">
+<meta property="og:description" content="Jak usunąć konto Exiva i powiązane dane — w aplikacji albo przez e-mail. Co usuwamy, co zostaje i na jak długo.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+(function () {
+  var root = document.documentElement;
+  root.className += " js";
+  document.addEventListener("DOMContentLoaded", function () {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang-btn]"));
+    if (!buttons.length) return;
+    function apply(lang) {
+      Array.prototype.forEach.call(document.querySelectorAll("[data-lang]"), function (el) {
+        if (el.getAttribute("data-lang") === lang) el.setAttribute("data-active", "");
+        else el.removeAttribute("data-active");
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-lang-btn") === lang ? "true" : "false");
+      });
+      try { localStorage.setItem("exiva-lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("exiva-lang"); } catch (e) {}
+    var guess = (navigator.language || "pl").toLowerCase().indexOf("pl") === 0 ? "pl" : "en";
+    apply(saved === "pl" || saved === "en" ? saved : guess);
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { apply(b.getAttribute("data-lang-btn")); });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści / Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" width="32" height="32" viewBox="0 0 108 108" role="img" aria-label="Exiva" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand-deleteaccounthtml-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFDF98"/>
+      <stop offset="55%" stop-color="#E6C25C"/>
+      <stop offset="100%" stop-color="#B08C1E"/>
+    </linearGradient>
+    <radialGradient id="brand-deleteaccounthtml-bg" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0%" stop-color="#2C2721"/>
+      <stop offset="100%" stop-color="#12100C"/>
+    </radialGradient>
+  </defs>
+  <rect width="108" height="108" rx="20" fill="url(#brand-deleteaccounthtml-bg)"/>
+  <circle cx="54" cy="54" r="33" fill="none" stroke="url(#brand-deleteaccounthtml-gold)" stroke-width="3.5" opacity="0.55"/>
+  <circle cx="54" cy="54" r="24.5" fill="none" stroke="url(#brand-deleteaccounthtml-gold)" stroke-width="1.5" opacity="0.3"/>
+  <path d="M54 26 Q57.5 50.5 82 54 Q57.5 57.5 54 82 Q50.5 57.5 26 54 Q50.5 50.5 54 26 Z" fill="url(#brand-deleteaccounthtml-gold)"/>
+</svg><span>Exiva</span></a>
+    <nav class="site-nav" aria-label="Główna nawigacja / Main navigation">
+      <a href="privacy.html"><span lang="pl">Prywatność</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Privacy</span></a>
+      <a href="terms.html"><span lang="pl">Regulamin</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Terms</span></a>
+      <a href="licenses.html"><span lang="pl">Licencje</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Licences</span></a>
+      <a href="delete-account.html" aria-current="page"><span lang="pl">Usuń konto</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Delete account</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap page-head">
+  <div class="prose">
+    <h1>Usunięcie konta i danych <span class="visually-hidden">/ Account and data deletion</span></h1>
+    <p class="doc-meta" lang="pl">Ta strona opisuje, jak usunąć konto Exiva oraz powiązane z nim dane — także wtedy, gdy nie masz już zainstalowanej aplikacji. Wymóg Google Play (Data deletion).</p>
+    <p class="doc-meta" lang="en">This page explains how to delete your Exiva account and the data linked to it — including when the app is no longer installed. Required by Google Play (Data deletion).</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="prose">
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Język / Language">
+    <button type="button" data-lang-btn="pl" aria-pressed="true" lang="pl">Polski</button>
+    <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">English</button>
+  </div>
+  <p class="hint" data-lang="pl" data-active lang="pl">Wersja polska jest wersją wiążącą.</p>
+  <p class="hint" data-lang="en" lang="en">The Polish version is the binding one; this translation is informative.</p>
+</div>
+  </div>
+</div>
+
+<article class="wrap legal-body">
+<section class="prose" data-lang="pl" data-active lang="pl">
+
+<h2>Aplikacja, której to dotyczy</h2>
+<p>Exiva — aplikacja na Androida, identyfikator pakietu <code>me.orzech.exiva</code>. Deweloper: Paweł Orzech, <a href="mailto:pawel@orzech.me">pawel@orzech.me</a>.</p>
+
+<div class="callout">
+  <p><strong>Konto jest opcjonalne.</strong> Jeżeli korzystasz z wersji darmowej albo z Premium bez logowania, <strong>nie mamy o Tobie żadnego wpisu w bazie</strong>. Wtedy nie ma czego usuwać po naszej stronie — wystarczy odinstalować aplikację lub wyczyścić jej dane w ustawieniach Androida.</p>
+</div>
+
+<h2>Sposób 1 — w aplikacji</h2>
+<ol>
+  <li>Otwórz Exivę i zaloguj się na konto, które chcesz usunąć.</li>
+  <li>Przejdź do <strong>Ustawienia → Konto → Usuń konto</strong>.</li>
+  <li>Potwierdź. Konto i powiązane z nim dane zostaną usunięte niezwłocznie.</li>
+</ol>
+
+<h2>Sposób 2 — przez e-mail (bez aplikacji)</h2>
+<p>Jeżeli nie masz już aplikacji na urządzeniu, wyślij żądanie z adresu e-mail powiązanego z kontem Exiva:</p>
+<p><a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Exiva%20%E2%80%94%20%C5%BC%C4%85danie%20usuni%C4%99cia%20konta%20i%20danych&amp;body=Dzie%C5%84%20dobry%2C%0A%0Aprosz%C4%99%20o%20usuni%C4%99cie%20mojego%20konta%20Exiva%20oraz%20powi%C4%85zanych%20z%20nim%20danych.%0A%0AAdres%20e-mail%20konta%3A%20%0AData%20%C5%BC%C4%85dania%3A%20%0A%0AWiem%2C%20%C5%BCe%20usuni%C4%99cie%20konta%20jest%20nieodwracalne%20i%20%C5%BCe%20nie%20przerywa%20automatycznie%20subskrypcji%20w%20Google%20Play.%0A%0APozdrawiam">Napisz do nas — żądanie usunięcia konta</a></p>
+<p>Przycisk otworzy Twojego klienta poczty z gotowym tematem <em>„Exiva — żądanie usunięcia konta i danych”</em>. Jeżeli wolisz napisać ręcznie, wyślij wiadomość na <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> z tym tematem i podaj adres e-mail konta.</p>
+<p class="doc-meta">Deklarowany czas pierwszej odpowiedzi: <strong>7 dni roboczych</strong>. Termin realizacji żądania wynikającego z RODO: do <strong>30 dni</strong> od jego otrzymania, z możliwością przedłużenia o kolejne 2 miesiące w przypadku żądań szczególnie skomplikowanych — o takim przedłużeniu i jego przyczynach poinformujemy Cię w ciągu pierwszego miesiąca.</p>
+
+<h2>Co usuwamy</h2>
+<p>Po usunięciu konta usuwamy niezwłocznie: wpis konta, adres e-mail, identyfikator Google, zaszyfrowaną kopię Twoich danych wraz z kluczem szyfrującym, reguły alertów, token powiadomień i powiązania z obserwowanymi obiektami.</p>
+
+<h3>Co zostaje mimo usunięcia konta i dlaczego</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Dane</th><th scope="col">Jak długo</th><th scope="col">Dlaczego</th></tr></thead>
+<tbody>
+<tr><td>Skrót tokenu zakupu i historia statusu subskrypcji, odłączone od konta</td><td>5 lat od końca roku podatkowego</td><td>obowiązek przechowywania dokumentacji sprzedaży (art. 86 § 1 Ordynacji podatkowej); art. 17 ust. 3 lit. b RODO wyłącza w tym zakresie prawo do usunięcia</td></tr>
+<tr><td>Wpisy w rejestrze zdarzeń bezpieczeństwa, w formie zanonimizowanej</td><td>12 miesięcy</td><td>rozliczalność (art. 5 ust. 2 RODO), bezpieczeństwo usługi</td></tr>
+<tr><td>Logi serwera zawierające skrócony adres IP</td><td>30 dni</td><td>bezpieczeństwo; wygasają automatycznie</td></tr>
+<tr><td>Kopie zapasowe bazy danych</td><td>do 30 dni (kopie dzienne) i do 6 miesięcy (kopie miesięczne)</td><td>selektywne usuwanie rekordów z zaszyfrowanych kopii zapasowych nie jest technicznie wykonalne bez ryzyka ich uszkodzenia. Kopie służą wyłącznie odtworzeniu po awarii; w razie odtworzenia dane kont oznaczonych jako usunięte są ponownie usuwane w ramach procedury przywracania</td></tr>
+</tbody>
+</table></div>
+
+<h3>Dane na Twoim urządzeniu</h3>
+<p>Dane przechowywane wyłącznie na Twoim urządzeniu usuwasz sam — odinstalowując aplikację lub czyszcząc jej dane w ustawieniach Androida. My nie mamy do nich dostępu i nie możemy ich usunąć za Ciebie.</p>
+
+<div class="callout is-warning">
+  <p><strong>Usunięcie konta nie anuluje subskrypcji.</strong> Subskrypcją zarządza Google Play. Aby ją zakończyć, wejdź w <strong>Google Play → Płatności i subskrypcje → Subskrypcje → Exiva → Anuluj subskrypcję</strong>.</p>
+</div>
+
+<p><a href="privacy.html#pl-11-1-usuniecie-konta-i-danych">Pełny opis w Polityce prywatności, rozdział 11.1</a> · <a href="privacy.html">Polityka prywatności</a> · <a href="terms.html">Regulamin</a></p>
+
+</section>
+
+<section class="prose" data-lang="en" lang="en">
+
+<h2>Which app this concerns</h2>
+<p>Exiva — Android application, package identifier <code>me.orzech.exiva</code>. Developer: Paweł Orzech, <a href="mailto:pawel@orzech.me">pawel@orzech.me</a>.</p>
+
+<div class="callout">
+  <p><strong>An account is optional.</strong> If you use the Free tier, or Premium without signing in, <strong>we hold no record about you in our database</strong>. In that case there is nothing for us to delete — just uninstall the app or clear its data in Android settings.</p>
+</div>
+
+<h2>Option 1 — in the app</h2>
+<ol>
+  <li>Open Exiva and sign in to the account you want to delete.</li>
+  <li>Go to <strong>Settings → Account → Delete account</strong>.</li>
+  <li>Confirm. The account and the data linked to it are deleted promptly.</li>
+</ol>
+
+<h2>Option 2 — by email (no app needed)</h2>
+<p>If the app is no longer installed, send a request from the email address linked to your Exiva account:</p>
+<p><a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Exiva%20%E2%80%94%20account%20and%20data%20deletion%20request&amp;body=Hello%2C%0A%0Aplease%20delete%20my%20Exiva%20account%20and%20the%20data%20linked%20to%20it.%0A%0AAccount%20email%20address%3A%20%0ARequest%20date%3A%20%0A%0AI%20understand%20that%20account%20deletion%20is%20irreversible%20and%20does%20not%20automatically%20cancel%20a%20Google%20Play%20subscription.%0A%0AKind%20regards">Email us — account deletion request</a></p>
+<p>The button opens your mail client with the subject <em>“Exiva — account and data deletion request”</em> pre-filled. If you prefer to write manually, email <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> with that subject and state the account's email address.</p>
+<p class="doc-meta">Declared time to first response: <strong>7 business days</strong>. GDPR requests are fulfilled within <strong>30 days</strong> of receipt, extendable by a further 2 months for particularly complex requests — we will tell you about such an extension and its reasons within the first month.</p>
+
+<h2>What we delete</h2>
+<p>After account deletion we promptly delete: the account record, your email address, your Google identifier, the encrypted copy of your data together with its encryption key, your alert rules, your notification token, and your links to watched objects.</p>
+
+<h3>What remains despite deletion, and why</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Data</th><th scope="col">For how long</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Purchase token hash and subscription status history, detached from the account</td><td>5 years from the end of the tax year</td><td>obligation to retain sales records (Art. 86 § 1 of the Polish Tax Ordinance); Art. 17(3)(b) GDPR excludes the right to erasure to that extent</td></tr>
+<tr><td>Security event log entries, in anonymised form</td><td>12 months</td><td>accountability (Art. 5(2) GDPR), service security</td></tr>
+<tr><td>Server logs containing a truncated IP address</td><td>30 days</td><td>security; they expire automatically</td></tr>
+<tr><td>Database backups</td><td>up to 30 days (daily copies) and up to 6 months (monthly copies)</td><td>selectively deleting records from encrypted backups is not technically feasible without risking their integrity. Backups serve disaster recovery only; if a restore happens, data belonging to accounts marked as deleted is purged again as part of the restore procedure</td></tr>
+</tbody>
+</table></div>
+
+<h3>Data on your device</h3>
+<p>Data stored only on your device is deleted by you — by uninstalling the app or clearing its data in Android settings. We have no access to it and cannot delete it for you.</p>
+
+<div class="callout is-warning">
+  <p><strong>Deleting your account does not cancel your subscription.</strong> Subscriptions are managed by Google Play. To end one, go to <strong>Google Play → Payments &amp; subscriptions → Subscriptions → Exiva → Cancel subscription</strong>.</p>
+</div>
+
+<p><a href="privacy.html#en-11-1-account-and-data-deletion">Full description in the Privacy Policy, section 11.1</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+
+</section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Exiva</h2>
+        <ul>
+          <li><a href="index.html">Strona główna / Home</a></li>
+          <li><a href="mailto:pawel@orzech.me">pawel@orzech.me</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dokumenty / Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Polityka prywatności / Privacy Policy</a></li>
+          <li><a href="terms.html">Regulamin / Terms of Service</a></li>
+          <li><a href="licenses.html">Licencje i atrybucje / Licences &amp; attributions</a></li>
+          <li><a href="delete-account.html">Usuwanie konta / Delete your account</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Źródła / Sources</h2>
+        <ul>
+          <li><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a></li>
+          <li><a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">cipsoft.com</a></li>
+          <li><a href="https://tibiadata.com" rel="noopener noreferrer" target="_blank">TibiaData API</a></li>
+          <li><a href="https://tibia.fandom.com" rel="noopener noreferrer" target="_blank">TibiaWiki</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p lang="pl"><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong> Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p lang="en"><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p lang="pl">Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
+      <p lang="en">The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+    </div>
+
+    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · <span lang="pl">Część danych encyklopedycznych pochodzi z TibiaWiki i jest dostępna na licencji <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>.</span> <span lang="en">Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</span></p>
+  </div>
+</footer>
+</body>
+</html>

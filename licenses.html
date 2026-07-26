@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Licencje i atrybucje / Licences & attributions — Exiva</title>
+<meta name="description" content="Źródła danych (TibiaData, TibiaWiki CC BY-SA 3.0, TibiaMaps), licencje fontów (Cinzel, Inter — SIL OFL 1.1) i nota o statusie nieoficjalnym.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#12100C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FDF8EF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Licencje i atrybucje / Licences & attributions — Exiva">
+<meta property="og:description" content="Źródła danych (TibiaData, TibiaWiki CC BY-SA 3.0, TibiaMaps), licencje fontów (Cinzel, Inter — SIL OFL 1.1) i nota o statusie nieoficjalnym.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+(function () {
+  var root = document.documentElement;
+  root.className += " js";
+  document.addEventListener("DOMContentLoaded", function () {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang-btn]"));
+    if (!buttons.length) return;
+    function apply(lang) {
+      Array.prototype.forEach.call(document.querySelectorAll("[data-lang]"), function (el) {
+        if (el.getAttribute("data-lang") === lang) el.setAttribute("data-active", "");
+        else el.removeAttribute("data-active");
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-lang-btn") === lang ? "true" : "false");
+      });
+      try { localStorage.setItem("exiva-lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("exiva-lang"); } catch (e) {}
+    var guess = (navigator.language || "pl").toLowerCase().indexOf("pl") === 0 ? "pl" : "en";
+    apply(saved === "pl" || saved === "en" ? saved : guess);
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { apply(b.getAttribute("data-lang-btn")); });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści / Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" width="32" height="32" viewBox="0 0 108 108" role="img" aria-label="Exiva" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand-licenseshtml-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFDF98"/>
+      <stop offset="55%" stop-color="#E6C25C"/>
+      <stop offset="100%" stop-color="#B08C1E"/>
+    </linearGradient>
+    <radialGradient id="brand-licenseshtml-bg" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0%" stop-color="#2C2721"/>
+      <stop offset="100%" stop-color="#12100C"/>
+    </radialGradient>
+  </defs>
+  <rect width="108" height="108" rx="20" fill="url(#brand-licenseshtml-bg)"/>
+  <circle cx="54" cy="54" r="33" fill="none" stroke="url(#brand-licenseshtml-gold)" stroke-width="3.5" opacity="0.55"/>
+  <circle cx="54" cy="54" r="24.5" fill="none" stroke="url(#brand-licenseshtml-gold)" stroke-width="1.5" opacity="0.3"/>
+  <path d="M54 26 Q57.5 50.5 82 54 Q57.5 57.5 54 82 Q50.5 57.5 26 54 Q50.5 50.5 54 26 Z" fill="url(#brand-licenseshtml-gold)"/>
+</svg><span>Exiva</span></a>
+    <nav class="site-nav" aria-label="Główna nawigacja / Main navigation">
+      <a href="privacy.html"><span lang="pl">Prywatność</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Privacy</span></a>
+      <a href="terms.html"><span lang="pl">Regulamin</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Terms</span></a>
+      <a href="licenses.html" aria-current="page"><span lang="pl">Licencje</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Licences</span></a>
+      <a href="delete-account.html"><span lang="pl">Usuń konto</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Delete account</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap page-head">
+  <div class="prose">
+    <h1>Licencje i atrybucje <span class="visually-hidden">/ Licences &amp; attributions</span></h1>
+    <p class="doc-meta" lang="pl">Źródła danych, licencje treści i fontów wykorzystywanych w aplikacji Exiva oraz na tej stronie. Wersja 1.0 · 2026-07-26.</p>
+    <p class="doc-meta" lang="en">Data sources, content licences and font licences used by the Exiva app and by this website. Version 1.0 · 2026-07-26.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="prose">
+<div class="lang-bar">
+  <div class="lang-switch" role="group" aria-label="Język / Language">
+    <button type="button" data-lang-btn="pl" aria-pressed="true" lang="pl">Polski</button>
+    <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">English</button>
+  </div>
+  <p class="hint" data-lang="pl" data-active lang="pl">Wersja polska jest wersją wiążącą.</p>
+  <p class="hint" data-lang="en" lang="en">The Polish version is the binding one; this translation is informative.</p>
+</div>
+  </div>
+</div>
+
+<article class="wrap legal-body">
+<section class="prose" data-lang="pl" data-active lang="pl">
+
+<h2 id="disclaimer">Nota główna</h2>
+<blockquote>
+<p><strong>Exiva — źródła i licencje</strong></p>
+<p>Exiva jest nieoficjalną aplikacją fanowską. Nie jest powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez CipSoft GmbH. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a> lub udostępnione przez CipSoft, w tym wszelkie grafiki, są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+</blockquote>
+
+<h2>Źródła danych</h2>
+
+<h3>TibiaData API</h3>
+<blockquote>
+<p><strong>TibiaData API</strong><br>
+Dane o postaciach, gildiach, światach, domach i statystykach pochodzą z TibiaData API.<br>
+<a href="https://tibiadata.com" rel="noopener noreferrer" target="_blank">https://tibiadata.com</a><br>
+Kod API: licencja MIT — <a href="https://github.com/TibiaData/tibiadata-api-go" rel="noopener noreferrer" target="_blank">https://github.com/TibiaData/tibiadata-api-go</a><br>
+Dane TibiaData opierają się na www.tibia.com, jedynej oficjalnej stronie gry Tibia.<br>
+Tibia jest objęta prawami autorskimi CipSoft GmbH.</p>
+</blockquote>
+
+<h3>TibiaWiki (Fandom) — treści tekstowe</h3>
+<blockquote>
+<p><strong>TibiaWiki</strong><br>
+Część opisów potworów, przedmiotów, zaklęć, NPC-ów i questów pochodzi z TibiaWiki i jest wykorzystywana na licencji <strong>Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)</strong>.</p>
+<p>Źródło: <a href="https://tibia.fandom.com" rel="noopener noreferrer" target="_blank">https://tibia.fandom.com</a><br>
+Treść licencji: <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">https://creativecommons.org/licenses/by-sa/3.0/</a><br>
+Informacje o licencjonowaniu Fandom: <a href="https://www.fandom.com/licensing" rel="noopener noreferrer" target="_blank">https://www.fandom.com/licensing</a></p>
+<p>Autorstwo poszczególnych artykułów jest wskazane przy każdym rekordzie w aplikacji poprzez link do oryginalnego artykułu oraz do jego historii edycji.</p>
+<p>Treści mogły zostać skrócone, przeformatowane lub przetłumaczone. Wszystkie takie modyfikacje są oznaczone przy danym rekordzie i pozostają dostępne na licencji CC BY-SA 3.0.</p>
+</blockquote>
+
+<h3>TibiaWikiApi (tibiawiki.dev)</h3>
+<blockquote>
+<p><strong>TibiaWikiApi</strong><br>
+Dane z TibiaWiki pobierane są przez niezależne API TibiaWikiApi autorstwa Benjamina Komena.<br>
+<a href="https://tibiawiki.dev" rel="noopener noreferrer" target="_blank">https://tibiawiki.dev</a> · <a href="https://github.com/benjaminkomen/TibiaWikiApi" rel="noopener noreferrer" target="_blank">https://github.com/benjaminkomen/TibiaWikiApi</a><br>
+Licencja kodu: MIT.<br>
+Same treści pozostają na licencji CC BY-SA 3.0 (patrz wyżej).</p>
+</blockquote>
+
+<h3>TibiaMaps</h3>
+<blockquote>
+<p><strong>Tibia map data</strong><br>
+Dane map i markerów pochodzą z projektu tibiamaps.<br>
+<a href="https://github.com/tibiamaps/tibia-map-data" rel="noopener noreferrer" target="_blank">https://github.com/tibiamaps/tibia-map-data</a></p>
+<p>Copyright (c) Mathias Bynens — licencja MIT.<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction… (pełna treść licencji MIT w sekcji „Licencje open source" w aplikacji).</p>
+<p>Dane map zostały wygenerowane na podstawie plików minimapy oficjalnego klienta gry Tibia. Grafika mapy jest objęta prawami autorskimi CipSoft GmbH.</p>
+</blockquote>
+
+<div class="callout is-warning">
+  <p>Wpis pojawia się w aplikacji <strong>tylko wtedy, gdy dane źródło jest faktycznie użyte w buildzie</strong>. Lista powyżej opisuje zestaw źródeł przewidzianych dla Exivy; ekran <strong>Ustawienia → Licencje i atrybucje</strong> w aplikacji jest źródłem prawdy dla konkretnego wydania.</p>
+</div>
+
+<h2 id="fonty">Fonty</h2>
+<blockquote>
+<p><strong>Cinzel</strong><br>
+Autor: Natanael Gama · Licencja: SIL Open Font License 1.1<br>
+<a href="https://fonts.google.com/specimen/Cinzel" rel="noopener noreferrer" target="_blank">https://fonts.google.com/specimen/Cinzel</a> · <a href="https://openfontlicense.org/" rel="noopener noreferrer" target="_blank">https://openfontlicense.org/</a></p>
+<p><strong>Inter</strong><br>
+Autor: Rasmus Andersson · Licencja: SIL Open Font License 1.1<br>
+<a href="https://fonts.google.com/specimen/Inter" rel="noopener noreferrer" target="_blank">https://fonts.google.com/specimen/Inter</a> · <a href="https://rsms.me/inter/" rel="noopener noreferrer" target="_blank">https://rsms.me/inter/</a></p>
+</blockquote>
+<p>Pełne pliki <code>OFL.txt</code> każdej użytej rodziny są dołączone do aplikacji w sekcji „Licencje open source".</p>
+
+<h2>Ikony i grafiki</h2>
+<blockquote>
+<p><strong>Ikony i identyfikacja wizualna</strong><br>
+Wszystkie ikony, ilustracje i elementy identyfikacji wizualnej Exivy zostały stworzone na potrzeby tej aplikacji i są objęte prawami autorskimi Pawła Orzecha.</p>
+</blockquote>
+<p>Aplikacja <strong>nie zawiera</strong> sprite'ów, ikon przedmiotów, outfitów, artworków ani innych assetów graficznych pochodzących z gry Tibia lub z serwisu tibia.com. Ta strona również nie używa żadnych grafik z gry.</p>
+
+<h2>Biblioteki open source</h2>
+<p>Pełna, automatycznie generowana lista licencji zależności runtime jest dostępna w aplikacji: <strong>Ustawienia → Licencje i atrybucje → Licencje open source</strong>.</p>
+
+</section>
+
+<section class="prose" data-lang="en" lang="en">
+
+<h2>Main notice</h2>
+<blockquote>
+<p><strong>Exiva — sources and licences</strong></p>
+<p>Exiva is an unofficial fan-made application. It is not affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by CipSoft GmbH. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a> or provided by CipSoft, including any graphics, is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+</blockquote>
+
+<h2>Data sources</h2>
+
+<h3>TibiaData API</h3>
+<blockquote>
+<p><strong>TibiaData API</strong><br>
+Character, guild, world, house and statistics data is provided by the TibiaData API.<br>
+<a href="https://tibiadata.com" rel="noopener noreferrer" target="_blank">https://tibiadata.com</a><br>
+API source code: MIT licence — <a href="https://github.com/TibiaData/tibiadata-api-go" rel="noopener noreferrer" target="_blank">https://github.com/TibiaData/tibiadata-api-go</a><br>
+TibiaData's data is based on www.tibia.com, the only official Tibia website.<br>
+Tibia is copyrighted by CipSoft GmbH.</p>
+</blockquote>
+
+<h3>TibiaWiki (Fandom) — textual content</h3>
+<blockquote>
+<p><strong>TibiaWiki</strong><br>
+Some descriptions of creatures, items, spells, NPCs and quests originate from TibiaWiki and are used under the <strong>Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)</strong> licence.</p>
+<p>Source: <a href="https://tibia.fandom.com" rel="noopener noreferrer" target="_blank">https://tibia.fandom.com</a><br>
+Licence text: <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">https://creativecommons.org/licenses/by-sa/3.0/</a><br>
+Fandom licensing information: <a href="https://www.fandom.com/licensing" rel="noopener noreferrer" target="_blank">https://www.fandom.com/licensing</a></p>
+<p>Authorship of individual articles is indicated on each record in the app via a link to the original article and to its edit history.</p>
+<p>Content may have been shortened, reformatted or translated. All such modifications are marked on the relevant record and remain available under the CC BY-SA 3.0 licence.</p>
+</blockquote>
+
+<h3>TibiaWikiApi (tibiawiki.dev)</h3>
+<blockquote>
+<p><strong>TibiaWikiApi</strong><br>
+TibiaWiki data is retrieved through the independent TibiaWikiApi by Benjamin Komen.<br>
+<a href="https://tibiawiki.dev" rel="noopener noreferrer" target="_blank">https://tibiawiki.dev</a> · <a href="https://github.com/benjaminkomen/TibiaWikiApi" rel="noopener noreferrer" target="_blank">https://github.com/benjaminkomen/TibiaWikiApi</a><br>
+Code licence: MIT.<br>
+The content itself remains under CC BY-SA 3.0 (see above).</p>
+</blockquote>
+
+<h3>TibiaMaps</h3>
+<blockquote>
+<p><strong>Tibia map data</strong><br>
+Map and marker data originates from the tibiamaps project.<br>
+<a href="https://github.com/tibiamaps/tibia-map-data" rel="noopener noreferrer" target="_blank">https://github.com/tibiamaps/tibia-map-data</a></p>
+<p>Copyright (c) Mathias Bynens — MIT licence.<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction… (full MIT licence text in the app's "Open source licences" section).</p>
+<p>Map data was generated from the minimap files of the official Tibia game client. Map graphics are copyrighted by CipSoft GmbH.</p>
+</blockquote>
+
+<div class="callout is-warning">
+  <p>An entry appears in the app <strong>only when that source is actually used in the build</strong>. The list above describes the set of sources foreseen for Exiva; the <strong>Settings → Licences &amp; attributions</strong> screen in the app is the source of truth for any given release.</p>
+</div>
+
+<h2>Fonts</h2>
+<blockquote>
+<p><strong>Cinzel</strong><br>
+Author: Natanael Gama · Licence: SIL Open Font License 1.1<br>
+<a href="https://fonts.google.com/specimen/Cinzel" rel="noopener noreferrer" target="_blank">https://fonts.google.com/specimen/Cinzel</a> · <a href="https://openfontlicense.org/" rel="noopener noreferrer" target="_blank">https://openfontlicense.org/</a></p>
+<p><strong>Inter</strong><br>
+Author: Rasmus Andersson · Licence: SIL Open Font License 1.1<br>
+<a href="https://fonts.google.com/specimen/Inter" rel="noopener noreferrer" target="_blank">https://fonts.google.com/specimen/Inter</a> · <a href="https://rsms.me/inter/" rel="noopener noreferrer" target="_blank">https://rsms.me/inter/</a></p>
+</blockquote>
+<p>The complete <code>OFL.txt</code> file for every font family in use ships with the app under "Open source licences".</p>
+
+<h2>Icons and graphics</h2>
+<blockquote>
+<p><strong>Icons and visual identity</strong><br>
+All icons, illustrations and visual identity elements of Exiva were created for this application and are copyrighted by Paweł Orzech.</p>
+</blockquote>
+<p>The application contains <strong>no</strong> sprites, item icons, outfits, artwork or other graphical assets originating from the Tibia game or from tibia.com. This website likewise uses no in-game graphics.</p>
+
+<h2>Open source libraries</h2>
+<p>The complete, automatically generated list of runtime dependency licences is available in the app: <strong>Settings → Licences &amp; attributions → Open source licences</strong>.</p>
+
+</section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Exiva</h2>
+        <ul>
+          <li><a href="index.html">Strona główna / Home</a></li>
+          <li><a href="mailto:pawel@orzech.me">pawel@orzech.me</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dokumenty / Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Polityka prywatności / Privacy Policy</a></li>
+          <li><a href="terms.html">Regulamin / Terms of Service</a></li>
+          <li><a href="licenses.html">Licencje i atrybucje / Licences &amp; attributions</a></li>
+          <li><a href="delete-account.html">Usuwanie konta / Delete your account</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Źródła / Sources</h2>
+        <ul>
+          <li><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a></li>
+          <li><a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">cipsoft.com</a></li>
+          <li><a href="https://tibiadata.com" rel="noopener noreferrer" target="_blank">TibiaData API</a></li>
+          <li><a href="https://tibia.fandom.com" rel="noopener noreferrer" target="_blank">TibiaWiki</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p lang="pl"><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong> Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p lang="en"><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p lang="pl">Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
+      <p lang="en">The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+    </div>
+
+    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · <span lang="pl">Część danych encyklopedycznych pochodzi z TibiaWiki i jest dostępna na licencji <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>.</span> <span lang="en">Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</span></p>
+  </div>
+</footer>
+</body>
+</html>
