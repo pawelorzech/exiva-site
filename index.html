@@ -12,10 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pawelorzech.github.io/exiva-site/">
 <meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://pawelorzech.github.io/exiva-site/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="landing-page">
@@ -31,7 +32,7 @@
       <a href="#why">Why Exiva</a>
       <a href="#features">Features</a>
       <a href="#pricing">Free vs Premium</a>
-      <a class="nav-cta" href="#launch">Get Exiva</a>
+      <a class="nav-cta" href="#launch">Launch updates</a>
     </nav>
   </div>
 </header>
@@ -41,17 +42,22 @@
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-light"></span> Unofficial Android companion for Tibia players</p>
+        <p class="eyebrow"><span class="status-light"></span> In development · unofficial Android companion for Tibia players</p>
         <h1 id="hero-title">Know what happened.<br><span>Before you log in.</span></h1>
-        <p class="tagline">Exiva watches your characters, guild and goals — then tells you when someone comes online, gains a level or dies. No tab hunting. No hourly website checks.</p>
+        <p class="tagline">Add the characters you care about. Exiva watches public Tibia data and brings the useful changes to you — online status, levels and deaths, plus the guild, world, goal and daily tools you keep opening tabs for.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#features">
-            See what Exiva tracks
+          <a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Tell%20me%20when%20Exiva%20launches">
+            Request a launch update
             <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn btn-secondary" href="#pricing">Compare plans</a>
+          <a class="btn btn-secondary" href="#how">See how it works</a>
         </div>
-        <p class="launch-note"><span>Coming to Google Play</span> · 3 characters free · no account required</p>
+        <div class="hero-facts" aria-label="Exiva plan highlights">
+          <span><strong>3</strong> characters free</span>
+          <span><strong>50</strong> with Premium</span>
+          <span><strong>&lt; 1 min</strong> Premium push target</span>
+        </div>
+        <p class="launch-note"><span>Not published yet</span> · coming to Google Play · no account required for Free</p>
       </div>
 
       <div class="product-stage" role="img" aria-label="Exiva app preview showing tracked characters, online status and level-up and death alerts">
@@ -126,6 +132,39 @@
       <div><strong>No Tibia login.</strong><span>Exiva never asks for it.</span></div>
       <div><strong>Honest freshness.</strong><span>Every screen shows data age.</span></div>
       <div><strong>Works offline.</strong><span>Last good data stays available.</span></div>
+    </div>
+  </section>
+
+  <section class="orientation-section" id="how" aria-labelledby="how-title">
+    <div class="wrap orientation-grid">
+      <div class="orientation-copy">
+        <p class="eyebrow">From name to signal</p>
+        <h2 id="how-title">Add once.<br>Keep playing.</h2>
+        <p>Exiva turns public game data into a private, readable watchlist. Your Tibia credentials never enter the flow.</p>
+      </div>
+      <ol class="workflow">
+        <li>
+          <span class="workflow-number">01</span>
+          <div>
+            <h3>Choose who matters</h3>
+            <p>Search any public Tibia character and add it to your list. Free keeps 3 on your device; Premium raises the limit to 50.</p>
+          </div>
+        </li>
+        <li>
+          <span class="workflow-number">02</span>
+          <div>
+            <h3>Exiva checks the world</h3>
+            <p>Every result shows its source and age. If a source is temporarily unavailable, the last good data stays visible with a clear warning.</p>
+          </div>
+        </li>
+        <li>
+          <span class="workflow-number">03</span>
+          <div>
+            <h3>You get the useful moment</h3>
+            <p>See online status, level-ups and deaths without repeating the search. Premium watches on the server and can push within a minute.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -274,20 +313,30 @@
             <p class="tier-price"><strong>0 zł</strong><span>forever</span></p>
           </div>
           <p class="tier-summary">3 tracked characters, refreshed on your own device. No account and no server-side profile.</p>
-          <ul>
+          <ul class="tier-highlights">
             <li><strong>3 tracked characters</strong>, refreshed on your own device</li>
-            <li>Local notifications when the app or its background job wakes up</li>
-            <li>Global broadcasts about news and in-game events</li>
-            <li>No account — everything stays on your device</li>
-            <li>Search any character, guild, world or house on any server</li>
-            <li>Full character profiles: vocation, residence, guild rank, achievement points, death log, former names and account status</li>
-            <li>Every world at a glance: population, PvP type, BattlEye, transfers and server save</li>
-            <li>Highscores across every public category and vocation</li>
-            <li>Boosted creature, boosted boss and Rashid's location, every day</li>
-            <li>Hunting, blessing, exercise weapon, magic level, stamina, loot split and more calculators</li>
-            <li>A creature, item, spell and imbuement codex you can actually search</li>
-            <li>Works offline — every screen shows exactly how old its data is</li>
+            <li><strong>No account</strong> — characters, notes and settings stay on your device</li>
+            <li>Search characters, guilds, worlds and houses; use highscores, daily events, calculators and the codex</li>
+            <li>Cached data works offline, with freshness shown on every screen</li>
           </ul>
+          <details class="tier-more">
+            <summary>View all 12 Free features</summary>
+            <ul>
+              <li><strong>3 tracked characters</strong>, refreshed on your own device</li>
+              <li>Local notifications when the app or its background job wakes up</li>
+              <li>Global broadcasts about news and in-game events</li>
+              <li>No account — everything stays on your device</li>
+              <li>Search any character, guild, world or house on any server</li>
+              <li>Full character profiles: vocation, residence, guild rank, achievement points, death log, former names and account status</li>
+              <li>Every world at a glance: population, PvP type, BattlEye, transfers and server save</li>
+              <li>Highscores across every public category and vocation</li>
+              <li>Boosted creature, boosted boss and Rashid's location, every day</li>
+              <li>Hunting, blessing, exercise weapon, magic level, stamina, loot split and more calculators</li>
+              <li>A creature, item, spell and imbuement codex you can actually search</li>
+              <li>Works offline — every screen shows exactly how old its data is</li>
+            </ul>
+          </details>
+          <a class="tier-link" href="#launch">See launch status <span>→</span></a>
         </article>
 
         <article class="tier premium-tier">
@@ -297,21 +346,31 @@
             <p class="tier-price"><strong>8,33 zł</strong><span>/ month, billed yearly</span></p>
           </div>
           <p class="tier-summary">Up to 50 characters with server-side push around the clock — plus deeper analysis, planning and sync.</p>
-          <ul>
-            <li><strong>Server-side push, around the clock</strong> — find out within a minute, even when the app has been closed for days</li>
+          <ul class="tier-highlights">
+            <li><strong>Server-side push around the clock</strong> — within a minute, even while the app is closed</li>
             <li><strong>Up to 50 tracked characters</strong></li>
-            <li>Smart Alert Rules in plain language: “tell me when Bubble passes 900, or dies to anyone from my guild”</li>
-            <li>Hunt Session Analyzer with XP/h, profit/h, loot split, trends and supply analysis</li>
-            <li>Goals and forecasts for level, skills, magic level, bestiary and gold, with uncertainty shown rather than hidden</li>
-            <li>House and auction watching with bid alerts before the hammer falls</li>
-            <li>Guild tooling: roster changes, online patterns, death timelines and private friendly/neutral/hostile labels</li>
-            <li>Sync across devices, full event history and offline codex pack</li>
-            <li>Quiet hours, cooldowns and per-object muting, so alerts stay signal</li>
+            <li>Smart Alert Rules with quiet hours, cooldowns and per-object muting</li>
+            <li>Hunt analysis, goals, forecasts, auction watching, guild tools and device sync</li>
           </ul>
+          <details class="tier-more">
+            <summary>View all 9 Premium features</summary>
+            <ul>
+              <li><strong>Server-side push, around the clock</strong> — find out within a minute, even when the app has been closed for days</li>
+              <li><strong>Up to 50 tracked characters</strong></li>
+              <li>Smart Alert Rules in plain language: “tell me when Bubble passes 900, or dies to anyone from my guild”</li>
+              <li>Hunt Session Analyzer with XP/h, profit/h, loot split, trends and supply analysis</li>
+              <li>Goals and forecasts for level, skills, magic level, bestiary and gold, with uncertainty shown rather than hidden</li>
+              <li>House and auction watching with bid alerts before the hammer falls</li>
+              <li>Guild tooling: roster changes, online patterns, death timelines and private friendly/neutral/hostile labels</li>
+              <li>Sync across devices, full event history and offline codex pack</li>
+              <li>Quiet hours, cooldowns and per-object muting, so alerts stay signal</li>
+            </ul>
+          </details>
+          <a class="tier-link premium-link" href="#price-options">See Premium prices <span>→</span></a>
         </article>
       </div>
 
-      <div class="price-block">
+      <div class="price-block" id="price-options">
         <div class="price-intro">
           <p class="eyebrow">What Premium costs</p>
           <h3>Choose your pace.</h3>
@@ -342,6 +401,13 @@
         <li>No lifetime plan. The service carries an ongoing server cost that a one-off payment cannot cover.</li>
         <li>Prices are localised to your country and currency. The binding amount is the one shown in Google Play at the moment of purchase.</li>
       </ul>
+      <div class="pricing-launch-note">
+        <div>
+          <strong>Exiva is not on Google Play yet.</strong>
+          <span>Get one direct launch update from the person building it.</span>
+        </div>
+        <a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Tell%20me%20when%20Exiva%20launches">Request launch update</a>
+      </div>
     </div>
   </section>
 
@@ -428,6 +494,7 @@
         <a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Tell%20me%20when%20Exiva%20launches">Tell me when Exiva launches</a>
         <a class="btn btn-secondary" href="#pricing">Review the plans</a>
       </div>
+      <p class="maker-note">Independently built and supported by Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a></p>
       <p class="launch-small">Android · English &amp; Polish in the app · public website in English</p>
     </div>
   </section>
