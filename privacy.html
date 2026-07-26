@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Polityka prywatności / Privacy Policy — Exiva</title>
-<meta name="description" content="Polityka prywatności aplikacji Exiva (PL/EN): jakie dane przetwarzamy, na jakiej podstawie, jak długo i jak z nich zrezygnować.">
+<title>Privacy Policy — Exiva</title>
+<meta name="description" content="Exiva privacy policy: what data we process, on what legal basis, for how long, and how to opt out.">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#12100C" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FDF8EF" media="(prefers-color-scheme: light)">
-<meta property="og:title" content="Polityka prywatności / Privacy Policy — Exiva">
-<meta property="og:description" content="Polityka prywatności aplikacji Exiva (PL/EN): jakie dane przetwarzamy, na jakiej podstawie, jak długo i jak z nich zrezygnować.">
+<meta property="og:title" content="Privacy Policy — Exiva">
+<meta property="og:description" content="Exiva privacy policy: what data we process, on what legal basis, for how long, and how to opt out.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -17,36 +17,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
-<script>
-(function () {
-  var root = document.documentElement;
-  root.className += " js";
-  document.addEventListener("DOMContentLoaded", function () {
-    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang-btn]"));
-    if (!buttons.length) return;
-    function apply(lang) {
-      Array.prototype.forEach.call(document.querySelectorAll("[data-lang]"), function (el) {
-        if (el.getAttribute("data-lang") === lang) el.setAttribute("data-active", "");
-        else el.removeAttribute("data-active");
-      });
-      buttons.forEach(function (b) {
-        b.setAttribute("aria-pressed", b.getAttribute("data-lang-btn") === lang ? "true" : "false");
-      });
-      try { localStorage.setItem("exiva-lang", lang); } catch (e) {}
-    }
-    var saved = null;
-    try { saved = localStorage.getItem("exiva-lang"); } catch (e) {}
-    var guess = (navigator.language || "pl").toLowerCase().indexOf("pl") === 0 ? "pl" : "en";
-    apply(saved === "pl" || saved === "en" ? saved : guess);
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.getAttribute("data-lang-btn")); });
-    });
-  });
-})();
-</script>
 </head>
 <body>
-<a class="skip-link" href="#main">Przejdź do treści / Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html"><svg class="mark" width="32" height="32" viewBox="0 0 108 108" role="img" aria-label="Exiva" xmlns="http://www.w3.org/2000/svg">
@@ -66,173 +39,26 @@
   <circle cx="54" cy="54" r="24.5" fill="none" stroke="url(#brand-privacyhtml-gold)" stroke-width="1.5" opacity="0.3"/>
   <path d="M54 26 Q57.5 50.5 82 54 Q57.5 57.5 54 82 Q50.5 57.5 26 54 Q50.5 50.5 54 26 Z" fill="url(#brand-privacyhtml-gold)"/>
 </svg><span>Exiva</span></a>
-    <nav class="site-nav" aria-label="Główna nawigacja / Main navigation">
-      <a href="privacy.html" aria-current="page"><span lang="pl">Prywatność</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Privacy</span></a>
-      <a href="terms.html"><span lang="pl">Regulamin</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Terms</span></a>
-      <a href="licenses.html"><span lang="pl">Licencje</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Licences</span></a>
-      <a href="delete-account.html"><span lang="pl">Usuń konto</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Delete account</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="licenses.html">Licences</a>
+      <a href="delete-account.html">Delete account</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <div class="wrap page-head">
   <div class="prose">
-    <h1>Polityka prywatności <span class="visually-hidden">/ Privacy Policy</span></h1>
-    <div class="doc-meta"><!-- TODO: TODO(research): ustalić datę publikacji aplikacji w Google Play i wpisać ją jako datę wejścia w życie -->
-<blockquote><p>Wersja: 1.0 · Data wejścia w życie: <strong><span class="todo-mark">TODO(research)</span>: ustalić datę publikacji aplikacji w Google Play i wpisać ją jako datę wejścia w życie</strong> · Data sporządzenia: 2026-07-26</p><p>Dokument gotowy do publikacji na stronie internetowej i do podlinkowania z Google Play.<br>
-Wersja polska jest wersją wiążącą; wersja angielska ma charakter informacyjny.</p><p>Powiązane dokumenty: <a href="terms.html">Regulamin</a> · <a href="licenses.html#disclaimer">Informacja o braku afiliacji z CipSoft</a> · <a href="licenses.html">Źródła i licencje</a></p></blockquote></div>
-  </div>
-</div>
-
-<div class="wrap">
-  <div class="prose">
-<div class="lang-bar">
-  <div class="lang-switch" role="group" aria-label="Język / Language">
-    <button type="button" data-lang-btn="pl" aria-pressed="true" lang="pl">Polski</button>
-    <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">English</button>
-  </div>
-  <p class="hint" data-lang="pl" data-active lang="pl">Wersja polska jest wersją wiążącą.</p>
-  <p class="hint" data-lang="en" lang="en">The Polish version is the binding one; this translation is informative.</p>
-</div>
+    <h1>Privacy Policy</h1>
+    <div class="doc-meta"><!-- TODO: TODO(research): determine the Google Play publication date and use it as the effective date -->
+<blockquote><p>Version: 1.0 · Effective date: <strong><span class="todo-mark">TODO(research)</span>: determine the Google Play publication date and use it as the effective date</strong> · Drafted: 2026-07-26</p><p>Related documents: <a href="terms.html">Terms of Service</a> · <a href="licenses.html#disclaimer">Non-affiliation notice</a> · <a href="licenses.html">Sources and licences</a></p></blockquote></div>
   </div>
 </div>
 
 <article class="wrap legal-body">
-  <section class="prose" data-lang="pl" data-active lang="pl" aria-label="Polityka prywatności">
-    <h2 class="visually-hidden">Polityka prywatności (PL)</h2>
-<h3 id="pl-1-w-skrocie">1. W skrócie</h3>
-<p>Exiva to nieoficjalna aplikacja fanowska dla graczy Tibii. Została zaprojektowana tak, żeby działała bez zbierania danych o Tobie.</p>
-<ul><li><strong>Jeśli korzystasz z wersji darmowej, nie zakładamy Ci konta i nie mamy o Tobie żadnego wpisu w naszej bazie danych.</strong> Śledzone postacie, notatki i ustawienia zostają na Twoim telefonie.</li><li><strong>Nigdy nie prosimy o dane logowania do Tibii</strong> i nigdy ich nie przyjmiemy. Wszystkie informacje o postaciach pochodzą z publicznie dostępnych źródeł.</li><li><strong>Nie wyświetlamy reklam</strong> i nie przekazujemy nikomu Twoich danych w celach marketingowych.</li><li><strong>Nie sprzedajemy danych.</strong> Nigdy.</li><li>Nie zbieramy numeru telefonu, lokalizacji, kontaktów, zdjęć ani identyfikatorów urządzenia typu IMEI.</li><li>Logowanie kontem Google jest <strong>opcjonalne</strong>. Subskrypcję możesz kupić i używać bez logowania.</li></ul>
-<h3 id="pl-2-administrator-danych-i-kontakt">2. Administrator danych i kontakt</h3>
-<p>Administratorem Twoich danych osobowych jest:</p>
-<!-- TODO: TODO(research): uzupełnić NIP działalności gospodarczej -->
-<!-- TODO: TODO(research): uzupełnić adres pocztowy działalności gospodarczej -->
-<blockquote><p><strong>Paweł Orzech</strong>, prowadzący jednoosobową działalność gospodarczą<br>
-NIP: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić NIP działalności gospodarczej</strong><br>
-Adres siedziby: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić adres pocztowy działalności gospodarczej</strong><br>
-Kraj: Polska<br>
-E-mail: <strong>pawel@orzech.me</strong></p></blockquote>
-<p>Nie wyznaczyliśmy inspektora ochrony danych — nie wymagają tego przepisy przy tej skali i charakterze przetwarzania. We wszystkich sprawach dotyczących danych osobowych pisz bezpośrednio na adres <code>pawel@orzech.me</code>.</p>
-<p>Deklarowany czas pierwszej odpowiedzi: <strong>7 dni roboczych</strong>. Termin realizacji żądań wynikających z RODO: do <strong>30 dni</strong> od otrzymania żądania, z możliwością przedłużenia o kolejne 2 miesiące w przypadku żądań szczególnie skomplikowanych — o takim przedłużeniu i jego przyczynach poinformujemy Cię w ciągu pierwszego miesiąca.</p>
-<h3 id="pl-3-zakres-tej-polityki">3. Zakres tej polityki</h3>
-<p>Ta polityka dotyczy aplikacji mobilnej <strong>Exiva</strong> (<code>me.orzech.exiva</code>) na system Android oraz powiązanych z nią usług serwerowych i strony internetowej projektu.</p>
-<p>Polityka <strong>nie</strong> dotyczy:</p>
-<ul><li>gry Tibia i strony <code>tibia.com</code> — te należą do CipSoft GmbH i mają własne zasady prywatności;</li><li>serwisów zewnętrznych, do których prowadzą linki z aplikacji (TibiaData, TibiaWiki/Fandom, Google Play);</li><li>sklepu Google Play, który jest odrębnym administratorem danych w zakresie realizacji płatności i dystrybucji aplikacji.</li></ul>
-<p>Exiva jest aplikacją nieoficjalną i nie jest powiązana z CipSoft GmbH — szczegóły w <a href="licenses.html#disclaimer">DISCLAIMER.md</a>.</p>
-<h3 id="pl-4-jakie-dane-przetwarzamy-wersja-darmowa-free">4. Jakie dane przetwarzamy — wersja darmowa (Free)</h3>
-<p><strong>W wersji darmowej nie zakładamy konta i nie tworzymy żadnego wpisu o Tobie w naszej bazie danych na serwerze.</strong></p>
-<p>Wszystkie dane, które wprowadzasz i które gromadzi aplikacja, są zapisywane <strong>wyłącznie na Twoim urządzeniu</strong>, w pamięci aplikacji (lokalna baza danych i lokalne preferencje):</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Dane</th><th scope="col">Do czego służą</th></tr></thead><tbody><tr><td>Nazwa śledzonej postaci i jej świat</td><td>wyświetlanie profilu, historii poziomów i statusu online</td></tr><tr><td>Historia poziomów i statystyk śledzonej postaci</td><td>wykresy, podsumowania, powiadomienia lokalne</td></tr><tr><td>Twoje notatki, cele i zapisane sesje polowań</td><td>funkcje planowania i analizy</td></tr><tr><td>Ustawienia aplikacji (motyw, język, godziny ciszy, preferencje powiadomień)</td><td>działanie aplikacji zgodnie z Twoimi wyborami</td></tr><tr><td>Pobrane dane publiczne (światy, potwory, przedmioty, rankingi) w pamięci podręcznej</td><td>szybkość działania i praca w trybie offline</td></tr></tbody></table></div>
-<p>Nie mamy do tych danych żadnego dostępu. Nie są nam wysyłane, nie da się ich u nas odzyskać, a ich usunięcie następuje w momencie usunięcia aplikacji lub wyczyszczenia jej danych w ustawieniach systemu Android.</p>
-<p>Jedyne, co w wersji darmowej łączy aplikację z naszym serwerem, to <strong>subskrypcja kanału powiadomień (tematu) w usłudze Firebase Cloud Messaging</strong> — używamy jej do wysyłania newsów, informacji o wydarzeniach w grze i codziennego podsumowania. Jest to rozgłoszenie: wysyłamy jedną wiadomość do kanału, a Firebase dostarcza ją wszystkim subskrybentom. <strong>Nie widzimy, kto subskrybuje kanał, ile jest urządzeń ani czy wiadomość została dostarczona.</strong> Nie otrzymujemy i nie przechowujemy identyfikatora Twojego urządzenia w związku z tymi powiadomieniami. Możesz je wyłączyć w ustawieniach aplikacji lub systemu.</p>
-<p>W wersji darmowej przetwarzamy dodatkowo dane analityczne i diagnostyczne opisane w rozdziale 7 — są one zbierane przez usługi Google (Firebase) i nie pozwalają nam Cię zidentyfikować.</p>
-<h3 id="pl-5-jakie-dane-przetwarzamy-wersja-premium">5. Jakie dane przetwarzamy — wersja Premium</h3>
-<p>Wersja Premium jest płatną subskrypcją. Występuje w dwóch wariantach.</p>
-<h4 id="pl-5-1-premium-bez-konta-exiva">5.1. Premium bez konta Exiva</h4>
-<p>Możesz kupić i używać subskrypcji <strong>bez zakładania u nas konta i bez logowania</strong>. Uprawnienie do funkcji płatnych jest wtedy powiązane z Twoim kontem Google Play, a nie z kontem u nas.</p>
-<p>W tym wariancie przetwarzamy:</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Dane</th><th scope="col">Do czego służą</th><th scope="col">Gdzie są przechowywane</th></tr></thead><tbody><tr><td>Skrót (hash SHA-256) tokenu zakupu z Google Play</td><td>potwierdzenie, że subskrypcja jest opłacona i aktywna</td><td>nasz serwer</td></tr><tr><td>Status subskrypcji i jego historia (aktywna, okres karencji, wstrzymana, anulowana, zwrócona)</td><td>obsługa uprawnień, obsługa zwrotów, dokumentacja sprzedaży</td><td>nasz serwer</td></tr><tr><td>Losowy identyfikator instalacji aplikacji (generowany na urządzeniu, niepowiązany z żadnym Twoim identyfikatorem osobistym)</td><td>zabezpieczenie przed wielokrotnym wykorzystaniem jednego zakupu, limity częstotliwości żądań</td><td>nasz serwer</td></tr><tr><td>Adres IP w logach serwera</td><td>bezpieczeństwo, przeciwdziałanie nadużyciom</td><td>logi serwera, 30 dni</td></tr></tbody></table></div>
-<p><strong>Nie znamy w tym wariancie Twojego adresu e-mail, imienia ani nazwiska.</strong> Sam token zakupu przechowujemy w postaci nieodwracalnego skrótu — nie da się z niego odtworzyć oryginału. Twoje notatki, cele i lista postaci nadal pozostają wyłącznie na urządzeniu.</p>
-<h4 id="pl-5-2-premium-z-kontem-exiva-opcjonalne-logowanie">5.2. Premium z kontem Exiva (opcjonalne logowanie)</h4>
-<p>Jeżeli <strong>zdecydujesz się</strong> zalogować przez „Zaloguj się przez Google", zakładamy dla Ciebie konto. Robimy to w dwóch celach i tylko w tych dwóch: (1) żebyś mógł odzyskać subskrypcję po zmianie urządzenia, (2) żeby zsynchronizować Twoje dane między urządzeniami.</p>
-<p>Dodatkowo do danych z punktu 5.1 przetwarzamy wtedy:</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Dane</th><th scope="col">Do czego służą</th></tr></thead><tbody><tr><td>Adres e-mail powiązany z Twoim kontem Google</td><td>identyfikacja konta, kontakt w sprawach subskrypcji, obsługa żądań dotyczących danych</td></tr><tr><td>Identyfikator użytkownika Google (<code>sub</code>)</td><td>techniczne powiązanie logowania z kontem, stabilne nawet po zmianie adresu e-mail</td></tr><tr><td>Zaszyfrowana kopia Twoich danych aplikacji (śledzone postacie, notatki, cele, sesje polowań, reguły alertów, ustawienia)</td><td>synchronizacja między urządzeniami i odtworzenie po reinstalacji</td></tr><tr><td>Reguły alertów, które mają działać po naszej stronie</td><td>wysyłanie powiadomień o zdarzeniach dotyczących śledzonych postaci</td></tr><tr><td>Token powiadomień push (Firebase Cloud Messaging)</td><td>dostarczanie powiadomień adresowanych do Ciebie</td></tr><tr><td>Data utworzenia konta, data ostatniego logowania, lista aktywnych sesji (przybliżony model urządzenia, data, kraj)</td><td>bezpieczeństwo konta, możliwość wylogowania się zdalnie</td></tr></tbody></table></div>
-<p><strong>Nie pobieramy z Twojego konta Google imienia, nazwiska ani zdjęcia profilowego</strong> — nie prosimy o taki zakres uprawnień.</p>
-<p>Kopia Twoich danych na naszym serwerze jest <strong>zaszyfrowana</strong>, a nazwy postaci przechowujemy w tabelach roboczych wyłącznie w postaci nieodwracalnych skrótów.</p>
-<h4 id="pl-5-3-rezygnacja-z-konta-nie-odbiera-dostepu-do-subskrypcji">5.3. Rezygnacja z konta nie odbiera dostępu do subskrypcji</h4>
-<p>Możesz w każdej chwili wylogować się i korzystać z Premium bez konta. Stracisz wtedy tylko synchronizację między urządzeniami. Możesz też usunąć konto — patrz rozdział 11.</p>
-<h3 id="pl-6-podstawy-prawne-przetwarzania">6. Podstawy prawne przetwarzania</h3>
-<p>Przetwarzamy dane osobowe na następujących podstawach z art. 6 ust. 1 RODO:</p>
-<!-- TODO: TODO(research) -->
-<div class="table-wrap"><table><thead><tr><th scope="col">Cel</th><th scope="col">Podstawa prawna</th><th scope="col">Uwagi</th></tr></thead><tbody><tr><td>Prowadzenie konta Exiva i synchronizacja danych</td><td><strong>art. 6 ust. 1 lit. b</strong> — niezbędność do wykonania umowy</td><td>umowa = regulamin, który akceptujesz zakładając konto</td></tr><tr><td>Realizacja subskrypcji i weryfikacja uprawnień</td><td><strong>art. 6 ust. 1 lit. b</strong></td><td></td></tr><tr><td>Wysyłanie powiadomień adresowanych (alerty, które sam skonfigurowałeś)</td><td><strong>art. 6 ust. 1 lit. b</strong></td><td>to funkcja usługi, o którą prosisz</td></tr><tr><td>Wysyłanie powiadomień rozgłoszeniowych (newsy, wydarzenia, dzienne podsumowanie)</td><td><strong>art. 6 ust. 1 lit. f</strong> — prawnie uzasadniony interes</td><td>informowanie użytkowników o działaniu usługi; nie identyfikujemy odbiorców; wyłączalne w jednym kroku</td></tr><tr><td>Bezpieczeństwo usługi, przeciwdziałanie nadużyciom, limity częstotliwości żądań</td><td><strong>art. 6 ust. 1 lit. f</strong></td><td>uzasadniony interes: ochrona usługi i jej użytkowników</td></tr><tr><td>Analityka produktowa (które ekrany są używane, gdzie użytkownicy się gubią)</td><td><strong>art. 6 ust. 1 lit. f</strong></td><td>dane nie pozwalają nam Cię zidentyfikować; patrz rozdział 7 i <strong><span class="todo-mark">TODO(research)</span></strong> poniżej</td></tr><tr><td>Diagnostyka awarii</td><td><strong>art. 6 ust. 1 lit. f</strong></td><td>zapewnienie działania usługi</td></tr><tr><td>Dokumentacja sprzedaży i rozliczenia podatkowe</td><td><strong>art. 6 ust. 1 lit. c</strong> — obowiązek prawny</td><td>art. 86 § 1 Ordynacji podatkowej — 5 lat</td></tr><tr><td>Ustalenie, dochodzenie lub obrona roszczeń</td><td><strong>art. 6 ust. 1 lit. f</strong></td><td>do upływu terminów przedawnienia</td></tr><tr><td>Wysyłanie wiadomości marketingowych</td><td><strong>art. 6 ust. 1 lit. a</strong> — zgoda</td><td><strong>obecnie nie prowadzimy marketingu e-mailowego</strong>; gdyby to się zmieniło, poprosimy o osobną zgodę</td></tr></tbody></table></div>
-<!-- TODO: TODO(research): -->
-<p><strong><span class="todo-mark">TODO(research)</span>:</strong> czy w polskim porządku prawnym analityka produktowa realizowana przez Firebase Analytics na urządzeniu końcowym wymaga zgody użytkownika na podstawie art. 173 Prawa telekomunikacyjnego / przepisów wdrażających dyrektywę ePrivacy (dostęp do informacji przechowywanej w urządzeniu końcowym), niezależnie od podstawy z RODO — jeśli tak, przed publikacją wdrożyć ekran zgody z możliwością odmowy bez utraty funkcjonalności i zaktualizować tę tabelę.</p>
-<h3 id="pl-7-uslugi-zewnetrzne-i-podmioty-przetwarzajace">7. Usługi zewnętrzne i podmioty przetwarzające</h3>
-<p>Korzystamy z następujących usług zewnętrznych. Każda z nich przetwarza dane w naszym imieniu (podmiot przetwarzający) albo jako odrębny administrator — jest to wskazane w tabeli.</p>
-<!-- TODO: TODO(research): uzupełnić nazwę i siedzibę dostawcy VPS oraz potwierdzić zawarcie umowy powierzenia przetwarzania (art. 28 RODO) -->
-<div class="table-wrap"><table><thead><tr><th scope="col">Usługa</th><th scope="col">Dostawca</th><th scope="col">Rola</th><th scope="col">Co przetwarza</th><th scope="col">Dokumenty</th></tr></thead><tbody><tr><td><strong>Firebase Cloud Messaging</strong></td><td>Google Ireland Limited / Google LLC</td><td>podmiot przetwarzający</td><td>tokeny powiadomień, subskrypcje tematów, treść powiadomień</td><td><a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Polityka prywatności Google</a></td></tr><tr><td><strong>Firebase Analytics</strong></td><td>jw.</td><td>podmiot przetwarzający</td><td>zdarzenia użycia aplikacji, identyfikator instancji aplikacji, przybliżona lokalizacja na poziomie kraju z adresu IP, model urządzenia, wersja systemu</td><td>jw.</td></tr><tr><td><strong>Firebase Crashlytics</strong></td><td>jw.</td><td>podmiot przetwarzający</td><td>raporty awarii: ślad stosu, model urządzenia, wersja systemu i aplikacji, stan urządzenia w chwili awarii</td><td>jw.</td></tr><tr><td><strong>Firebase Remote Config</strong></td><td>jw.</td><td>podmiot przetwarzający</td><td>zdalna konfiguracja aplikacji; pobiera identyfikator instalacji</td><td>jw.</td></tr><tr><td><strong>Firebase App Check (Play Integrity)</strong></td><td>jw.</td><td>podmiot przetwarzający</td><td>potwierdzenie, że żądanie pochodzi z autentycznej instalacji aplikacji</td><td>jw.</td></tr><tr><td><strong>Google Play Billing / Google Play</strong></td><td>Google Ireland Limited</td><td><strong>odrębny administrator</strong> w zakresie płatności</td><td>dane transakcji, dane rozliczeniowe, adres e-mail kupującego. <strong>My nie otrzymujemy Twoich danych płatniczych</strong> — nie znamy numeru karty ani danych rozliczeniowych</td><td><a href="https://play.google.com/intl/pl/about/play-terms/" rel="noopener noreferrer" target="_blank">Warunki Google Play</a></td></tr><tr><td><strong>Google Play Developer API</strong></td><td>Google Ireland Limited</td><td>podmiot przetwarzający</td><td>weryfikacja statusu Twojej subskrypcji po stronie naszego serwera</td><td>jw.</td></tr><tr><td><strong>Sign in with Google</strong></td><td>Google Ireland Limited</td><td>podmiot przetwarzający</td><td>uwierzytelnienie; przekazuje nam adres e-mail i identyfikator użytkownika</td><td>jw.</td></tr><tr><td><strong>Hosting serwera (VPS)</strong></td><td><strong><span class="todo-mark">TODO(research)</span>: uzupełnić nazwę i siedzibę dostawcy VPS oraz potwierdzić zawarcie umowy powierzenia przetwarzania (art. 28 RODO)</strong></td><td>podmiot przetwarzający</td><td>przechowywanie bazy danych i logów</td><td>—</td></tr></tbody></table></div>
-<p>Nie przekazujemy Twoich danych żadnym reklamodawcom, brokerom danych ani sieciom afiliacyjnym. Nie prowadzimy profilowania w celach marketingowych. Nie podejmujemy wobec Ciebie decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu, które wywoływałyby skutki prawne lub w podobny sposób istotnie na Ciebie wpływały (art. 22 RODO).</p>
-<h4 id="pl-7-1-przekazywanie-danych-poza-europejski-obszar-gospodarczy">7.1. Przekazywanie danych poza Europejski Obszar Gospodarczy</h4>
-<p>Usługi Google (Firebase, Google Play) mogą wiązać się z przekazywaniem danych do Stanów Zjednoczonych i innych państw, w których Google prowadzi infrastrukturę.</p>
-<p>Google deklaruje stosowanie mechanizmów transferu przewidzianych w rozdziale V RODO — w szczególności <strong>standardowych klauzul umownych</strong> (SCC) zatwierdzonych przez Komisję Europejską oraz uczestnictwa w programie <strong>EU-U.S. Data Privacy Framework</strong>. Aktualny opis stosowanych zabezpieczeń znajduje się w dokumentach Google, do których linkujemy w tabeli powyżej.</p>
-<!-- TODO: TODO(research): -->
-<p><strong><span class="todo-mark">TODO(research)</span>:</strong> zweryfikować przed publikacją aktualny status prawny EU-U.S. Data Privacy Framework (decyzja Komisji Europejskiej o odpowiednim stopniu ochrony może zostać zmieniona, zawieszona lub unieważniona) oraz aktualny status certyfikacji Google LLC w tym programie; sprawdzić, czy właściwym podmiotem umownym dla użytkowników z UE jest Google Ireland Limited. Jeśli status DPF ulegnie zmianie, ten rozdział należy zaktualizować, wskazując SCC jako podstawę podstawową.</p>
-<!-- TODO: TODO(research): potwierdzić i wskazać konkretny kraj lokalizacji serwera -->
-<p>Nasz serwer aplikacyjny i baza danych znajdują się na terenie <strong>Unii Europejskiej</strong> (<strong><span class="todo-mark">TODO(research)</span>: potwierdzić i wskazać konkretny kraj lokalizacji serwera</strong>).</p>
-<h3 id="pl-8-dane-pochodzace-ze-zrodel-publicznych">8. Dane pochodzące ze źródeł publicznych</h3>
-<p>Exiva pobiera informacje o postaciach, gildiach, światach, domach i rankingach z publicznie dostępnych źródeł — przede wszystkim z <strong>TibiaData API</strong> (<code>api.tibiadata.com</code>), które przetwarza dane opublikowane na oficjalnej stronie <code>tibia.com</code>. Dane encyklopedyczne pochodzą z <strong>TibiaWiki</strong> i są udostępniane na licencji CC BY-SA 3.0. Pełna lista źródeł: <a href="licenses.html">ATTRIBUTIONS.md</a>.</p>
-<p>Ważne rozróżnienie:</p>
-<p><strong>Nie zbieramy tych danych o Tobie — pobieramy je, bo o nie poprosiłeś.</strong> Gdy wpisujesz nazwę postaci, aplikacja odpytuje o nią publiczne źródło. Nie budujemy z tego profilu żadnej osoby, nie łączymy postaci z tożsamością gracza i nie udostępniamy tych zestawień nikomu.</p>
-<p><strong>Nazwa postaci to informacja publiczna, ale traktujemy ją ostrożnie.</strong> Nazwa postaci jest jawna na <code>tibia.com</code> i sama w sobie jest pseudonimem. Jednak zestawiona z Twoim urządzeniem lub kontem może pośrednio wskazywać, kim jesteś w grze i które postacie są Twoje. Dlatego:</p>
-<ul><li>w naszej bazie danych nazwy postaci występują przede wszystkim jako nieodwracalne skróty;</li><li>pełne nazwy przechowujemy wyłącznie w zaszyfrowanej kopii Twoich danych;</li><li>nigdy nie zapisujemy nazw postaci w postaci jawnej w logach;</li><li>nie budujemy i nie zbudujemy funkcji pokazującej, kto śledzi jakie postacie.</li></ul>
-<p><strong>Nigdy nie prosimy o dane logowania do Tibii.</strong> Exiva nie ma ekranu logowania do gry, nie przyjmuje haseł, nie integruje się z klientem gry i nie automatyzuje rozgrywki. Jeśli kiedykolwiek zobaczysz ekran podający się za Exivę i proszący o hasło do Tibii — to nie jesteśmy my. Zgłoś to na <code>pawel@orzech.me</code>.</p>
-<h3 id="pl-9-identyfikatory-pliki-cookie-i-podobne-technologie">9. Identyfikatory, pliki cookie i podobne technologie</h3>
-<p>Aplikacja Exiva <strong>nie używa plików cookie</strong> — to technologia przeglądarek, a Exiva jest aplikacją natywną. Używa natomiast następujących identyfikatorów:</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Identyfikator</th><th scope="col">Czym jest</th><th scope="col">Kto go widzi</th><th scope="col">Jak się go pozbyć</th></tr></thead><tbody><tr><td><strong>App Instance ID</strong> (Firebase)</td><td>losowy identyfikator instalacji aplikacji nadawany przez Firebase; pozwala policzyć unikalnych użytkowników bez ich identyfikowania</td><td>Google, my w formie zagregowanej</td><td>wyłączenie analityki w ustawieniach aplikacji; usunięcie danych aplikacji lub jej odinstalowanie resetuje identyfikator</td></tr><tr><td><strong>Token FCM</strong></td><td>adres, pod który Firebase dostarcza powiadomienia na Twoje urządzenie</td><td>Google; my — tylko dla powiadomień adresowanych w Premium</td><td>wyłączenie powiadomień; wylogowanie; odinstalowanie aplikacji</td></tr><tr><td><strong>Identyfikator instalacji Exivy</strong></td><td>losowa wartość generowana lokalnie przez aplikację, używana wyłącznie do zabezpieczeń i limitów żądań</td><td>my</td><td>wyczyszczenie danych aplikacji lub jej odinstalowanie</td></tr></tbody></table></div>
-<p><strong>Nie używamy reklamowego identyfikatora Androida (AAID) w celach reklamowych.</strong> Aplikacja nie zawiera reklam, nie zawiera pakietów SDK sieci reklamowych i nie uczestniczy w żadnej sieci afiliacyjnej. Nie stosujemy fingerprintingu urządzenia ani żadnej techniki mającej na celu identyfikowanie Cię pomimo zresetowania identyfikatorów.</p>
-<h3 id="pl-10-kopia-zapasowa-systemu-android">10. Kopia zapasowa systemu Android</h3>
-<p>System Android może wykonywać automatyczną kopię zapasową danych aplikacji na Twoje konto Google Drive oraz przenosić dane przy zmianie urządzenia. Odbywa się to w ramach mechanizmu systemowego, którym zarządza Google i Twoje ustawienia systemowe, nie my — nie mamy dostępu do tak wykonanej kopii.</p>
-<!-- TODO: TODO(research): -->
-<p><strong><span class="todo-mark">TODO(research)</span>:</strong> przed publikacją ustalić ostateczną wartość <code>android:allowBackup</code> (analiza i rekomendacja: <code>docs/SECURITY_AND_PRIVACY.md</code>, rozdz. 16.1) i doprecyzować ten rozdział: jeśli kopia zapasowa pozostanie włączona, wskazać dokładnie, które kategorie danych są nią objęte; jeśli zostanie wyłączona, wskazać eksport danych jako sposób przeniesienia ich na nowe urządzenie.</p>
-<h3 id="pl-11-twoje-prawa">11. Twoje prawa</h3>
-<p>Przysługują Ci następujące prawa wynikające z RODO. Aby z nich skorzystać, napisz na <code>pawel@orzech.me</code> — albo, tam gdzie to możliwe, zrób to samodzielnie w aplikacji.</p>
-<!-- TODO: TODO(research): wpisać docelowy adres URL strony usuwania konta`; albo e-mail -->
-<div class="table-wrap"><table><thead><tr><th scope="col">Prawo</th><th scope="col">Podstawa</th><th scope="col">Jak z niego skorzystać</th></tr></thead><tbody><tr><td><strong>Dostęp do danych</strong> i otrzymanie ich kopii</td><td>art. 15</td><td>Ustawienia → Prywatność → „Eksportuj moje dane" (plik JSON), albo e-mail</td></tr><tr><td><strong>Sprostowanie</strong> nieprawidłowych danych</td><td>art. 16</td><td>edycja w aplikacji, albo e-mail</td></tr><tr><td><strong>Usunięcie danych</strong> („prawo do bycia zapomnianym")</td><td>art. 17</td><td>Ustawienia → Konto → „Usuń konto"; strona <code>TODO(research): wpisać docelowy adres URL strony usuwania konta</code>; albo e-mail</td></tr><tr><td><strong>Ograniczenie przetwarzania</strong></td><td>art. 18</td><td>e-mail</td></tr><tr><td><strong>Przenoszenie danych</strong></td><td>art. 20</td><td>eksport do pliku JSON — format ustrukturyzowany, powszechnie używany i nadający się do odczytu maszynowego</td></tr><tr><td><strong>Sprzeciw</strong> wobec przetwarzania opartego na uzasadnionym interesie</td><td>art. 21</td><td>e-mail; w przypadku powiadomień rozgłoszeniowych i analityki wystarczy wyłączenie ich w ustawieniach aplikacji</td></tr><tr><td><strong>Cofnięcie zgody</strong> w dowolnym momencie</td><td>art. 7 ust. 3</td><td>tam, gdzie przetwarzanie opiera się na zgodzie; cofnięcie nie wpływa na zgodność z prawem przetwarzania sprzed cofnięcia</td></tr><tr><td><strong>Skarga do organu nadzorczego</strong></td><td>art. 77</td><td>patrz niżej</td></tr></tbody></table></div>
-<h4 id="pl-11-1-usuniecie-konta-i-danych">11.1. Usunięcie konta i danych</h4>
-<!-- TODO: TODO(research): wpisać docelowy adres URL strony żądania usunięcia konta (wymóg Google Play) -->
-<p>Konto możesz usunąć <strong>w aplikacji</strong> (Ustawienia → Konto → Usuń konto) oraz <strong>przez stronę internetową</strong>, bez konieczności instalowania aplikacji: <strong><span class="todo-mark">TODO(research)</span>: wpisać docelowy adres URL strony żądania usunięcia konta (wymóg Google Play)</strong>.</p>
-<p>Po usunięciu konta usuwamy niezwłocznie: wpis konta, adres e-mail, identyfikator Google, zaszyfrowaną kopię Twoich danych wraz z kluczem szyfrującym, reguły alertów, token powiadomień i powiązania z obserwowanymi obiektami.</p>
-<p><strong>Co zostaje mimo usunięcia konta i dlaczego:</strong></p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Dane</th><th scope="col">Jak długo</th><th scope="col">Dlaczego</th></tr></thead><tbody><tr><td>Skrót tokenu zakupu i historia statusu subskrypcji, odłączone od konta</td><td>5 lat od końca roku podatkowego</td><td>obowiązek przechowywania dokumentacji sprzedaży (art. 86 § 1 Ordynacji podatkowej); art. 17 ust. 3 lit. b RODO wyłącza w tym zakresie prawo do usunięcia</td></tr><tr><td>Wpisy w rejestrze zdarzeń bezpieczeństwa, w formie zanonimizowanej</td><td>12 miesięcy</td><td>rozliczalność (art. 5 ust. 2 RODO), bezpieczeństwo usługi</td></tr><tr><td>Logi serwera zawierające skrócony adres IP</td><td>30 dni</td><td>bezpieczeństwo; wygasają automatycznie</td></tr><tr><td>Kopie zapasowe bazy danych</td><td>do 30 dni (kopie dzienne) i do 6 miesięcy (kopie miesięczne)</td><td>selektywne usuwanie rekordów z zaszyfrowanych kopii zapasowych nie jest technicznie wykonalne bez ryzyka ich uszkodzenia. Kopie służą wyłącznie odtworzeniu po awarii; w razie odtworzenia dane kont oznaczonych jako usunięte są ponownie usuwane w ramach procedury przywracania</td></tr></tbody></table></div>
-<p>Dane przechowywane wyłącznie na Twoim urządzeniu usuwasz sam — odinstalowując aplikację lub czyszcząc jej dane w ustawieniach Androida. My nie mamy do nich dostępu i nie możemy ich usunąć za Ciebie.</p>
-<h4 id="pl-11-2-skarga-do-organu-nadzorczego">11.2. Skarga do organu nadzorczego</h4>
-<p>Jeśli uważasz, że przetwarzamy Twoje dane niezgodnie z prawem, masz prawo wnieść skargę do organu nadzorczego:</p>
-<blockquote><p><strong>Prezes Urzędu Ochrony Danych Osobowych</strong><br>
-ul. Stawki 2, 00-193 Warszawa<br>
-<a href="https://uodo.gov.pl" rel="noopener noreferrer" target="_blank">https://uodo.gov.pl</a></p></blockquote>
-<p>Możesz też wnieść skargę do organu nadzorczego w państwie swojego zwykłego pobytu lub miejsca pracy.</p>
-<h3 id="pl-12-okresy-przechowywania-danych">12. Okresy przechowywania danych</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">Kategoria</th><th scope="col">Okres przechowywania</th></tr></thead><tbody><tr><td>Dane wyłącznie na urządzeniu (postacie, notatki, cele, sesje, ustawienia)</td><td>do odinstalowania aplikacji lub wyczyszczenia jej danych</td></tr><tr><td>Pamięć podręczna danych publicznych</td><td>od 1 minuty do 24 godzin w zależności od typu danych; pełne czyszczenie po 30 dniach nieużywania</td></tr><tr><td>Konto Exiva i zaszyfrowana kopia danych</td><td>do usunięcia konta; automatyczne usunięcie po <strong>24 miesiącach</strong> braku logowania i braku aktywnej subskrypcji</td></tr><tr><td>Token powiadomień push</td><td><strong>60 dni</strong> od ostatniego kontaktu aplikacji z serwerem; natychmiast po wyłączeniu powiadomień lub wylogowaniu</td></tr><tr><td>Skrót tokenu zakupu i historia subskrypcji</td><td><strong>5 lat</strong> od końca roku podatkowego (obowiązek prawny)</td></tr><tr><td>Logi serwera (skrócony adres IP, ścieżka, kod odpowiedzi)</td><td><strong>30 dni</strong></td></tr><tr><td>Rejestr zdarzeń bezpieczeństwa</td><td><strong>12 miesięcy</strong></td></tr><tr><td>Kopie zapasowe</td><td><strong>30 dni</strong> (dzienne), <strong>6 miesięcy</strong> (miesięczne)</td></tr><tr><td>Dane analityczne (Firebase Analytics)</td><td><strong>14 miesięcy</strong></td></tr><tr><td>Raporty awarii (Crashlytics)</td><td><strong>90 dni</strong></td></tr><tr><td>Korespondencja e-mail w sprawach obsługi</td><td><strong>3 lata</strong> od zamknięcia sprawy</td></tr></tbody></table></div>
-<h3 id="pl-13-bezpieczenstwo">13. Bezpieczeństwo</h3>
-<p>Stosujemy środki techniczne i organizacyjne odpowiednie do ryzyka, w tym: szyfrowanie transmisji (TLS), szyfrowane przechowywanie tokenów na urządzeniu, szyfrowanie kopii danych na serwerze i kopii zapasowych, przechowywanie nazw postaci w postaci nieodwracalnych skrótów, ograniczenie dostępu do bazy danych wyłącznie do administratora i wyłącznie przez szyfrowany tunel, limity częstotliwości żądań, weryfikację autentyczności aplikacji (Firebase App Check) oraz automatyczne skanowanie kodu i zależności pod kątem podatności i wycieku sekretów.</p>
-<p>Pełny opis techniczny — model zagrożeń, rejestr danych, retencja i procedura reakcji na incydent — znajduje się w dokumencie <code>docs/SECURITY_AND_PRIVACY.md</code> w repozytorium projektu.</p>
-<p>W razie naruszenia ochrony danych osobowych, które może powodować ryzyko naruszenia Twoich praw lub wolności, zgłosimy je Prezesowi UODO <strong>w terminie 72 godzin</strong> od stwierdzenia naruszenia, a jeśli ryzyko będzie wysokie — zawiadomimy również Ciebie, bez zbędnej zwłoki.</p>
-<p>Zgłoszenia dotyczące bezpieczeństwa przyjmujemy na <code>pawel@orzech.me</code> z tematem zaczynającym się od <code>[SECURITY]</code>.</p>
-<h3 id="pl-14-dzieci">14. Dzieci</h3>
-<p>Exiva nie jest kierowana do dzieci i nie zbiera świadomie danych osobowych osób poniżej <strong>16 roku życia</strong>. Aplikacja jest w Google Play oznaczona jako przeznaczona dla odbiorców dorosłych i nastoletnich i <strong>nie uczestniczy w programie Google Play Families / Designed for Families</strong>.</p>
-<p>Tibia jest grą, w którą grają również osoby małoletnie. Jeśli jesteś rodzicem lub opiekunem i uważasz, że dziecko przekazało nam dane osobowe (co w praktyce może nastąpić wyłącznie przez założenie konta lub wykupienie subskrypcji), napisz na <code>pawel@orzech.me</code> — usuniemy te dane niezwłocznie.</p>
-<p>Zakup subskrypcji wymaga konta Google Play; kontrola nad zakupami dokonywanymi przez osoby małoletnie leży po stronie ustawień rodzicielskich Google Play.</p>
-<!-- TODO: TODO(research): -->
-<p><strong><span class="todo-mark">TODO(research)</span>:</strong> potwierdzić właściwy próg wieku dla zgody na usługi społeczeństwa informacyjnego w Polsce (art. 8 RODO pozwala państwom członkowskim obniżyć próg z 16 do 13 lat) — oraz spójność zadeklarowanej grupy wiekowej z ustawieniami „Treść aplikacji" w Google Play Console.</p>
-<h3 id="pl-15-zmiany-polityki">15. Zmiany polityki</h3>
-<p>Możemy zmieniać tę politykę — na przykład gdy dodamy funkcję, która wymaga przetwarzania nowych danych, albo gdy zmienią się przepisy.</p>
-<ul><li>Aktualna wersja jest zawsze dostępna w aplikacji (Ustawienia → Prywatność) i na stronie internetowej projektu.</li><li>Każda wersja ma numer i datę wejścia w życie.</li><li><strong>O zmianach istotnych</strong> — czyli takich, które rozszerzają zakres zbieranych danych, zmieniają cel przetwarzania albo dodają nowego odbiorcę danych — poinformujemy z <strong>14-dniowym wyprzedzeniem</strong>: komunikatem w aplikacji, a posiadaczy kont dodatkowo e-mailem.</li><li>Zmiany redakcyjne (poprawki językowe, doprecyzowania, aktualizacja linków) wchodzą w życie z chwilą publikacji.</li><li>Archiwum poprzednich wersji jest dostępne w historii repozytorium projektu.</li></ul>
-<p>Dalsze korzystanie z aplikacji po wejściu zmian w życie oznacza zapoznanie się z nimi. Jeśli nie akceptujesz zmian, możesz usunąć konto i przestać korzystać z aplikacji; zasady rozwiązania odpłatnej subskrypcji opisuje <a href="terms.html">Regulamin</a>.</p>
-<h3 id="pl-16-google-play-bezpieczenstwo-danych-data-safety">16. Google Play — Bezpieczeństwo danych (Data Safety)</h3>
-<p>Poniższa tabela odpowiada 1:1 deklaracji złożonej w formularzu „Bezpieczeństwo danych" w Google Play Console. Jeśli kiedykolwiek zauważysz rozbieżność między tą tabelą a tym, co widzisz w sklepie — napisz do nas, bo to znaczy, że jedno z dwojga wymaga poprawki.</p>
-<p><strong>Deklaracje ogólne:</strong></p>
-<ul><li>Dane są <strong>szyfrowane podczas przesyłania</strong>: <strong>TAK</strong> (TLS na wszystkich połączeniach).</li><li>Użytkownik może <strong>zażądać usunięcia danych</strong>: <strong>TAK</strong> — w aplikacji oraz przez stronę internetową.</li><li><strong>Nie zbieramy</strong> żadnych danych do celów reklamowych. Aplikacja nie zawiera reklam.</li><li><strong>Nie sprzedajemy</strong> i nie udostępniamy danych brokerom danych.</li></ul>
-<p><strong>Szczegóły per typ danych:</strong></p>
-<div class="table-wrap"><table><thead><tr><th scope="col">Typ danych (kategoria Google Play)</th><th scope="col">Zbierane</th><th scope="col">Udostępniane</th><th scope="col">Wymagane?</th><th scope="col">Cel</th><th scope="col">Można usunąć?</th></tr></thead><tbody><tr><td>Adres e-mail</td><td><strong>Tak</strong> — tylko przy opcjonalnym logowaniu</td><td>Nie</td><td>Opcjonalne</td><td>Zarządzanie kontem</td><td>Tak</td></tr><tr><td>Identyfikatory użytkownika (ID Google, ID instalacji)</td><td><strong>Tak</strong></td><td>Nie</td><td>Opcjonalne (ID Google) / Wymagane (ID instalacji przy Premium)</td><td>Zarządzanie kontem, zapobieganie oszustwom, bezpieczeństwo</td><td>Tak</td></tr><tr><td>Imię i nazwisko</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Adres</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Numer telefonu</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Inne informacje kontaktowe</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Informacje o płatnościach</td><td>Nie — obsługuje je Google Play; <strong>my nie otrzymujemy danych płatniczych</strong></td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Historia zakupów</td><td><strong>Tak</strong> — wyłącznie status subskrypcji i skrót tokenu zakupu</td><td>Nie</td><td>Wymagane dla Premium</td><td>Realizacja usługi, obowiązki prawne</td><td>Częściowo — wymóg prawny przechowywania przez 5 lat</td></tr><tr><td>Dokładna / przybliżona lokalizacja</td><td>Nie — aplikacja nie ma uprawnień lokalizacyjnych</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kontakty</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Zdjęcia, filmy, pliki audio, pliki</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kalendarz</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Wiadomości (SMS, e-mail w urządzeniu)</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Historia przeglądania stron</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Historia wyszukiwania w aplikacji</td><td>Nie — wyszukiwania nie opuszczają urządzenia</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Aplikacje zainstalowane na urządzeniu</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Zdrowie i sprawność fizyczna</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Informacje finansowe (poza historią zakupów)</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Dane osobiste — inne</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td><strong>Pliki i dokumenty użytkownika (notatki, cele, sesje polowań)</strong></td><td><strong>Tak — tylko przy włączonej synchronizacji Premium</strong>; w pozostałych przypadkach dane nie opuszczają urządzenia</td><td>Nie</td><td>Opcjonalne</td><td>Realizacja usługi (synchronizacja)</td><td>Tak</td></tr><tr><td>Interakcje w aplikacji (użyte ekrany, akcje)</td><td><strong>Tak</strong></td><td>Nie</td><td>Opcjonalne — można wyłączyć analitykę</td><td>Analityka</td><td>Tak — wyłączenie analityki i usunięcie danych</td></tr><tr><td>Dzienniki awarii</td><td><strong>Tak</strong></td><td>Nie</td><td>Opcjonalne</td><td>Diagnostyka</td><td>Tak</td></tr><tr><td>Dane diagnostyczne (wydajność)</td><td><strong>Tak</strong></td><td>Nie</td><td>Opcjonalne</td><td>Diagnostyka</td><td>Tak</td></tr><tr><td>Inne dane wygenerowane przez użytkownika</td><td>Nie</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
-<!-- TODO: TODO(research): -->
-<p><strong><span class="todo-mark">TODO(research)</span>:</strong> po wypełnieniu formularza w Google Play Console porównać deklarację pole po polu z powyższą tabelą i wyrównać różnice; sprawdzić, czy Firebase Analytics i Crashlytics nie deklarują w bibliotekach typów danych, których nie ma na tej liście (Google udostępnia zestawienia „Data safety" dla własnych SDK).</p>
-<h3 id="pl-17-kontakt">17. Kontakt</h3>
-<p>Wszystkie sprawy dotyczące prywatności, danych osobowych i tej polityki:</p>
-<!-- TODO: TODO(research): uzupełnić NIP -->
-<!-- TODO: TODO(research): uzupełnić adres pocztowy -->
-<blockquote><p><strong>pawel@orzech.me</strong><br>
-Paweł Orzech, jednoosobowa działalność gospodarcza, Polska<br>
-NIP: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić NIP</strong><br>
-Adres: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić adres pocztowy</strong></p></blockquote>
-<!-- TODO: TODO(research): uzupełnić datę publikacji aplikacji -->
-<p>Data sporządzenia: <strong>2026-07-26</strong> Wersja: <strong>1.0</strong> Data wejścia w życie: <strong><span class="todo-mark">TODO(research)</span>: uzupełnić datę publikacji aplikacji</strong></p>
-<hr>
-<hr>
-  </section>
-  <section class="prose" data-lang="en" lang="en" aria-label="Privacy Policy">
-    <h2 class="visually-hidden">Privacy Policy (EN)</h2>
-<!-- TODO: TODO(research): determine the Google Play publication date and use it as the effective date -->
-<blockquote><p>Version: 1.0 · Effective date: <strong><span class="todo-mark">TODO(research)</span>: determine the Google Play publication date and use it as the effective date</strong> · Drafted: 2026-07-26</p><p>The Polish version of this document is the binding one; this English version is provided for convenience.</p><p>Related documents: <a href="terms.html">Terms of Service</a> · <a href="licenses.html#disclaimer">Non-affiliation notice</a> · <a href="licenses.html">Sources and licences</a></p></blockquote>
+  <section class="prose" aria-label="Privacy Policy">
+    <h2 class="visually-hidden">Privacy Policy</h2>
 <h3 id="en-1-summary">1. Summary</h3>
 <p>Exiva is an unofficial fan-made app for Tibia players. It is designed to work without collecting data about you.</p>
 <ul><li><strong>If you use the free tier, we do not create an account for you and we hold no record about you in our server database.</strong> Tracked characters, notes and settings stay on your phone.</li><li><strong>We never ask for your Tibia login credentials</strong> and we never will. All character information comes from publicly available sources.</li><li><strong>We show no ads</strong> and we pass your data to nobody for marketing purposes.</li><li><strong>We do not sell data.</strong> Ever.</li><li>We do not collect your phone number, location, contacts, photos, or device identifiers such as IMEI.</li><li>Signing in with Google is <strong>optional</strong>. You can buy and use the subscription without signing in.</li></ul>
@@ -368,21 +194,21 @@ Address: <strong><span class="todo-mark">TODO(research)</span>: fill in the post
       <div>
         <h2>Exiva</h2>
         <ul>
-          <li><a href="index.html">Strona główna / Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="mailto:pawel@orzech.me">pawel@orzech.me</a></li>
         </ul>
       </div>
       <div>
-        <h2>Dokumenty / Legal</h2>
+        <h2>Legal</h2>
         <ul>
-          <li><a href="privacy.html">Polityka prywatności / Privacy Policy</a></li>
-          <li><a href="terms.html">Regulamin / Terms of Service</a></li>
-          <li><a href="licenses.html">Licencje i atrybucje / Licences &amp; attributions</a></li>
-          <li><a href="delete-account.html">Usuwanie konta / Delete your account</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="licenses.html">Licences &amp; attributions</a></li>
+          <li><a href="delete-account.html">Delete your account</a></li>
         </ul>
       </div>
       <div>
-        <h2>Źródła / Sources</h2>
+        <h2>Sources</h2>
         <ul>
           <li><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a></li>
           <li><a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">cipsoft.com</a></li>
@@ -393,13 +219,11 @@ Address: <strong><span class="todo-mark">TODO(research)</span>: fill in the post
     </div>
 
     <div class="disclaimer">
-      <p lang="pl"><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong> Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-      <p lang="en"><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-      <p lang="pl">Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
-      <p lang="en">The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+      <p><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p>The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
     </div>
 
-    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · <span lang="pl">Część danych encyklopedycznych pochodzi z TibiaWiki i jest dostępna na licencji <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>.</span> <span lang="en">Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</span></p>
+    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</p>
   </div>
 </footer>
 </body>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — Exiva</title>
-<meta name="description" content="Nie ma tu nic. / Nothing here.">
+<meta name="description" content="Nothing here.">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#12100C" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FDF8EF" media="(prefers-color-scheme: light)">
 <meta property="og:title" content="404 — Exiva">
-<meta property="og:description" content="Nie ma tu nic. / Nothing here.">
+<meta property="og:description" content="Nothing here.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -17,36 +17,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
-<script>
-(function () {
-  var root = document.documentElement;
-  root.className += " js";
-  document.addEventListener("DOMContentLoaded", function () {
-    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang-btn]"));
-    if (!buttons.length) return;
-    function apply(lang) {
-      Array.prototype.forEach.call(document.querySelectorAll("[data-lang]"), function (el) {
-        if (el.getAttribute("data-lang") === lang) el.setAttribute("data-active", "");
-        else el.removeAttribute("data-active");
-      });
-      buttons.forEach(function (b) {
-        b.setAttribute("aria-pressed", b.getAttribute("data-lang-btn") === lang ? "true" : "false");
-      });
-      try { localStorage.setItem("exiva-lang", lang); } catch (e) {}
-    }
-    var saved = null;
-    try { saved = localStorage.getItem("exiva-lang"); } catch (e) {}
-    var guess = (navigator.language || "pl").toLowerCase().indexOf("pl") === 0 ? "pl" : "en";
-    apply(saved === "pl" || saved === "en" ? saved : guess);
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.getAttribute("data-lang-btn")); });
-    });
-  });
-})();
-</script>
 </head>
 <body>
-<a class="skip-link" href="#main">Przejdź do treści / Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html"><svg class="mark" width="32" height="32" viewBox="0 0 108 108" role="img" aria-label="Exiva" xmlns="http://www.w3.org/2000/svg">
@@ -66,11 +39,11 @@
   <circle cx="54" cy="54" r="24.5" fill="none" stroke="url(#brand-404html-gold)" stroke-width="1.5" opacity="0.3"/>
   <path d="M54 26 Q57.5 50.5 82 54 Q57.5 57.5 54 82 Q50.5 57.5 26 54 Q50.5 50.5 54 26 Z" fill="url(#brand-404html-gold)"/>
 </svg><span>Exiva</span></a>
-    <nav class="site-nav" aria-label="Główna nawigacja / Main navigation">
-      <a href="privacy.html"><span lang="pl">Prywatność</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Privacy</span></a>
-      <a href="terms.html"><span lang="pl">Regulamin</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Terms</span></a>
-      <a href="licenses.html"><span lang="pl">Licencje</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Licences</span></a>
-      <a href="delete-account.html"><span lang="pl">Usuń konto</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Delete account</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="licenses.html">Licences</a>
+      <a href="delete-account.html">Delete account</a>
     </nav>
   </div>
 </header>
@@ -78,11 +51,10 @@
 <div class="wrap error-page">
   <div>
     <p class="code">404</p>
-    <h1 lang="pl">Exiva nie znajduje tej strony</h1>
-    <p class="lede" lang="pl">Adres jest nieprawidłowy albo strona została przeniesiona.</p>
-    <p class="lede" lang="en">This address is wrong, or the page has moved.</p>
+    <h1>Exiva cannot find this page</h1>
+    <p class="lede">This address is wrong, or the page has moved.</p>
     <p class="cta-row" style="justify-content:center">
-      <a class="btn btn-primary" href="index.html">Strona główna / Home</a>
+      <a class="btn btn-primary" href="index.html">Home</a>
     </p>
   </div>
 </div>
@@ -93,21 +65,21 @@
       <div>
         <h2>Exiva</h2>
         <ul>
-          <li><a href="index.html">Strona główna / Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="mailto:pawel@orzech.me">pawel@orzech.me</a></li>
         </ul>
       </div>
       <div>
-        <h2>Dokumenty / Legal</h2>
+        <h2>Legal</h2>
         <ul>
-          <li><a href="privacy.html">Polityka prywatności / Privacy Policy</a></li>
-          <li><a href="terms.html">Regulamin / Terms of Service</a></li>
-          <li><a href="licenses.html">Licencje i atrybucje / Licences &amp; attributions</a></li>
-          <li><a href="delete-account.html">Usuwanie konta / Delete your account</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="licenses.html">Licences &amp; attributions</a></li>
+          <li><a href="delete-account.html">Delete your account</a></li>
         </ul>
       </div>
       <div>
-        <h2>Źródła / Sources</h2>
+        <h2>Sources</h2>
         <ul>
           <li><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a></li>
           <li><a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">cipsoft.com</a></li>
@@ -118,13 +90,11 @@
     </div>
 
     <div class="disclaimer">
-      <p lang="pl"><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong> Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-      <p lang="en"><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-      <p lang="pl">Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
-      <p lang="en">The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+      <p><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p>The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
     </div>
 
-    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · <span lang="pl">Część danych encyklopedycznych pochodzi z TibiaWiki i jest dostępna na licencji <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>.</span> <span lang="en">Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</span></p>
+    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</p>
   </div>
 </footer>
 </body>

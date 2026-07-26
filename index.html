@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exiva — nieoficjalny companion dla graczy Tibii</title>
-<meta name="description" content="Śledź 3 postacie w Tibii za darmo. Premium dodaje push z serwera 24/7 i 50 postaci — od 8,33 zł miesięcznie. Nieoficjalna aplikacja fanowska na Androida. Bez reklam.">
+<title>Exiva — unofficial companion for Tibia players</title>
+<meta name="description" content="Track 3 Tibia characters for free. Premium adds server push 24/7 and 50 characters — from 8,33 zł a month. Unofficial fan-made Android app. No ads.">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#12100C" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FDF8EF" media="(prefers-color-scheme: light)">
-<meta property="og:title" content="Exiva — nieoficjalny companion dla graczy Tibii">
-<meta property="og:description" content="Śledź 3 postacie w Tibii za darmo. Premium dodaje push z serwera 24/7 i 50 postaci — od 8,33 zł miesięcznie. Nieoficjalna aplikacja fanowska na Androida. Bez reklam.">
+<meta property="og:title" content="Exiva — unofficial companion for Tibia players">
+<meta property="og:description" content="Track 3 Tibia characters for free. Premium adds server push 24/7 and 50 characters — from 8,33 zł a month. Unofficial fan-made Android app. No ads.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -17,36 +17,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
-<script>
-(function () {
-  var root = document.documentElement;
-  root.className += " js";
-  document.addEventListener("DOMContentLoaded", function () {
-    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang-btn]"));
-    if (!buttons.length) return;
-    function apply(lang) {
-      Array.prototype.forEach.call(document.querySelectorAll("[data-lang]"), function (el) {
-        if (el.getAttribute("data-lang") === lang) el.setAttribute("data-active", "");
-        else el.removeAttribute("data-active");
-      });
-      buttons.forEach(function (b) {
-        b.setAttribute("aria-pressed", b.getAttribute("data-lang-btn") === lang ? "true" : "false");
-      });
-      try { localStorage.setItem("exiva-lang", lang); } catch (e) {}
-    }
-    var saved = null;
-    try { saved = localStorage.getItem("exiva-lang"); } catch (e) {}
-    var guess = (navigator.language || "pl").toLowerCase().indexOf("pl") === 0 ? "pl" : "en";
-    apply(saved === "pl" || saved === "en" ? saved : guess);
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.getAttribute("data-lang-btn")); });
-    });
-  });
-})();
-</script>
 </head>
 <body>
-<a class="skip-link" href="#main">Przejdź do treści / Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html"><svg class="mark" width="32" height="32" viewBox="0 0 108 108" role="img" aria-label="Exiva" xmlns="http://www.w3.org/2000/svg">
@@ -66,11 +39,11 @@
   <circle cx="54" cy="54" r="24.5" fill="none" stroke="url(#brand-indexhtml-gold)" stroke-width="1.5" opacity="0.3"/>
   <path d="M54 26 Q57.5 50.5 82 54 Q57.5 57.5 54 82 Q50.5 57.5 26 54 Q50.5 50.5 54 26 Z" fill="url(#brand-indexhtml-gold)"/>
 </svg><span>Exiva</span></a>
-    <nav class="site-nav" aria-label="Główna nawigacja / Main navigation">
-      <a href="privacy.html"><span lang="pl">Prywatność</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Privacy</span></a>
-      <a href="terms.html"><span lang="pl">Regulamin</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Terms</span></a>
-      <a href="licenses.html"><span lang="pl">Licencje</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Licences</span></a>
-      <a href="delete-account.html"><span lang="pl">Usuń konto</span> <span class="visually-hidden">/</span> <span lang="en" class="visually-hidden">Delete account</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="licenses.html">Licences</a>
+      <a href="delete-account.html">Delete account</a>
     </nav>
   </div>
 </header>
@@ -78,23 +51,17 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <span class="kicker" lang="pl">Nieoficjalny companion dla graczy Tibii</span>
+      <span class="kicker">Unofficial companion for Tibia players</span>
       <h1>Exiva</h1>
-      <p class="tagline" data-lang="pl" data-active lang="pl">Exiva mówi Ci, co dzieje się z Twoimi postaciami — bez odpalania klienta.</p>
-      <p class="tagline" data-lang="en" lang="en">Exiva tells you where your characters stand — without opening the client.</p>
+      <p class="tagline">Exiva tells you where your characters stand — without opening the client.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#" aria-describedby="play-note">
-          <span lang="pl">Pobierz z Google Play</span>
-        </a>
-        <a class="btn btn-secondary" href="#funkcje"><span lang="pl">Co potrafi</span></a>
-        <p class="cta-note" id="play-note">
-          <span data-lang="pl" data-active lang="pl">Link do Google Play pojawi się tutaj po publikacji aplikacji.</span>
-          <span data-lang="en" lang="en">The Google Play link will appear here once the app is published.</span>
-        </p>
+        <a class="btn btn-primary" href="#" aria-describedby="play-note">Get it on Google Play</a>
+        <a class="btn btn-secondary" href="#features">What it does</a>
+        <p class="cta-note" id="play-note">The Google Play link will appear here once the app is published.</p>
       </div>
     </div>
     <div class="hero-art">
-      <svg class="" width="320" height="320" viewBox="0 0 108 108" role="img" aria-label="Logo Exiva — złota iskra w pierścieniach lokalizacji" xmlns="http://www.w3.org/2000/svg">
+      <svg class="" width="320" height="320" viewBox="0 0 108 108" role="img" aria-label="Exiva logo — a golden spark inside location rings" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="hero-gold" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#FFDF98"/>
@@ -115,34 +82,9 @@
   </div>
 </section>
 
-<div class="wrap">
-  <div class="prose">
-<div class="lang-bar">
-  <div class="lang-switch" role="group" aria-label="Język / Language">
-    <button type="button" data-lang-btn="pl" aria-pressed="true" lang="pl">Polski</button>
-    <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">English</button>
-  </div>
-  <p class="hint" data-lang="pl" data-active lang="pl">Strona jest dwujęzyczna — przełącz na angielski w dowolnej chwili.</p>
-  <p class="hint" data-lang="en" lang="en">This site is bilingual — switch back to Polish at any time.</p>
-</div>
-  </div>
-</div>
-
-<section class="section" id="funkcje">
+<section class="section" id="features">
   <div class="wrap">
-    <div data-lang="pl" data-active lang="pl">
-      <h2>Co robi Exiva</h2>
-      <p class="lede">Podajesz nazwę postaci raz. Od tego momentu Exiva pilnuje świata za Ciebie: kiedy wchodzi online, kiedy wbija level, kiedy ginie i od kogo.</p>
-      <div class="grid">
-        <article class="card"><h3>Śledzenie postaci</h3><p>Podajesz nazwę postaci raz. Exiva pilnuje świata za Ciebie: kiedy wchodzi online, kiedy wbija level, kiedy ginie i od kogo.</p></article>
-        <article class="card"><h3>Alerty, gdy coś się dzieje</h3><p>Dowiadujesz się z powiadomienia, a nie z przewijania strony godzinę później. Free odświeża na urządzeniu, Premium pilnuje na serwerze przez całą dobę. Quiet hours, cooldowny i wyciszanie pojedynczych obiektów.</p></article>
-        <article class="card"><h3>Światy, gildie, domy</h3><p>Wyszukiwanie dowolnej postaci, gildii, świata i domu na każdym serwerze. Populacja, typ PvP, BattlEye, transfery, server save.</p></article>
-        <article class="card"><h3>Highscores i eventy</h3><p>Highscores we wszystkich publicznych kategoriach i vocation. Boosted creature, boosted boss i lokalizacja Rashida — codziennie.</p></article>
-        <article class="card"><h3>Kalkulatory</h3><p>Blessing, exercise weapons, magic level, stamina, podział lootu i więcej — każdy wzór udokumentowany i pokryty testami.</p></article>
-        <article class="card"><h3>Codex i tryb offline</h3><p>Codex potworów, przedmiotów, czarów i imbuementów, w którym da się szukać. Dane z cache czytasz w metrze, a każdy ekran pokazuje, ile mają lat.</p></article>
-      </div>
-    </div>
-    <div data-lang="en" lang="en">
+    <div>
       <h2>What Exiva does</h2>
       <p class="lede">Name a character once. From then on Exiva watches the world for you: when they come online, when they gain a level, when they die and to whom.</p>
       <div class="grid">
@@ -157,73 +99,9 @@
   </div>
 </section>
 
-<section class="section" id="cennik">
+<section class="section" id="pricing">
   <div class="wrap">
-    <div data-lang="pl" data-active lang="pl">
-      <h2>Free i Premium</h2>
-      <p class="lede">Różnica nie polega na tym, ile slotów dostajesz. Polega na tym, <strong>kiedy się dowiadujesz</strong>. Free odświeża Twoje postacie na Twoim urządzeniu — wiesz, gdy aplikacja się obudzi. Premium pilnuje ich na naszym serwerze przez całą dobę — wiesz w ciągu minuty, nawet jeśli nie otwierałeś aplikacji od dwóch dni.</p>
-      <p class="lede">Zero reklam. Zero sztucznie spowolnionej wersji darmowej. Paywall pojawia się, gdy sięgasz po płatną funkcję — i nigdzie indziej.</p>
-      <div class="tiers">
-        <article class="tier">
-          <h3>Free</h3>
-          <p class="price">Za darmo · 3 śledzone postacie · odświeżanie na urządzeniu</p>
-          <ul>
-            <li>3 śledzone postacie, odświeżane na Twoim urządzeniu</li>
-            <li>Powiadomienia lokalne — gdy aplikacja albo jej zadanie w tle się obudzi</li>
-            <li>Globalne powiadomienia o newsach i wydarzeniach w grze</li>
-            <li>Bez konta i bez profilu na serwerze — wszystko zostaje na urządzeniu</li>
-            <li>Wyszukiwanie dowolnej postaci, gildii, świata i domu na każdym serwerze</li>
-            <li>Pełne profile postaci — vocation, rezydencja, ranga w gildii, punkty osiągnięć, log śmierci z zabójcami, poprzednie nazwy, status konta</li>
-            <li>Wszystkie światy na jednym ekranie: populacja, typ PvP, BattlEye, transfery, server save</li>
-            <li>Highscores we wszystkich publicznych kategoriach i vocation</li>
-            <li>Boosted creature, boosted boss i lokalizacja Rashida — codziennie</li>
-            <li>Kalkulatory: blessing, exercise weapons, magic level, stamina, podział lootu i więcej</li>
-            <li>Codex potworów, przedmiotów, czarów i imbuementów, w którym da się szukać</li>
-            <li>Działa offline — każdy ekran pokazuje wiek danych</li>
-          </ul>
-        </article>
-        <article class="tier is-premium">
-          <h3>Premium<span class="badge">Subskrypcja</span></h3>
-          <p class="price">Od 8,33 zł miesięcznie · do 50 postaci · push z serwera 24/7</p>
-          <ul>
-            <li><strong>Push z serwera, całą dobę</strong> — dowiadujesz się w ciągu minuty, nawet jeśli nie otwierałeś aplikacji od dwóch dni</li>
-            <li>Do 50 śledzonych postaci</li>
-            <li>Smart Alert Rules — opisujesz zwykłym zdaniem, co Cię interesuje: „daj znać, jak Bubble przekroczy 900 albo zginie od kogoś z mojej gildii”</li>
-            <li>Hunt Session Analyzer — wklejasz log sesji i dostajesz XP/h, profit/h, podział lootu, trendy między spotami i okresami oraz uczciwą odpowiedź, gdzie poszły supplies</li>
-            <li>Cele i prognozy — level, skille, magic level, bestiary, złoto — z jawnie pokazaną niepewnością, a nie ukrytą</li>
-            <li>Obserwowanie domów i aukcji z alertem, zanim licytacja się skończy</li>
-            <li>Narzędzia gildyjne: zmiany składu, wzorce aktywności, oś czasu śmierci, prywatne etykiety friendly/neutral/hostile, które widzisz tylko Ty</li>
-            <li>Synchronizacja między urządzeniami, pełna historia zdarzeń, codex offline</li>
-            <li>Quiet hours, cooldowny i wyciszanie pojedynczych obiektów</li>
-          </ul>
-        </article>
-      </div>
-      <h3 id="ceny">Ile kosztuje Premium</h3>
-      <div class="prices" aria-label="Ceny Premium">
-        <div class="price-card">
-          <p class="plan">Miesięcznie</p>
-          <p class="amount">12,99 zł</p>
-          <p class="per">za miesiąc</p>
-        </div>
-        <div class="price-card is-best">
-          <p class="plan">Rocznie<span class="badge">Najlepsza opcja</span></p>
-          <p class="amount">99,99 zł</p>
-          <p class="per">za rok — 8,33 zł miesięcznie</p>
-        </div>
-        <div class="price-card">
-          <p class="plan">Founders</p>
-          <p class="amount">69,99 zł</p>
-          <p class="per">za pierwszy rok · oferta ograniczona, potem cena standardowa planu rocznego</p>
-        </div>
-      </div>
-      <ul class="price-notes">
-        <li>Bez reklam — w żadnym planie.</li>
-        <li>Bez planu lifetime. Usługa generuje stały koszt serwerowy, którego jednorazowa opłata nie pokryje.</li>
-        <li>Subskrypcją zarządza Google Play — anulujesz w każdej chwili, bez pisania do nas.</li>
-        <li>Ceny są lokalizowane do Twojego kraju i waluty. Wiążąca jest kwota widoczna w Google Play w chwili zakupu.</li>
-      </ul>
-    </div>
-    <div data-lang="en" lang="en">
+    <div>
       <h2>Free and Premium</h2>
       <p class="lede">The difference is not how many slots you get. It is <strong>when you find out</strong>. Free refreshes your characters on your own device — you know once the app wakes up. Premium watches them on our server around the clock — you know within a minute, even if you have not opened the app in two days.</p>
       <p class="lede">No advertising anywhere. No artificially slowed free experience. The paywall appears when you reach for a paid feature and nowhere else.</p>
@@ -290,16 +168,9 @@
   </div>
 </section>
 
-<section class="section" id="dane">
+<section class="section" id="data">
   <div class="wrap">
-    <div class="prose" data-lang="pl" data-active lang="pl">
-      <h2>Uczciwość wobec danych</h2>
-      <p>Każdy rekord ma zapisane źródło i wiek. Gdy dane są przeterminowane, Exiva to mówi, zamiast udawać. Gdy źródło padnie, zostajesz z ostatnimi dobrymi danymi i wyraźnym ostrzeżeniem — a nie z pustym ekranem.</p>
-      <h2>Prywatność</h2>
-      <p>Do korzystania z Exivy nie potrzebujesz konta. Użytkownik darmowy nie ma w ogóle profilu po stronie serwera — postać, notatki i ustawienia zostają na Twoim urządzeniu. Exiva nigdy nie prosi o dane logowania do Tibii i nigdy ich nie przechowuje. Twoje listy obserwowanych są prywatne.</p>
-      <p><a href="privacy.html">Polityka prywatności</a> · <a href="terms.html">Regulamin</a> · <a href="delete-account.html">Usuwanie konta i danych</a> · <a href="licenses.html">Licencje i atrybucje</a></p>
-    </div>
-    <div class="prose" data-lang="en" lang="en">
+    <div class="prose">
       <h2>Built to be honest about data</h2>
       <p>Every record carries its source and its age. When something is stale, Exiva says so instead of pretending. When a source is down, you keep the last good data with a clear warning — you do not get an empty screen.</p>
       <h2>Privacy</h2>
@@ -312,15 +183,8 @@
 <section class="section" id="disclaimer">
   <div class="wrap">
     <div class="prose">
-      <h2>Status nieoficjalny <span class="visually-hidden">/ Unofficial status</span></h2>
-      <div class="callout" lang="pl">
-        <p><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong></p>
-        <p>Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>.</p>
-        <p><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH.</p>
-        <p>Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-        <p>Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
-      </div>
-      <div class="callout" lang="en">
+      <h2>Unofficial status</h2>
+      <div class="callout">
         <p><strong>Exiva is an unofficial fan-made application.</strong></p>
         <p>Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way.</p>
         <p><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH.</p>
@@ -337,21 +201,21 @@
       <div>
         <h2>Exiva</h2>
         <ul>
-          <li><a href="index.html">Strona główna / Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="mailto:pawel@orzech.me">pawel@orzech.me</a></li>
         </ul>
       </div>
       <div>
-        <h2>Dokumenty / Legal</h2>
+        <h2>Legal</h2>
         <ul>
-          <li><a href="privacy.html">Polityka prywatności / Privacy Policy</a></li>
-          <li><a href="terms.html">Regulamin / Terms of Service</a></li>
-          <li><a href="licenses.html">Licencje i atrybucje / Licences &amp; attributions</a></li>
-          <li><a href="delete-account.html">Usuwanie konta / Delete your account</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="licenses.html">Licences &amp; attributions</a></li>
+          <li><a href="delete-account.html">Delete your account</a></li>
         </ul>
       </div>
       <div>
-        <h2>Źródła / Sources</h2>
+        <h2>Sources</h2>
         <ul>
           <li><a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a></li>
           <li><a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">cipsoft.com</a></li>
@@ -362,13 +226,11 @@
     </div>
 
     <div class="disclaimer">
-      <p lang="pl"><strong>Exiva jest nieoficjalną aplikacją fanowską.</strong> Exiva nie jest tworzona, wydawana, sponsorowana ani w żaden sposób powiązana z <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> jest tworzona i wydawana przez <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. „Tibia" i „CipSoft" są zarejestrowanymi znakami towarowymi CipSoft GmbH. Wszystkie treści pochodzące z oficjalnej strony <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> lub udostępnione przez CipSoft — w tym wszelkie wykorzystane grafiki — są objęte prawami autorskimi CipSoft GmbH. Jedyną oficjalną stroną gry jest <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-      <p lang="en"><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
-      <p lang="pl">Narzędzia, kalkulatory i funkcje dostępne w Exivie nie zostały stworzone przez CipSoft GmbH. Informacje prezentowane w aplikacji mogą być niekompletne, nieaktualne lub niepoprawne i nie są potwierdzone przez CipSoft GmbH.</p>
-      <p lang="en">The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
+      <p><strong>Exiva is an unofficial fan-made application.</strong> Exiva is not created, published, sponsored by, or affiliated with <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a> in any way. <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">Tibia</a> is made and published by <a href="https://www.cipsoft.com" rel="noopener noreferrer" target="_blank">CipSoft GmbH</a>. "Tibia" and "CipSoft" are registered trademarks of CipSoft GmbH. All content originating from the official <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">tibia.com</a> website or provided by CipSoft — including any graphics that may be used — is copyrighted by CipSoft GmbH. The only official website is <a href="https://www.tibia.com" rel="noopener noreferrer" target="_blank">www.tibia.com</a>.</p>
+      <p>The tools, calculators and features available in Exiva were not created by CipSoft GmbH. Information presented in this application may be incomplete, outdated or incorrect and has not been confirmed by CipSoft GmbH.</p>
     </div>
 
-    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · <span lang="pl">Część danych encyklopedycznych pochodzi z TibiaWiki i jest dostępna na licencji <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>.</span> <span lang="en">Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</span></p>
+    <p class="colophon">© Paweł Orzech · <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> · Some encyclopaedic data originates from TibiaWiki and is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a> licence.</p>
   </div>
 </footer>
 </body>
