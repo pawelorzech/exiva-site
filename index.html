@@ -11,9 +11,14 @@
 <meta property="og:description" content="The unofficial Android companion that watches your Tibia world and tells you when something changes.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pawelorzech.github.io/exiva-site/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://pawelorzech.github.io/exiva-site/assets/exiva-world-hero.webp">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta property="og:image:alt" content="An original pixel-art fantasy town at night with the Exiva app interface">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://pawelorzech.github.io/exiva-site/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/exiva-world-hero.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap">
@@ -39,15 +44,10 @@
 
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-map" aria-hidden="true">
-      <span class="map-room room-one"></span>
-      <span class="map-room room-two"></span>
-      <span class="map-room room-three"></span>
-      <span class="map-route route-one"></span>
-      <span class="map-route route-two"></span>
-      <span class="map-marker marker-start"></span>
-      <span class="map-marker marker-target"></span>
+    <div class="hero-world" aria-hidden="true">
+      <span class="world-readout world-readout-cave"><i></i><b>TRACKING</b><small>Character activity</small></span>
+      <span class="world-readout world-readout-town"><i></i><b>ANTICA</b><small>World online</small></span>
+      <span class="world-readout world-readout-save"><i></i><b>SERVER SAVE</b><small>Countdown ready</small></span>
     </div>
     <div class="wrap hero-inner">
       <div class="hero-copy">

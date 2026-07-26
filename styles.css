@@ -1,6 +1,6 @@
 /* ==========================================================================
    Exiva public site
-   Product direction: a quiet command centre, not a fantasy costume.
+   Product direction: a modern command centre inside an original RPG world.
    ========================================================================== */
 
 :root {
@@ -348,32 +348,94 @@ img, svg { max-width: 100%; height: auto; }
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
+  background: #050908;
 }
 
-.hero-grid {
+.hero-world {
   position: absolute;
-  inset: 0;
-  opacity: .5;
-  background-image:
-    linear-gradient(rgba(216, 197, 154, .032) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(216, 197, 154, .032) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, .012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .012) 1px, transparent 1px);
-  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
-  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 86%);
-  mask-image: linear-gradient(to bottom, #000, transparent 86%);
+  inset: 0 0 auto;
+  height: min(62rem, 76vw);
+  min-height: 47rem;
+  background-image: url("assets/exiva-world-hero.webp");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   pointer-events: none;
 }
+
+.hero-world::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 9, 8, .98) 0%, rgba(5, 9, 8, .9) 24%, rgba(5, 9, 8, .38) 48%, rgba(5, 9, 8, .08) 72%),
+    linear-gradient(180deg, rgba(5, 9, 8, .08) 52%, #050908 100%);
+}
+
+.hero-world::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .2;
+  background-image:
+    linear-gradient(rgba(216, 197, 154, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(216, 197, 154, .08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  -webkit-mask-image: linear-gradient(90deg, #000, transparent 72%);
+  mask-image: linear-gradient(90deg, #000, transparent 72%);
+}
+
+.world-readout {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: .5rem auto;
+  align-items: center;
+  gap: 0 .45rem;
+  padding: .45rem .6rem;
+  border: 1px solid rgba(239, 182, 74, .36);
+  border-radius: 4px;
+  background: rgba(5, 9, 8, .78);
+  box-shadow: 0 9px 24px rgba(0, 0, 0, .38);
+  font-family: var(--font-mono);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.world-readout i {
+  grid-row: 1 / 3;
+  width: .42rem;
+  height: .42rem;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(73, 212, 154, .7);
+}
+
+.world-readout b {
+  color: var(--gold-bright);
+  font-size: .52rem;
+  letter-spacing: .12em;
+}
+
+.world-readout small {
+  color: #b9b8aa;
+  font-size: .48rem;
+}
+
+.world-readout-cave { top: 22%; right: 44%; }
+.world-readout-town { top: 14%; right: 14%; }
+.world-readout-save { top: 60%; right: 5%; }
+.world-readout-save i { background: var(--mana); box-shadow: 0 0 12px rgba(114, 174, 248, .7); }
 
 .hero::before {
   content: "";
   position: absolute;
-  top: -22rem;
-  right: -10rem;
-  width: 56rem;
-  height: 56rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(239, 182, 74, .12), rgba(105, 69, 38, .05) 42%, transparent 70%);
+  top: 4rem;
+  left: 0;
+  z-index: 1;
+  width: 45%;
+  height: 34rem;
+  background: radial-gradient(ellipse at 25% 40%, rgba(239, 182, 74, .08), transparent 68%);
   pointer-events: none;
 }
 
@@ -471,15 +533,21 @@ img, svg { max-width: 100%; height: auto; }
 
 .hero-inner {
   position: relative;
+  z-index: 3;
   display: grid;
   grid-template-columns: minmax(0, .93fr) minmax(31rem, 1.07fr);
   gap: clamp(2rem, 6vw, 6rem);
   align-items: center;
-  min-height: 44rem;
-  padding-block: clamp(4rem, 8vw, 7.5rem) clamp(3rem, 6vw, 5rem);
+  min-height: 49rem;
+  padding-block: clamp(4rem, 7vw, 6.5rem) clamp(3rem, 6vw, 5rem);
 }
 
-.hero-copy { position: relative; z-index: 3; }
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  padding: clamp(1rem, 2vw, 1.8rem) 0;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .92);
+}
 
 .eyebrow {
   margin: 0 0 1.25rem;
@@ -502,13 +570,18 @@ img, svg { max-width: 100%; height: auto; }
   box-shadow: 0 0 0 4px rgba(73, 212, 154, .1), 0 0 16px rgba(73, 212, 154, .6);
 }
 
-.hero h1 { max-width: 11ch; }
-.hero h1 span { color: var(--gold-bright); }
+.hero h1 { max-width: none; }
+.hero h1 span {
+  display: block;
+  color: var(--gold-bright);
+  font-size: .82em;
+  white-space: nowrap;
+}
 
 .tagline {
   max-width: 40rem;
   margin-top: 1.5rem;
-  color: var(--muted);
+  color: #c1c9c4;
   font-size: clamp(1.08rem, .98rem + .45vw, 1.28rem);
   line-height: 1.65;
   letter-spacing: -.018em;
@@ -573,15 +646,16 @@ img, svg { max-width: 100%; height: auto; }
 .product-stage::before {
   content: "";
   position: absolute;
-  inset: 5% -18% -5% 2%;
+  inset: -8% -18% -5% 2%;
   z-index: -2;
-  background: radial-gradient(circle at 56% 47%, rgba(239, 182, 74, .1), transparent 50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 56% 47%, rgba(5, 9, 8, .58), rgba(5, 9, 8, .14) 42%, transparent 70%);
 }
 
 .cast-line {
   position: absolute;
   z-index: -1;
-  border-color: rgba(239, 182, 74, .15);
+  border-color: rgba(239, 182, 74, .28);
   pointer-events: none;
 }
 
@@ -619,8 +693,8 @@ img, svg { max-width: 100%; height: auto; }
   border-radius: 6px;
   background:
     linear-gradient(180deg, rgba(216, 197, 154, .035), transparent 46%),
-    rgba(8, 16, 15, .92);
-  box-shadow: var(--shadow-soft);
+    rgba(8, 16, 15, .96);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, .46), 0 0 0 1px rgba(0, 0, 0, .32);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   font-family: var(--font-mono);
@@ -701,7 +775,8 @@ img, svg { max-width: 100%; height: auto; }
   background: #080b0a;
   box-shadow:
     0 38px 90px rgba(0, 0, 0, .58),
-    0 0 0 1px rgba(239, 182, 74, .08),
+    0 0 0 1px rgba(239, 182, 74, .2),
+    0 0 80px rgba(239, 182, 74, .1),
     inset 0 0 0 2px #27251f;
   transform: translateX(-50%) rotate(1.8deg);
 }
@@ -979,7 +1054,7 @@ img, svg { max-width: 100%; height: auto; }
   border-radius: 8px;
   background:
     linear-gradient(180deg, rgba(216, 197, 154, .045), transparent 38%),
-    linear-gradient(100deg, rgba(58, 40, 27, .9), rgba(18, 25, 22, .96) 58%);
+    linear-gradient(100deg, rgba(58, 40, 27, .96), rgba(10, 16, 14, .98) 58%);
   box-shadow:
     inset 0 0 0 2px rgba(8, 16, 15, .72),
     inset 0 0 0 3px rgba(239, 182, 74, .06),
@@ -2005,6 +2080,8 @@ tbody tr:last-child td { border-bottom: 0; }
 /* Responsive */
 @media (max-width: 68rem) {
   .hero-inner { grid-template-columns: 1fr 28rem; gap: 2rem; }
+  .hero h1 { max-width: 11ch; }
+  .hero h1 span { font-size: 1em; white-space: normal; }
   .product-stage { transform: scale(.9); transform-origin: center; }
   .tibia-routine { grid-template-columns: 1fr repeat(2, 1fr); }
   .routine-label { grid-row: span 2; }
@@ -2021,6 +2098,19 @@ tbody tr:last-child td { border-bottom: 0; }
   .hero h1,
   .tagline { margin-inline: auto; }
   .hero .cta-row { justify-content: center; }
+  .hero-world {
+    height: 76rem;
+    min-height: 0;
+    background-position: 67% top;
+    background-size: auto 55rem;
+  }
+  .hero-world::before {
+    background:
+      linear-gradient(180deg, rgba(5, 9, 8, .88) 0%, rgba(5, 9, 8, .52) 27%, rgba(5, 9, 8, .06) 52%, #050908 100%),
+      linear-gradient(90deg, rgba(5, 9, 8, .5), rgba(5, 9, 8, .04) 50%, rgba(5, 9, 8, .24));
+  }
+  .hero-world::after { display: none; }
+  .world-readout { display: none; }
   .hero-map {
     top: 23rem;
     right: -18rem;
@@ -2074,6 +2164,12 @@ tbody tr:last-child td { border-bottom: 0; }
   .landing-nav .nav-cta { margin-left: 0; padding-inline: .65rem; }
   .landing-header .brand .mark { width: 32px; height: 32px; }
   .hero-inner { padding-top: 3.5rem; }
+  .hero-copy {
+    margin-inline: -.35rem;
+    padding: 1.1rem .35rem 1.5rem;
+    border-radius: 18px;
+    background: radial-gradient(ellipse at center, rgba(5, 9, 8, .78), rgba(5, 9, 8, .3) 68%, transparent);
+  }
   .hero h1 { max-width: 10ch; font-size: clamp(2.6rem, 12.5vw, 4rem); }
   .tagline { font-size: 1rem; }
   .hero .btn { width: 100%; }
