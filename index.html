@@ -40,11 +40,20 @@
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-map" aria-hidden="true">
+      <span class="map-room room-one"></span>
+      <span class="map-room room-two"></span>
+      <span class="map-room room-three"></span>
+      <span class="map-route route-one"></span>
+      <span class="map-route route-two"></span>
+      <span class="map-marker marker-start"></span>
+      <span class="map-marker marker-target"></span>
+    </div>
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-light"></span> In development · unofficial Android companion for Tibia players</p>
+        <p class="eyebrow"><span class="status-light"></span> In development · built for Tibia players</p>
         <h1 id="hero-title">Know what happened.<br><span>Before you log in.</span></h1>
-        <p class="tagline">Add the characters you care about. Exiva watches public Tibia data and brings the useful changes to you — online status, levels and deaths, plus the guild, world, goal and daily tools you keep opening tabs for.</p>
+        <p class="tagline">Between hunts, server saves and guild plans, Exiva watches the public Tibia data you care about — online status, levels and deaths — then keeps your worlds, goals and daily tools in one place.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Tell%20me%20when%20Exiva%20launches">
             Request a launch update
@@ -127,6 +136,33 @@
       </div>
     </div>
 
+    <div class="wrap tibia-routine" aria-label="Tibia information available in Exiva">
+      <div class="routine-label">
+        <span>YOUR DAILY READOUT</span>
+        <strong>Tibia, at a glance</strong>
+      </div>
+      <div class="routine-slot">
+        <span class="slot-key">1</span>
+        <span class="slot-glyph world-glyph" aria-hidden="true">◎</span>
+        <div><small>WORLDS</small><strong>Population &amp; PvP</strong></div>
+      </div>
+      <div class="routine-slot">
+        <span class="slot-key">2</span>
+        <span class="slot-glyph rashid-glyph" aria-hidden="true">R</span>
+        <div><small>RASHID</small><strong>Daily location</strong></div>
+      </div>
+      <div class="routine-slot">
+        <span class="slot-key">3</span>
+        <span class="slot-glyph boss-glyph" aria-hidden="true">†</span>
+        <div><small>BOOSTED BOSS</small><strong>Today's target</strong></div>
+      </div>
+      <div class="routine-slot">
+        <span class="slot-key">4</span>
+        <span class="slot-glyph save-glyph" aria-hidden="true">◷</span>
+        <div><small>SERVER SAVE</small><strong>Time &amp; countdown</strong></div>
+      </div>
+    </div>
+
     <div class="wrap proof-strip" aria-label="Key Exiva benefits">
       <div><strong>No ads.</strong><span>In any plan, ever.</span></div>
       <div><strong>No Tibia login.</strong><span>Exiva never asks for it.</span></div>
@@ -144,21 +180,21 @@
       </div>
       <ol class="workflow">
         <li>
-          <span class="workflow-number">01</span>
+          <span class="workflow-number"><span>01</span></span>
           <div>
             <h3>Choose who matters</h3>
             <p>Search any public Tibia character and add it to your list. Free keeps 3 on your device; Premium raises the limit to 50.</p>
           </div>
         </li>
         <li>
-          <span class="workflow-number">02</span>
+          <span class="workflow-number"><span>02</span></span>
           <div>
             <h3>Exiva checks the world</h3>
             <p>Every result shows its source and age. If a source is temporarily unavailable, the last good data stays visible with a clear warning.</p>
           </div>
         </li>
         <li>
-          <span class="workflow-number">03</span>
+          <span class="workflow-number"><span>03</span></span>
           <div>
             <h3>You get the useful moment</h3>
             <p>See online status, level-ups and deaths without repeating the search. Premium watches on the server and can push within a minute.</p>
