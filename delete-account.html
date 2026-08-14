@@ -15,7 +15,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&amp;display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -63,33 +63,31 @@
 <p>Exiva — Android application, package identifier <code>me.orzech.exiva</code>. Developer: Paweł Orzech, <a href="mailto:pawel@orzech.me">pawel@orzech.me</a>.</p>
 
 <div class="callout">
-  <p><strong>An account is optional.</strong> If you use the Free tier, or Premium without signing in, <strong>we hold no record about you in our database</strong>. In that case there is nothing for us to delete — just uninstall the app or clear its data in Android settings.</p>
+  <p><strong>Free has no server account.</strong> A server account is created automatically only when a Premium purchase is verified. It is linked to the Play purchase and an installation identifier, not to an email address or Google profile.</p>
 </div>
 
 <h2>Option 1 — in the app</h2>
 <ol>
-  <li>Open Exiva and sign in to the account you want to delete.</li>
-  <li>Go to <strong>Settings → Account → Delete account</strong>.</li>
-  <li>Confirm. The account and the data linked to it are deleted promptly.</li>
+  <li>Open Exiva on an installation where Premium has been restored.</li>
+  <li>Go to <strong>Settings → Privacy and your data → Delete server account</strong>.</li>
+  <li>Read the consequences, tick the acknowledgement and confirm. The active server record is deleted immediately.</li>
 </ol>
 
 <h2>Option 2 — by email (no app needed)</h2>
-<p>If the app is no longer installed, send a request from the email address linked to your Exiva account:</p>
-<p><a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Exiva%20%E2%80%94%20account%20and%20data%20deletion%20request&amp;body=Hello%2C%0A%0Aplease%20delete%20my%20Exiva%20account%20and%20the%20data%20linked%20to%20it.%0A%0AAccount%20email%20address%3A%20%0ARequest%20date%3A%20%0A%0AI%20understand%20that%20account%20deletion%20is%20irreversible%20and%20does%20not%20automatically%20cancel%20a%20Google%20Play%20subscription.%0A%0AKind%20regards">Email us — account deletion request</a></p>
-<p>The button opens your mail client with the subject <em>“Exiva — account and data deletion request”</em> pre-filled. If you prefer to write manually, email <a href="mailto:pawel@orzech.me">pawel@orzech.me</a> with that subject and state the account's email address.</p>
+<p>Reinstall Exiva from the same Google Play account, use <strong>Restore purchase</strong>, then follow Option 1. This proves control of the purchase without asking for a password or identity document.</p>
+<p>If that is not possible, contact support and include the Google Play order ID shown in your purchase history. Never send a password, full payment-card number or purchase token.</p>
+<p><a class="btn btn-primary" href="mailto:pawel@orzech.me?subject=Exiva%20%E2%80%94%20account%20deletion&amp;body=Hello%2C%0A%0AI%20cannot%20use%20the%20in-app%20deletion%20flow.%20Please%20tell%20me%20how%20to%20verify%20my%20Google%20Play%20purchase%20and%20delete%20the%20associated%20server%20account.%0A%0AGoogle%20Play%20order%20ID%3A%20%0A%0AI%20will%20not%20send%20a%20password%2C%20card%20number%20or%20purchase%20token.">Contact support</a></p>
 <p class="doc-meta">Declared time to first response: <strong>7 business days</strong>. GDPR requests are fulfilled within <strong>30 days</strong> of receipt, extendable by a further 2 months for particularly complex requests — we will tell you about such an extension and its reasons within the first month.</p>
 
 <h2>What we delete</h2>
-<p>After account deletion we promptly delete: the account record, your email address, your Google identifier, the encrypted copy of your data together with its encryption key, your alert rules, your notification token, and your links to watched objects.</p>
+<p>Deletion removes the server account, active installation records, entitlement, encrypted purchase token, encrypted notification tokens, server-side tracked-character subscriptions and pending notifications. Exiva currently stores no account email, Google profile identifier, notes, goals or hunt sessions on the server.</p>
 
 <h3>What remains despite deletion, and why</h3>
 <div class="table-wrap"><table>
 <thead><tr><th scope="col">Data</th><th scope="col">For how long</th><th scope="col">Why</th></tr></thead>
 <tbody>
-<tr><td>Purchase token hash and subscription status history, detached from the account</td><td>5 years from the end of the tax year</td><td>obligation to retain sales records (Art. 86 § 1 of the Polish Tax Ordinance); Art. 17(3)(b) GDPR excludes the right to erasure to that extent</td></tr>
-<tr><td>Security event log entries, in anonymised form</td><td>12 months</td><td>accountability (Art. 5(2) GDPR), service security</td></tr>
-<tr><td>Server logs containing a truncated IP address</td><td>30 days</td><td>security; they expire automatically</td></tr>
-<tr><td>Database backups</td><td>up to 30 days (daily copies) and up to 6 months (monthly copies)</td><td>selectively deleting records from encrypted backups is not technically feasible without risking their integrity. Backups serve disaster recovery only; if a restore happens, data belonging to accounts marked as deleted is purged again as part of the restore procedure</td></tr>
+<tr><td>Purchase-token hash, product and base-plan identifiers, detached from the account</td><td>Up to 6 years</td><td>minimum accounting and abuse-prevention record; it cannot be decrypted into the purchase token and is not linked to the deleted account</td></tr>
+<tr><td>Short-lived infrastructure logs and backups</td><td>According to the hosting rotation and backup schedule</td><td>service security and disaster recovery; restored data is subject to the same deletion controls</td></tr>
 </tbody>
 </table></div>
 
