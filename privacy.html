@@ -40,13 +40,17 @@
 </tbody></table></div>
 <p>The current server does <strong>not</strong> store an account email, Google profile identifier, notes, goals, hunt sessions or a cloud backup of the local database.</p>
 
-<h2>5. Analytics and crash diagnostics</h2>
+<h2>5. Artificial intelligence when creating alert rules</h2>
+<p>You can create an alert rule either by building it in the editor or by typing a sentence in your own words. Only the second route involves a model: the sentence you type is sent to <strong>Google Gemini</strong> so it can be turned into a rule structure. Nothing else about you is sent with it.</p>
+<p>Exiva does not store or log the sentence. The only thing kept is a per-account counter of how many parses were made in the current month, which exists to enforce the fair-use limit. If you would rather send nothing to a model, build the rule by hand in the editor — both routes produce exactly the same rule.</p>
+
+<h2>6. Analytics and crash diagnostics</h2>
 <p>Firebase Analytics and Crashlytics are disabled until the user makes the relevant consent choice in the app. If enabled, Exiva sends technical usage events and diagnostics needed to understand reliability. Event parameters must not contain character names, notes, search text, purchase tokens or notification tokens. Consent can be withdrawn in Settings.</p>
 
-<h2>6. Recipients and international processing</h2>
-<p>Data is processed only by providers required to run the selected function: Google Play for billing, Firebase for app attestation and push delivery, Exiva's VPS/hosting provider for Premium services, and the public game-data providers requested by the user. Exiva has no ads, does not sell personal data and does not send data to data brokers.</p>
+<h2>7. Recipients and international processing</h2>
+<p>Data is processed only by providers required to run the selected function: Google Play for billing, Firebase for app attestation and push delivery, <strong>Contabo GmbH</strong> (Munich, Germany), whose server in <strong>Lauterbourg, France</strong> hosts the Premium services, so that processing stays inside the European Union, and the public game-data providers requested by the user. Exiva has no ads, does not sell personal data and does not send data to data brokers.</p>
 
-<h2>7. Retention and deletion</h2>
+<h2>8. Retention and deletion</h2>
 <ul>
 <li>Local data remains until you delete it, clear app data or uninstall.</li>
 <li>An active Premium account remains while needed to provide Premium, unless you delete it.</li>
@@ -56,17 +60,17 @@
 <li>Short-lived operational logs and disaster-recovery backups follow the hosting rotation. They are not used to resume a deleted account.</li>
 </ul>
 
-<h2>8. Your controls and rights</h2>
+<h2>9. Your controls and rights</h2>
 <p>Settings → Privacy and your data provides local export, import, analytics consent, local deletion and—when a Premium account exists—direct server-account deletion. The server action and local wipe are deliberately separate, and neither cancels a Google Play subscription.</p>
 <p>Instructions for deletion without relying on the current installation are on the <a href="delete-account.html">account deletion page</a>. You may also contact us to request access, correction, restriction, portability, objection or erasure where applicable. You may complain to the President of the Personal Data Protection Office in Poland or the authority in your habitual residence.</p>
 
-<h2>9. Security</h2>
+<h2>10. Security</h2>
 <p>Exiva uses TLS, Android app-private storage, server-side App Check, bounded verification rate limits, HMAC sessions checked against active accounts, encrypted purchase/notification tokens, hashed installation identifiers and least-privilege deployment secrets. No security measure is absolute; report issues through the <a href="report.html">reporting page</a>.</p>
 
-<h2>10. Children</h2>
+<h2>11. Children</h2>
 <p>Exiva is not directed to children and does not participate in Google Play's Designed for Families programme. A paid subscription must be purchased through the age and parental controls of Google Play.</p>
 
-<h2>11. Changes</h2>
+<h2>12. Changes</h2>
 <p>Material changes will be described in the app or release notes before they take effect where required. The current version is always published at this URL. Technical implementation, the Play Data Safety declaration and this policy must be kept consistent.</p>
 
 <p><a href="terms.html">Terms of Service</a> · <a href="licenses.html">Licences and attributions</a> · <a href="report.html">Report a problem</a></p>
